@@ -1,0 +1,200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3\n"
+
+# Cookie-Banner
+msgid "1 Jahr"
+msgstr "1 an"
+
+# Cookie-Banner
+msgid "2 Jahre"
+msgstr "2 ans"
+
+# Cookie-Banner
+msgid "6 Monate"
+msgstr "6 mois"
+
+# Cookie-Banner
+msgid "Akzeptieren"
+msgstr "Accepter"
+
+# Cookie-Banner
+msgid "akzeptieren"
+msgstr "accepter"
+
+# Cookie-Banner
+msgid "Alle akzeptieren"
+msgstr "Accepter tous"
+
+# Cookie-Banner
+msgid "Alle umschalten"
+msgstr "Commuter tout"
+
+# Cookie-Banner
+msgid "Anbieter"
+msgstr "Fournisseur"
+
+# Cookie-Banner
+msgid "Aus"
+msgstr "Off"
+
+# Cookie-Banner
+msgid "Cookie Banner"
+msgstr "Cookie Banner"
+
+# Cookie-Banner
+msgid "Cookie von Facebook, das für Website-Analysen, Ad-Targeting und Anzeigenmessung verwendet wird."
+msgstr "Cookie de Facebook utilisé pour l'analyse de sites web, le ciblage publicitaire et la mesure d'audience des publicités."
+
+# Cookie-Banner
+msgid "Cookie-Einstellungen"
+msgstr "Paramètres des cookies"
+
+# Cookie-Banner
+msgid "Cookie-Informationen anzeigen"
+msgstr "Afficher les informations sur les cookies"
+
+# Cookie-Banner
+msgid "Cookie-Informationen ausblenden"
+msgstr "Masquer les informations sur les cookies"
+
+# Cookie-Banner
+msgid "Cookie-Name"
+msgstr "Nom du cookie"
+
+# Cookie-Banner
+msgid "Datenschutz"
+msgstr "Protection des données"
+
+# Cookie-Banner
+msgid "Datenschutzeinstellungen"
+msgstr "Paramètres de confidentialité"
+
+# Cookie-Banner
+msgid "Datenschutzerklärung"
+msgstr "Déclaration de confidentialité"
+
+# Cookie-Banner
+msgid "Details anzeigen"
+msgstr "Afficher les détails"
+
+# Cookie-Banner
+msgid "Details ausblenden"
+msgstr "Masquer les détails"
+
+# Cookie-Banner
+msgid "Eigentümer der Website"
+msgstr "Propriétaire du site"
+
+# Cookie-Banner
+msgid "Ein"
+msgstr "On"
+
+# Cookie-Banner
+msgid "Einige von ihnen sind essenziell, während andere uns helfen die Website für dich zu optimieren."
+msgstr "Certains d'entre eux sont essentiels, tandis que d'autres nous aident à optimiser le site web pour toi.."
+
+# Cookie-Banner
+msgid "Einstellungen anpassen"
+msgstr "Personnaliser les paramètres"
+
+# Cookie-Banner
+msgid "Essentiell"
+msgstr "Essentiel"
+
+# Cookie-Banner
+msgid "Essenziell"
+msgstr "Essentiel"
+
+# Cookie-Banner
+msgid "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich."
+msgstr "Les cookies essentiels permettent des fonctions de base et sont nécessaires au bon fonctionnement du site web.."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies."
+msgstr "Vous trouverez ici un aperçu de tous les cookies utilisés."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies. Sie können Ihre Einwilligung zu ganzen Kategorien geben oder sich weitere Informationen anzeigen lassen und so nur bestimmte Cookies auswählen."
+msgstr "Vous trouverez ici un aperçu de tous les cookies utilisés. Vous pouvez donner votre accord pour des catégories entières ou afficher plus d'informations et ainsi ne sélectionner que certains cookies.."
+
+# Cookie-Banner
+msgid "Individuelle Datenschutzeinstellungen"
+msgstr "Paramètres de confidentialité personnalisés"
+
+# Cookie-Banner
+msgid "Inhalte von Videoplattformen und Social Media Plattformen werden standardmässig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr."
+msgstr "Les contenus des plates-formes vidéo et des médias sociaux sont bloqués par défaut. Si les cookies de médias externes sont acceptés, l'accès à ces contenus ne nécessite plus d'autorisation manuelle.."
+
+# Cookie-Banner
+msgid "Laufzeit"
+msgstr "Durée de validité"
+
+# Cookie-Banner
+msgid "Marketing"
+msgstr "Marketing"
+
+# Cookie-Banner
+msgid "Marketing-Cookies speichern Informationen über besuchte Websites von Nutzern. Diese Daten werden verwendet, um personalisierte Werbung anzuzeigen, die auf die Interessen der Nutzer zugeschnitten ist."
+msgstr "Les cookies marketing enregistrent des informations sur les sites web visités par les utilisateurs. Ces données sont utilisées pour afficher des publicités personnalisées en fonction des intérêts des utilisateurs.."
+
+# Cookie-Banner
+msgid "Medien"
+msgstr "Média"
+
+# Cookie-Banner
+msgid "nur essentielle Cookies akzeptieren"
+msgstr "n'accepter que les cookies essentiels"
+
+# Cookie-Banner
+msgid "Nur Essenzielle"
+msgstr "Essentiels uniquement"
+
+# Cookie-Banner
+msgid "Speichern"
+msgstr "Sauver"
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in den globalen Cookie-Einstellungen ausgewählt wurden."
+msgstr "Enregistre les paramètres des visiteurs sélectionnés dans les paramètres globaux des cookies."
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in der Cookie Box von OHO Cookie ausgewählt wurden."
+msgstr "Enregistre les préférences des visiteurs sélectionnés dans la boîte à cookies de OHO Cookie."
+
+# Cookie-Banner
+msgid "Statistik Cookies erfassen Informationen anonym. Diese Informationen helfen uns zu verstehen, wie unsere Besucher unsere Website nutzen."
+msgstr "Les cookies statistiques collectent des informations de manière anonyme. Ces informations nous aident à comprendre comment nos visiteurs utilisent notre site web."
+
+# Cookie-Banner
+msgid "Statistiken"
+msgstr "Statistiques"
+
+# Cookie-Banner
+msgid "Wir nutzen Google Analytics, um die Besucherzahlen unserer Webseite zu messen."
+msgstr "Nous utilisons Google Analytics pour mesurer le nombre de visiteurs de notre site web.."
+
+# Cookie-Banner
+msgid "Wir verwenden Cookies auf unserer Website."
+msgstr "Nous utilisons des cookies sur notre site web."
+
+#: Kontaktformular Meldung bei Erfolg
+msgid "Wir werden sobald als möglich mit Ihnen Kontakt aufnehmen."
+msgstr "Nous prendrons contact avec vous dès que possible."
+
+# Cookie-Banner
+msgid "Wird zum Entsperren von Youtube-Inhalten verwendet."
+msgstr "Utilisé pour déverrouiller le contenu de Youtube."
+
+# Cookie-Banner
+msgid "Zweck"
+msgstr "Objectif"

@@ -1,0 +1,34 @@
+/*
+* Add additional styles to the quote block render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+
+.render-wrap.block--quote .quote-wrap {
+  max-width: 100%;
+  min-height: 200px;
+  padding: 2em 8em 2em 2em;
+  position: relative;
+  background: #dfdfdf;
+}
+
+.render-wrap.block--quote .quote-wrap::after {
+  content: '"';
+  position: absolute;
+  z-index: 1;
+  font-style: italic;
+  right: 0;
+  top: 0;
+  font-size: 15rem;
+  width: 8rem;
+  height: 8rem;
+  transform: translate3d(0, -0.425em, 0);
+  pointer-events: none;
+}
+
+.render-wrap.block--quote .quote-wrap blockquote {
+  margin: 0;
+}
+
+.render-wrap.block--quote .covered-image-wrap {
+  width: 100%;
+  height: 100%;
+}

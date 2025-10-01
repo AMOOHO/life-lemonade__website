@@ -1,0 +1,207 @@
+/*
+* Add additional styles to the Form block render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+
+/* GENERAL FORM STYLES *******************************************************************************/
+
+.render-wrap.block--form .grid-wrap {
+  align-items: flex-start;
+}
+
+.render-wrap.block--form .sec-wrap__inner {
+  max-width: 800px;
+}
+
+.render-wrap.block--form .form-wrap .grid-wrap .box {
+  padding: 0.625em;
+}
+
+.render-wrap.block--form .form-wrap {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.render-wrap.block--form .field-wrap {
+  flex-basis: 100%;
+  max-width: 100%;
+  grid-column-start: auto;
+  grid-column-end: span 12;
+  margin-bottom: 1.75rem;
+  margin-top: 0.5em;
+}
+
+.render-wrap.block--form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/***** Labels */
+
+.render-wrap.block--form .field-wrap span.label {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  color: #787878 !important;
+  hyphens: none;
+  width: 100%;
+}
+
+/***** Input fields  */
+
+.render-wrap.block--form input[type="text"],
+.render-wrap.block--form input[type="email"],
+.render-wrap.block--form input[type="url"],
+.render-wrap.block--form input[type="password"],
+.render-wrap.block--form input[type="search"],
+.render-wrap.block--form input[type="number"],
+.render-wrap.block--form input[type="tel"],
+.render-wrap.block--form input[type="range"],
+.render-wrap.block--form input[type="date"],
+.render-wrap.block--form input[type="month"],
+.render-wrap.block--form input[type="week"],
+.render-wrap.block--form input[type="time"],
+.render-wrap.block--form input[type="datetime"],
+.render-wrap.block--form input[type="datetime-local"],
+.render-wrap.block--form input[type="color"] {
+  border: 1px solid #dfdfdf;
+  padding: 0.25em;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  background: #fff;
+  color: #787878;
+}
+
+.render-wrap.block--form input[type="checkbox"],
+.render-wrap.block--form input[type="radio"] {
+  display: none;
+}
+
+.render-wrap.block--form input,
+select,
+textarea {
+  color: #787878 !important;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.render-wrap.block--form textarea {
+  background: #fff;
+  padding: 0.25em;
+  line-height: 1.5625em;
+  max-height: 20em;
+  border: 1px solid #dfdfdf;
+  border-radius: 0;
+  margin: 0em;
+  resize: none;
+}
+
+.render-wrap.block--form textarea:focus,
+input:focus,
+.render-wrap.block--form textarea:active,
+input:active,
+.render-wrap.block--form .form-wrap .has-error textarea:active,
+.render-wrap.block--form .form-wrap .has-error input:active,
+.render-wrap.block--form .form-wrap .has-error textarea:focus,
+.render-wrap.block--form .form-wrap .has-error input:focus {
+  color: #fff;
+  border: 1px solid #787878;
+}
+
+/***** option wraps */
+
+.render-wrap.block--form .field-wrap .option-wrap {
+  display: inline-block;
+  position: relative;
+  margin-top: 0.5rem;
+  margin-right: 2rem;
+}
+
+.render-wrap.block--form .field-wrap .option-wrap:hover,
+.render-wrap.block--form .field-wrap .option-wrap label:hover {
+  cursor: pointer;
+}
+
+.render-wrap.block--form .field-wrap.checkbox .option-wrap {
+  width: 100%;
+}
+
+.render-wrap.block--form .field-wrap .option-wrap label {
+  padding-left: 2rem;
+}
+
+.render-wrap.block--form .field-wrap .option-wrap label .option-caption::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #dfdfdf;
+}
+
+.render-wrap.block--form .field-wrap.radio .option-wrap label .option-caption::after {
+  border-radius: 1.5rem;
+}
+
+.render-wrap.block--form .field-wrap .option-wrap input:checked ~ label .option-caption::after {
+  background: #000;
+  border: 1px solid #000;
+}
+
+/***** select */
+
+.render-wrap.block--form .field-wrap.dropdown {
+  position: relative;
+}
+
+.render-wrap.block--form .field-wrap.dropdown select {
+  cursor: pointer;
+}
+
+.render-wrap.block--form .field-wrap select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 1px solid #000;
+  padding: 0.25em 0.25em 0.25em 0.25em;
+}
+
+.render-wrap.block--form .field-wrap select option {
+  font-weight: 400;
+}
+
+/* --- Radio & Checkbox */
+
+.render-wrap.block--form .field-wrap.radio,
+.render-wrap.block--form .field-wrap.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-end: span 6;
+  width: fit-content;
+}
+
+.render-wrap.block--form .field-wrap.radio .option-wrap,
+.render-wrap.block--form .field-wrap.checkbox .option-wrap {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.render-wrap.block--form .field-wrap.radio .option-wrap input,
+.render-wrap.block--form .field-wrap.checkbox .option-wrap input {
+  width: fit-content;
+  margin-right: 0.5em;
+}
+
+/***** Submit button */
+
+.render-wrap.block--form .submit-wrap {
+  display: none;
+}

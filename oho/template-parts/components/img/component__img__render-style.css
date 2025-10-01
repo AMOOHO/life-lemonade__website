@@ -1,0 +1,11 @@
+/*
+* Add additional styles to the single image render template,
+additional you can use the backend loades styles in css/default.css */
+
+.render-wrap.block--img .single-image-wrap {
+  height: 160px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

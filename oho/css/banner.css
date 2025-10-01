@@ -1,0 +1,181 @@
+/* NoScript / Old Browser Banner Styles */
+
+/* ///////////////////// */
+
+/* -------------- */
+/* DESKTOP */
+/* TABLET */
+/* MOBILE */
+/* MINI-MOBILE */
+/* -------------- */
+
+/* DESKTOP //////////////////////////////////////////////////////////////// */
+/*
+01. NoScript / Old Browser Banner
+*/
+
+/*
+-----------------------------------------------------------------------------
+
+01. NoScript / Old Browser Banner
+
+-----------------------------------------------------------------------------
+*/
+
+/* ***** Warning Banner */
+
+.warning-banner {
+  background: var(--color__error);
+  top: 0em;
+  text-align: center;
+  padding: 1em;
+}
+
+.warning-banner {
+  width: 100%;
+  display: block;
+  position: fixed;
+  border-radius: 0.2em;
+  z-index: 99999;
+}
+
+.warning-banner table {
+  width: 100%;
+  height: inherit;
+  text-align: center;
+  margin: 0;
+}
+
+.warning-banner p,
+.warning-banner b,
+.warning-banner a {
+  color: var(--color__light);
+  margin: 0 0.6em 0 0.6em;
+}
+
+.warning-banner p:nth-child(2) {
+  margin: 0.6em;
+}
+
+.warning-banner a {
+  border: 0.0625em solid var(--color__light);
+  padding: 0.4em;
+  white-space: nowrap;
+  border-radius: 0.0625em;
+}
+
+.warning-banner a:hover {
+  border: 0.0625em solid var(--color__light);
+  color: var(--color__light);
+}
+
+/* ***** NoScript-Banner */
+
+input[type="checkbox"].hide-noscript-banner {
+  visibility: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+
+input[type="checkbox"].hide-noscript-banner:checked + .noscript-banner {
+  display: none;
+}
+
+.noscript-banner .button-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.noscript-banner .button-wrap > * + * {
+  margin-left: 0.5em;
+}
+
+.noscript-banner a,
+.noscript-banner label {
+  display: inline-block;
+  background-color: var(--color__error);
+  color: var(--color__light);
+  border-radius: 0;
+  border: 0.0625rem solid var(--color__light);
+  padding: 0.5em;
+  margin: 0;
+  line-height: 1em;
+}
+
+.noscript-banner a:hover,
+.noscript-banner label:hover {
+  background-color: var(--color__light);
+  color: var(--color__error);
+  border: 0.0625rem solid var(--color__light);
+}
+
+/* MINI-DESKTOP //////////////////////////////////////////////////////////////// */
+/*
+01. NoScript / Old Browser Banner
+*/
+
+@media only screen and (max-width: 80em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. NavigNoScript / Old Browser Banner
+
+  -----------------------------------------------------------------------------
+  */
+}
+
+/* TABLET //////////////////////////////////////////////////////////////// */
+/*
+01. NoScript / Old Browser Banner
+*/
+
+@media only screen and (max-width: 55em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. NavigNoScript / Old Browser Banner
+
+  -----------------------------------------------------------------------------
+  */
+}
+
+/* MOBILE //////////////////////////////////////////////////////////////// */
+/*
+01. NoScript / Old Browser Banner
+*/
+
+@media only screen and (max-width: 36em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. NoScript / Old Browser Banner
+
+  -----------------------------------------------------------------------------
+  */
+
+  /* ***** Warning Banner */
+  .warning-banner p,
+  .warning-banner b,
+  .warning-banner a {
+    font-size: var(--fsize__s);
+  }
+}
+
+/* MINI-MOBILE //////////////////////////////////////////////////////////////// */
+/*
+01. NoScript / Old Browser Banner
+*/
+
+@media only screen and (max-width: 27em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. NavigNoScript / Old Browser Banner
+
+  -----------------------------------------------------------------------------
+  */
+}

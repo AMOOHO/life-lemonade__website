@@ -1,0 +1,75 @@
+{
+  "text": {
+    "empty": "Please fill out this field.",
+    "invalid": "This field contains forbidden characters."
+  },
+  "textarea": {
+    "empty": "Please fill out this field.",
+    "invalid": "This field contains forbidden characters."
+  },
+  "email": {
+    "empty": "Please enter your e-mail address.",
+    "invalid": "This e-mail address is not correct."
+  },
+  "url": {
+    "empty": "Please enter an URL.",
+    "invalid": "This URL is not correct."
+  },
+  "tel": {
+    "empty": "Please enter a phone number.",
+    "invalid": "This phone number is not correct."
+  },
+  "password": {
+    "empty": "Please enter a password.",
+    "invalid": "This password contains errors or it does not meet the requirements."
+  },
+  "number": {
+    "empty": "Please fill out this field.",
+    "invalid": "This field must be a number.",
+    "too_small": "This number is too small.",
+    "too_big": "This number is too big."
+  },
+  "range": {
+    "empty": "Please choose a number.",
+    "invalid": "This field must be a number.",
+    "too_small": "This number is too small.",
+    "too_big": "This number is too big."
+  },
+  "date": {
+    "empty": "Please enter a date.",
+    "invalid": "This field contains errors.",
+    "too_small": "This date must be newer.",
+    "too_big": "This date must be older."
+  },
+  "time": {
+    "empty": "Please enter a time.",
+    "invalid": "This field contains errors.",
+    "too_small": "The selected time is too early.",
+    "too_big": "The selected time is too late."
+  },
+  "option_fields": {
+    "empty": "Please choose an option."
+  },
+  "option_fields_single": {
+    "empty": "Please tick this box."
+  },
+  "file": {
+    "empty": "Please upload a file.",
+    "invalid": "This file format is not allowed.",
+    "invalid-filename": "One or more files contain illegal characters in the name.",
+    "too_many": "Too many files were uploaded.",
+    "too_big": "One or more files are too large."
+  },
+  "submit": {
+    "invalid_fields": "One or more fields are incorrect.",
+    "invalid_captcha": "The spam check has failed. Please try again or contact us by e-mail.",
+    "upload_error": "There was an error while uploading the file(s).",
+    "transmission_error": "Not all fields could be transmitted. Please try again later.",
+    "csrf_error": "CSRF token does not match.",
+    "session_error": "Something went wrong, please log in again."
+  },
+  "defaults": {
+    "mailer_subject": "New inquiry",
+    "mailer_error": "There was an error while sending the email. Please try again later."
+  }
+}

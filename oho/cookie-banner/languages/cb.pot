@@ -1,0 +1,156 @@
+# Copyright (C) 2023 OHO Design
+msgid ""
+msgstr ""
+
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-12-23 16:00+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator:\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+
+
+# Cookie-Banner
+msgid "1 Jahr"
+
+# Cookie-Banner
+msgid "2 Jahre"
+
+# Cookie-Banner
+msgid "6 Monate"
+
+# Cookie-Banner
+msgid "Akzeptieren"
+
+# Cookie-Banner
+msgid "akzeptieren"
+
+# Cookie-Banner
+msgid "Alle akzeptieren"
+
+# Cookie-Banner
+msgid "Alle umschalten"
+
+# Cookie-Banner
+msgid "Anbieter"
+
+# Cookie-Banner
+msgid "Aus"
+
+# Cookie-Banner
+msgid "Cookie Banner"
+
+# Cookie-Banner
+msgid "Cookie von Facebook, das für Website-Analysen, Ad-Targeting und Anzeigenmessung verwendet wird."
+
+# Cookie-Banner
+msgid "Cookie-Einstellungen"
+
+# Cookie-Banner
+msgid "Cookie-Informationen anzeigen"
+
+# Cookie-Banner
+msgid "Cookie-Informationen ausblenden"
+
+# Cookie-Banner
+msgid "Cookie-Name"
+
+# Cookie-Banner
+msgid "Datenschutz"
+
+# Cookie-Banner
+msgid "Datenschutzeinstellungen"
+
+# Cookie-Banner
+msgid "Datenschutzerklärung"
+
+# Cookie-Banner
+msgid "Details anzeigen"
+
+# Cookie-Banner
+msgid "Details ausblenden"
+
+# Cookie-Banner
+msgid "Eigentümer der Website"
+
+# Cookie-Banner
+msgid "Ein"
+
+# Cookie-Banner
+msgid "Einige von ihnen sind essenziell, während andere uns helfen die Website für dich zu optimieren."
+
+# Cookie-Banner
+msgid "Einstellungen anpassen"
+
+# Cookie-Banner
+msgid "Essentiell"
+
+# Cookie-Banner
+msgid "Essenziell"
+
+# Cookie-Banner
+msgid "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies. Sie können Ihre Einwilligung zu ganzen Kategorien geben oder sich weitere Informationen anzeigen lassen und so nur bestimmte Cookies auswählen."
+
+# Cookie-Banner
+msgid "Individuelle Datenschutzeinstellungen"
+
+# Cookie-Banner
+msgid "Inhalte von Videoplattformen und Social Media Plattformen werden standardmässig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr."
+
+# Cookie-Banner
+msgid "Laufzeit"
+
+# Cookie-Banner
+msgid "Marketing"
+
+# Cookie-Banner
+msgid "Marketing-Cookies speichern Informationen über besuchte Websites von Nutzern. Diese Daten werden verwendet, um personalisierte Werbung anzuzeigen, die auf die Interessen der Nutzer zugeschnitten ist."
+
+# Cookie-Banner
+msgid "Medien"
+
+# Cookie-Banner
+msgid "nur essentielle Cookies akzeptieren"
+
+# Cookie-Banner
+msgid "Nur Essenzielle"
+
+# Cookie-Banner
+msgid "Speichern"
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in den globalen Cookie-Einstellungen ausgewählt wurden."
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in der Cookie Box von OHO Cookie ausgewählt wurden."
+
+# Cookie-Banner
+msgid "Statistik Cookies erfassen Informationen anonym. Diese Informationen helfen uns zu verstehen, wie unsere Besucher unsere Website nutzen."
+
+# Cookie-Banner
+msgid "Statistiken"
+
+# Cookie-Banner
+msgid "Wir nutzen Google Analytics, um die Besucherzahlen unserer Webseite zu messen."
+
+# Cookie-Banner
+msgid "Wir verwenden Cookies auf unserer Website."
+
+#: Kontaktformular Meldung bei Erfolg
+msgid "Wir werden sobald als möglich mit Ihnen Kontakt aufnehmen."
+
+# Cookie-Banner
+msgid "Wird zum Entsperren von Youtube-Inhalten verwendet."
+
+# Cookie-Banner
+msgid "Zweck"

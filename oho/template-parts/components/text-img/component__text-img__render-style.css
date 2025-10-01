@@ -1,0 +1,15 @@
+/*
+* Add additional styles to the text image block render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+.render-wrap.block--text-img .box-image {
+  height: 180px;
+}
+
+.render-wrap.block--text-img .box-image .single-image-wrap {
+  height: 180px;
+  width: 100%;
+  border-radius: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

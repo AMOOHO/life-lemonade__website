@@ -1,0 +1,8 @@
+/*
+* Add additional styles to the time table render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+
+.render-wrap.block--timetable td {
+  vertical-align: top;
+  padding: 1em 2em 0 0;
+}

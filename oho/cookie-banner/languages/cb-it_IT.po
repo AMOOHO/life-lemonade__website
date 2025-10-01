@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3\n"
+
+# Cookie-Banner
+msgid "1 Jahr"
+msgstr "1 anno"
+
+# Cookie-Banner
+msgid "2 Jahre"
+msgstr "2 anni"
+
+# Cookie-Banner
+msgid "6 Monate"
+msgstr "6 mesi"
+
+# Cookie-Banner
+msgid "akzeptieren"
+msgstr "accettare"
+
+# Cookie-Banner
+msgid "Alle akzeptieren"
+msgstr "Accettare tutti"
+
+# Cookie-Banner
+msgid "Alle umschalten"
+msgstr "Interruttore tutti"
+
+# Cookie-Banner
+msgid "Anbieter"
+msgstr "Fornitore"
+
+# Cookie-Banner
+msgid "Aus"
+msgstr "Off"
+
+# Cookie-Banner
+msgid "Cookie Banner"
+msgstr "Cookie Banner"
+
+# Cookie-Banner
+msgid "Cookie von Facebook, das für Website-Analysen, Ad-Targeting und Anzeigenmessung verwendet wird."
+msgstr "Cookie di Facebook utilizzato per l'analisi del sito web, il targeting e la misurazione degli annunci."
+
+# Cookie-Banner
+msgid "Cookie-Einstellungen"
+msgstr "Impostazioni dei cookie"
+
+# Cookie-Banner
+msgid "Cookie-Informationen anzeigen"
+msgstr "Mostra informazioni sui cookie"
+
+# Cookie-Banner
+msgid "Cookie-Informationen ausblenden"
+msgstr "Nascondere le informazioni sui cookie"
+
+# Cookie-Banner
+msgid "Cookie-Name"
+msgstr "Nome del cookie"
+
+# Cookie-Banner
+msgid "Datenschutz"
+msgstr "Protezione dei dati"
+
+# Cookie-Banner
+msgid "Datenschutzeinstellungen"
+msgstr "Impostazioni sulla privacy"
+
+# Cookie-Banner
+msgid "Datenschutzerklärung"
+msgstr "Informativa sulla privacy"
+
+# Cookie-Banner
+msgid "Details anzeigen"
+msgstr "Mostra i dettagli"
+
+# Cookie-Banner
+msgid "Details ausblenden"
+msgstr "Nascondi dettagli"
+
+# Cookie-Banner
+msgid "Eigentümer der Website"
+msgstr "Proprietario del sito web"
+
+# Cookie-Banner
+msgid "Ein"
+msgstr "On"
+
+# Cookie-Banner
+msgid "Einige von ihnen sind essenziell, während andere uns helfen die Website für dich zu optimieren."
+msgstr "Alcuni di essi sono essenziali, mentre altri ci aiutano a ottimizzare il sito web per voi."
+
+# Cookie-Banner
+msgid "Einstellungen anpassen"
+msgstr "Regolare le impostazioni"
+
+# Cookie-Banner
+msgid "Essentiell"
+msgstr "Essenziale"
+
+# Cookie-Banner
+msgid "Essenziell"
+msgstr "Essenziale"
+
+# Cookie-Banner
+msgid "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich."
+msgstr "I cookie essenziali abilitano le funzioni di base e sono necessari per il corretto funzionamento del sito web."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies."
+msgstr "Qui troverete una panoramica di tutti i cookie utilizzati."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies. Sie können Ihre Einwilligung zu ganzen Kategorien geben oder sich weitere Informationen anzeigen lassen und so nur bestimmte Cookies auswählen."
+msgstr "Qui troverete una panoramica di tutti i cookie utilizzati. È possibile dare il proprio consenso a intere categorie o visualizzare ulteriori informazioni e quindi selezionare solo determinati cookie."
+
+# Cookie-Banner
+msgid "Individuelle Datenschutzeinstellungen"
+msgstr "Impostazioni di privacy individuali"
+
+# Cookie-Banner
+msgid "Inhalte von Videoplattformen und Social Media Plattformen werden standardmässig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr."
+msgstr "I contenuti delle piattaforme video e dei social media sono bloccati per impostazione predefinita. Se si accettano i cookie dei media esterni, l'accesso a questi contenuti non richiede più il consenso manuale."
+
+# Cookie-Banner
+msgid "Laufzeit"
+msgstr "Durata"
+
+# Cookie-Banner
+msgid "Marketing"
+msgstr "Marketing"
+
+# Cookie-Banner
+msgid "Marketing-Cookies speichern Informationen über besuchte Websites von Nutzern. Diese Daten werden verwendet, um personalisierte Werbung anzuzeigen, die auf die Interessen der Nutzer zugeschnitten ist."
+msgstr "I cookie di marketing memorizzano informazioni sui siti web visitati dagli utenti. Questi dati vengono utilizzati per visualizzare pubblicità personalizzata in base agli interessi degli utenti."
+
+# Cookie-Banner
+msgid "Medien"
+msgstr "Media"
+
+# Cookie-Banner
+msgid "nur essentielle Cookies akzeptieren"
+msgstr "accettare solo i cookie essenziali"
+
+# Cookie-Banner
+msgid "Nur Essenzielle"
+msgstr "Solo essenziali"
+
+# Cookie-Banner
+msgid "Speichern"
+msgstr "Salvare"
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in den globalen Cookie-Einstellungen ausgewählt wurden."
+msgstr "Salva le impostazioni dei visitatori selezionati nelle impostazioni globali dei cookie."
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in der Cookie Box von OHO Cookie ausgewählt wurden."
+msgstr "Salva le impostazioni dei visitatori selezionati nella casella dei cookie di OHO Cookie."
+
+# Cookie-Banner
+msgid "Statistik Cookies erfassen Informationen anonym. Diese Informationen helfen uns zu verstehen, wie unsere Besucher unsere Website nutzen."
+msgstr "I cookie statistici raccolgono informazioni in forma anonima. Queste informazioni ci aiutano a capire come i visitatori utilizzano il nostro sito web."
+
+# Cookie-Banner
+msgid "Statistiken"
+msgstr "Statistiche"
+
+# Cookie-Banner
+msgid "Wir nutzen Google Analytics, um die Besucherzahlen unserer Webseite zu messen."
+msgstr "Utilizziamo Google Analytics per misurare il numero di visitatori del nostro sito web."
+
+# Cookie-Banner
+msgid "Wir verwenden Cookies auf unserer Website."
+msgstr "Sul nostro sito web utilizziamo i cookie."
+
+#: Kontaktformular Meldung bei Erfolg
+msgid "Wir werden sobald als möglich mit Ihnen Kontakt aufnehmen."
+msgstr "Vi contatteremo il prima possibile."
+
+# Cookie-Banner
+msgid "Wird zum Entsperren von Youtube-Inhalten verwendet."
+msgstr "Utilizzato per sbloccare i contenuti di Youtube."
+
+# Cookie-Banner
+msgid "Zweck"
+msgstr "Scopo"

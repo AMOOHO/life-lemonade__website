@@ -1,0 +1,276 @@
+/* CUSTOM ACF STYLES  ////////////////////////////////////////////////////////////////
+*
+*  Add backend styles for the classes you used within the ACF fields
+*/
+
+/*** custom callouts */
+.callout--warning .acf-input {
+  background: #f0dc97;
+  padding: 1em 2em;
+  border-radius: 0.1875em;
+}
+.callout--warning .acf-label {
+  display: none;
+}
+
+/***** flexible content fields */
+
+.acf-field-5eaab9d6873fc .acf-input .acf-label:before {
+  font-family: "Custom Dashicons Backendbranding";
+  content: "\f0ad";
+  margin-right: 0.3125em;
+  display: inline;
+}
+
+/***** image position -- grid select */
+
+.acf-image-position ul {
+  width: 3.75rem;
+}
+
+.acf-image-position ul li {
+  margin-right: 0.5em !important;
+  margin-top: 0.5em !important;
+}
+
+.acf-image-position .acf-input label {
+  text-indent: -624.9375em;
+  font-size: 0em;
+}
+
+.acf-image-position label input {
+  display: none;
+}
+.acf-image-position label span.square {
+  display: block;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: white;
+  border: 0.125rem solid grey;
+}
+.acf-image-position label.selected span.square {
+  background: grey;
+}
+.acf-image-position li {
+  display: inline-block;
+  list-style: none;
+  max-width: 25%;
+}
+
+/***** Hide add More Button if is disabled for flexible content ACF */
+
+.acfe-flexible-stylised-button:has(.disabled) {
+  display: none;
+}
+
+/* Adding icons to ACF’s flexible content popup box */
+
+/* .acf-fc-popup [data-layout="block--text"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\eca8";
+  margin-right: 0.625em;
+}
+[data-layout="block--text"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\eca8";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--text-img"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\eca8";
+  margin-right: 0.625em;
+}
+[data-layout="block--text-img"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\eca8";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--quote"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\f10d";
+  margin-right: 0.625em;
+}
+[data-layout="block--quote"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\f10d";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--img"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ea0e";
+  margin-right: 0.625em;
+}
+[data-layout="block--img"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ea0e";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--gallery-slider"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ea10";
+  margin-right: 0.625em;
+}
+[data-layout="block--gallery-slider"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ea10";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--embed-video"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\e9f7";
+  margin-right: 0.625em;
+}
+[data-layout="block--embed-video"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\e9f7";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--buttons"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec9e";
+  margin-right: 0.625em;
+}
+[data-layout="block--buttons"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec9e";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--accordion"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec31";
+  margin-right: 0.625em;
+}
+[data-layout="block--accordion"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec31";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--quote-slider"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\eae6";
+  margin-right: 0.625em;
+}
+[data-layout="block--quote-slider"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\eae6";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--form"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\e999";
+  margin-right: 0.625em;
+}
+[data-layout="block--form"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\e999";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--contact-person"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\e9d0";
+  margin-right: 0.625em;
+}
+[data-layout="block--contact-person"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\e9d0";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--team"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ea23";
+  margin-right: 0.625em;
+}
+[data-layout="block--team"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ea23";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--timetable"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec2c";
+  margin-right: 0.625em;
+}
+[data-layout="block--timetable"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec2c";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--accordion__start"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec42";
+  margin-right: 0.625em;
+}
+[data-layout="block--accordion__start"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec42";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+}
+
+.acf-fc-popup [data-layout="block--accordion__end"]:before{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec41";
+  margin-right: 0.625em;
+}
+[data-layout="block--accordion__end"] .acf-fc-layout-handle:after{
+  font-family: 'Custom Dashicons Backendbranding';
+  content: "\ec41";
+  margin-left: 0.4375em;
+  display: inline-block;
+  transform: translateY(1px);
+  opacity: 0.6;
+} */

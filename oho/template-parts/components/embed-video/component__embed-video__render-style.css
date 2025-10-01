@@ -1,0 +1,20 @@
+/*
+* Add additional styles to the embed video render template,
+additional you can use the backend loades styles in css/default.css */
+
+.render-wrap.block--embed-video .embed-video-wrap {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.render-wrap.block--embed-video .embed-video-wrap iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate3d(-50%, -50%, 0);
+  border: none;
+}

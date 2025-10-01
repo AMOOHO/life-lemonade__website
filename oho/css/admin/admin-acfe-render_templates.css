@@ -1,0 +1,231 @@
+/* CUSTOM ACF EXTENDED STYLES  ////////////////////////////////////////////////////////////////
+*
+*  Add default styles for flex content render templates,
+additional you can use the backend loades styles in css/default.css */
+
+.render-wrap {
+  min-height: 3.75em;
+  background: rgb(234, 234, 234); /* Old browsers */
+  background: -moz-linear-gradient(
+    165deg,
+    rgb(246, 246, 246),
+    rgba(255, 255, 255, 1) 96.22%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    165deg,
+    rgb(246, 246, 246),
+    rgba(255, 255, 255, 1) 96.22%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    165deg,
+    rgb(246, 246, 246),
+    rgba(255, 255, 255, 1) 96.22%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.render-wrap .fcolor--light {
+  color: #fff;
+}
+
+.render-wrap.neg {
+  background: #e7e7e7;
+}
+
+.render-wrap * {
+  color: #787878;
+}
+
+.render-wrap a {
+  border-bottom: 0em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.render-wrap .grid-wrap {
+  align-items: center;
+}
+
+.render-wrap .centered-text h1,
+.render-wrap .centered-text h2,
+.render-wrap .centered-text h3,
+.render-wrap .centered-text h4,
+.render-wrap .centered-text h5,
+.render-wrap .centered-text h6,
+.render-wrap .centered-text p,
+.render-wrap .centered-text span,
+.render-wrap .centered-text a,
+.render-wrap h1.centered-text,
+.render-wrap h2.centered-text,
+.render-wrap h3.centered-text,
+.render-wrap h4.centered-text,
+.render-wrap h5.centered-text,
+.render-wrap h6.centered-text,
+.render-wrap p.centered-text,
+.render-wrap span.centered-text,
+.render-wrap a.centered-text {
+  text-align: center;
+}
+
+/* ***** Sections */
+
+.render-wrap .sec-wrap {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.render-wrap .sec-wrap__inner {
+  width: 100%;
+  max-width: 62.5em;
+  height: auto;
+  margin: auto;
+  padding: 1.25em 2.1875em;
+  position: relative;
+}
+.render-wrap .sec-wrap__inner.full {
+  max-width: 100%;
+}
+
+/* ***** Headers */
+
+.render-wrap .header-wrap {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.render-wrap .header-wrap__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.render-wrap .header-wrap__inner {
+  width: 100%;
+  max-width: 62.5em;
+  height: auto;
+  margin: auto;
+  padding: 5em 2.1875em;
+  position: relative;
+}
+.render-wrap .header-wrap__inner.full {
+  max-width: 100%;
+}
+
+/* *****  Width */
+
+.render-wrap .w-full {
+  width: 100%;
+}
+
+/* ***** Height */
+
+.render-wrap .h-full {
+  height: 100%;
+}
+
+/* ***** Covered image wrap */
+
+.render-wrap .covered-image-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.render-wrap .covered-image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* ***** Contained image wrap */
+
+.render-wrap .contained-image-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.render-wrap .contained-image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+/* ***** Fixed Ratios */
+
+.render-wrap [class*="ratio--"] {
+  position: relative;
+  height: auto;
+}
+
+.render-wrap [class*="ratio--"]::before {
+  display: block;
+  content: "";
+  width: 100%;
+}
+
+.render-wrap [class*="ratio--"] > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.render-wrap .ratio--1_1::before {
+  padding-top: calc(1 / 1 * 100%);
+}
+
+.render-wrap .ratio--3_2::before {
+  padding-top: calc(2 / 3 * 100%);
+}
+
+.render-wrap .ratio--2_3::before {
+  padding-top: calc(3 / 2 * 100%);
+}
+
+.render-wrap .ratio--3_4::before {
+  padding-top: calc(4 / 3 * 100%);
+}
+
+.render-wrap .ratio--4_3::before {
+  padding-top: calc(3 / 4 * 100%);
+}
+
+.render-wrap .ratio--5_2::before {
+  padding-top: calc(2 / 5 * 100%);
+}
+
+.render-wrap .ratio--2_5::before {
+  padding-top: calc(5 / 2 * 100%);
+}
+
+.render-wrap .ratio--16_9::before {
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.render-wrap .ratio--9_16::before {
+  padding-top: calc(16 / 9 * 100%);
+}
+
+.render-wrap .ratio--16_10::before {
+  padding-top: calc(10 / 16 * 100%);
+}
+
+.render-wrap .ratio--10_16::before {
+  padding-top: calc(16 / 10 * 100%);
+}

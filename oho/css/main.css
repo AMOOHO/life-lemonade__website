@@ -1,0 +1,986 @@
+/* //////////////////////
+
+REPLACE-GUIDE:
+--> XXXXXXXXXXXXXXXXXXXX (Firmenname)
+--> rename path in robots.txt (root)
+
+////////////////////// */
+
+/* -------------- */
+/* SETUP */
+/* DESKTOP */
+/* MINI-DESKTOP */
+/* TABLET */
+/* MOBILE */
+/* MINI-MOBILE */
+/* SPECIAL BREAKPOINTS */
+/* -------------- */
+
+/* SETUP //////////////////////////////////////////////////////////////// */
+
+:root {
+  /* ***** Colors */
+
+  /* --- Default */
+  --color__dark: #000000;
+  --color__light: #ffffff;
+
+  /* --- Corporate */
+  --color__primary: #1e1e1e;
+  --color__secondary: #f5f5f5;
+  --color__accent: #a25ce3;
+
+  /* --- System */
+  --color__success: #00871b;
+  --color__warning: #fea137;
+  --color__error: #cd0000;
+
+  /* ***** Font Sizes */
+  --fsize__h1: 5rem;
+  --fsize__h2: 3rem;
+  --fsize__h3: 1.8rem;
+  --fsize__h4: 1.8rem;
+  --fsize__h5: 1.8rem;
+  --fsize__h6: 1.8rem;
+  --fsize__p: 1.1rem;
+  --fsize__s: 0.85rem;
+
+  /* ***** Icon Sizes */
+  --isize__small: 0.75rem;
+  --isize__regular: 1.75rem;
+  --isize__large: 4rem;
+
+  /* ***** Borders */
+  --border__small: 0.0625em solid var(--color__primary);
+  --border__small--light: 0.0625em solid var(--color__light);
+  --border__regular: 0.125em solid var(--color__primary);
+  --border__regular--light: 0.125em solid var(--color__primary);
+  --border__large: 0.25em solid var(--color__primary);
+  --border__large--light: 0.25em solid var(--color__primary);
+
+  /* ***** Radiuses */
+  --radius__small: 1em;
+  --radius__regular: 2em;
+  --radius__large: 4em;
+
+  /* ***** Layout */
+  --innerwrap__width: min(100vw, 80em);
+  --innerwrap__width--slim: min(100vw, 62.5em);
+  --innerwrap__width--slimmer: min(100vw, 50em);
+  --innerwrap__width--slim-af: min(100vw, 35em);
+  --innerwrap__px: 2rem;
+  --innerwrap__py: 5rem;
+}
+
+/* FONTS – LICENSED TO XXXXXXXXXXXXXXXXXXXX *******************************************************************************/
+
+/* ... */
+
+/* BASE STYLES */
+
+html,
+body {
+  font-size: 1rem;
+  /* ensures that browser's default font size is used as a reference for rem */
+  line-height: 1.2em;
+  /* ideally the same line-height that is used on p tag */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+/* ***** Main Height */
+
+.site-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.site-content main {
+  flex-grow: 1;
+}
+
+/* FONT STYLES */
+
+h1,
+.h1 {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: var(--fsize__h1);
+  line-height: 1em;
+  letter-spacing: 0em;
+  color: var(--color__primary);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+h2,
+.h2 {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: var(--fsize__h2);
+  line-height: 1.1em;
+  letter-spacing: 0em;
+  color: var(--color__primary);
+  text-decoration: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+h3,
+h4,
+h5,
+h6,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: var(--fsize__h3);
+  line-height: 1.3em;
+  letter-spacing: 0em;
+  color: var(--color__primary);
+  text-decoration: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+p,
+li,
+p a,
+.p,
+.p a,
+address {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: var(--fsize__p);
+  font-style: normal;
+  line-height: 1.4em;
+  letter-spacing: 0.01em;
+  color: var(--color__primary);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.s {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: var(--fsize__s);
+  line-height: 1.2em;
+  letter-spacing: 0.01em;
+  color: var(--color__primary);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.p.s a,
+.s a {
+  font-size: var(--fsize__s);
+  color: var(--color__primary);
+  text-decoration: none;
+}
+
+.fsize--marginal {
+  font-size: var(--fsize_s);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+strong,
+b {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  color: var(--color__primary);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+p a strong,
+.p a strong,
+p a b,
+.p a b {
+  padding: 0;
+  font-weight: 700;
+}
+
+/* ––– Unordered List */
+
+ul.plain {
+  padding-left: 0;
+}
+
+ul.plain li {
+  list-style: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+ul.plain li::before {
+  content: none;
+}
+
+/* ***** locked wysiwyg styles to avoid different title sizes */
+
+.wysiwyg > *:first-child {
+  margin-top: 0;
+}
+
+.wysiwyg > *:last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg h1,
+.wysiwyg h2 {
+  font-family: "Arial", sans-serif;
+  font-size: var(--fsize__h2);
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  color: var(--color__primary);
+  text-decoration: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  overflow: visible;
+}
+
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6 {
+  font-family: "Arial", sans-serif;
+  font-size: var(--fsize__h3);
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  color: var(--color__primary);
+  text-decoration: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  overflow: visible;
+}
+
+.wysiwyg p,
+.wysiwyg li,
+.wysiwyg blockquote {
+  font-family: "Arial", sans-serif;
+  font-size: var(--fsize__p);
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  color: var(--color__primary);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.wysiwyg p a,
+.wysiwyg u {
+  text-decoration: none;
+  border-bottom: var(--border__small);
+  padding: 0 0 0.0625em 0;
+}
+
+@supports (text-decoration-skip-ink: none) {
+  .wysiwyg p a,
+  .wysiwyg u {
+    border-bottom: unset;
+    padding: 0;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.0625em;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.wysiwyg ul,
+.wysiwyg ol {
+  padding-left: 1.5em;
+}
+
+.wysiwyg blockquote {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.wysiwyg blockquote::before,
+.wysiwyg blockquote::after {
+  position: absolute;
+  font-size: 1.375em;
+  color: var(--color__primary);
+}
+
+.wysiwyg blockquote::before {
+  content: "«";
+  left: -0.725em;
+  top: -0.0875em;
+}
+
+.wysiwyg blockquote::after {
+  content: "»";
+  right: -0.725em;
+  top: -0.0875em;
+}
+
+.wysiwyg hr {
+  margin: 2em 0;
+}
+
+.wysiwyg img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2em auto;
+}
+
+.wysiwyg table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em auto;
+}
+
+.wysiwyg table th,
+.wysiwyg table td {
+  padding: 0.5em;
+  border: var(--border__small);
+  text-align: left;
+  vertical-align: top;
+}
+
+/* LINKS / GLOBAL INTERACTIONS *******************************************************************************/
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ***** Links */
+
+a.underline,
+a.underline:hover,
+p a,
+p a:hover,
+.p a,
+.p a:hover {
+  text-decoration: none;
+  border-bottom: var(--border__small);
+  padding: 0 0 0.0625em 0;
+}
+
+@supports (text-decoration-skip-ink: none) {
+  a.underline,
+  a.underline:hover,
+  p a,
+  p a:hover,
+  .p a,
+  .p a:hover {
+    border-bottom: unset;
+    padding: 0;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.0625em;
+    text-underline-offset: 0.2em;
+  }
+}
+
+/* ***** Buttons */
+
+.button {
+  background: var(--color__primary);
+  color: var(--color__light);
+  border-radius: var(--radius__regular);
+  padding: 0.3em 1em 0.3em;
+  border: 0;
+  margin-top: 0em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button.neg {
+  background: var(--color__light);
+  color: var(--color__primary);
+  border: var(--border__regular);
+}
+
+/* --- Centered Button */
+
+.centered-button {
+  width: 100%;
+  text-align: center;
+  margin: 1.875em 0;
+}
+
+.centered-button .button {
+  display: inline;
+}
+
+/* ***** Default Interactions */
+
+::-moz-selection {
+  background: var(--color__primary);
+  color: var(--color__light);
+}
+
+::selection {
+  background: var(--color__primary);
+  color: var(--color__light);
+}
+
+*:focus {
+  outline: none;
+  /* background-color: var(--color__primary) !important;
+  color: var(--color__light);
+  mix-blend-mode: difference; */
+}
+
+a:focus-visible {
+  outline: var(--border__regular);
+}
+
+a:focus-visible .covered-image-wrap::after,
+a:focus-visible .contained-image-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: var(--color__primary);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: 0;
+  /* Firefox */
+}
+
+/*  ***** IMG Lazy loading helper (Litespeed) */
+
+img[data-lazyloaded] {
+  opacity: 0;
+}
+
+img.litespeed-loaded {
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 1;
+}
+
+/* MISC *******************************************************************************/
+
+/* DESKTOP //////////////////////////////////////////////////////////////// */
+/*
+01. Presets
+02. Footer
+*/
+
+/*
+-----------------------------------------------------------------------------
+
+01. Presets
+
+-----------------------------------------------------------------------------
+*/
+
+/* LAYOUT *******************************************************************************/
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+.main__inner {
+  margin-top: 6em;
+  /* Space to Navigation */
+}
+
+/* ***** Sections */
+
+.sec-wrap {
+  width: 100%;
+  height: auto;
+  background: var(--color_secondary);
+  position: relative;
+}
+
+.sec-wrap__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sec-wrap__inner {
+  position: relative;
+  width: var(--innerwrap__width);
+  height: auto;
+  margin: auto;
+}
+
+.sec-wrap__inner:not([class*="pxy"], [class*="px-"], [class*="pl-"]) {
+  padding-left: var(--innerwrap__px);
+}
+
+.sec-wrap__inner:not([class*="pxy"], [class*="px-"], [class*="pr-"]) {
+  padding-right: var(--innerwrap__px);
+}
+
+.sec-wrap__inner:not([class*="pxy"], [class*="py-"], [class*="pt-"]) {
+  padding-top: var(--innerwrap__py);
+}
+
+.sec-wrap__inner:not([class*="pxy"], [class*="py-"], [class*="pb-"]) {
+  padding-bottom: var(--innerwrap__py);
+}
+
+.sec-wrap__inner.full {
+  width: 100%;
+}
+
+.sec-wrap__inner.slim {
+  width: var(--innerwrap__width--slim);
+}
+
+.sec-wrap__inner.slimmer {
+  width: var(--innerwrap__width--slimmer);
+}
+
+.sec-wrap__inner.slim-af {
+  width: var(--innerwrap__width--slim-af);
+}
+
+/* ***** Headers */
+
+.header-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* Spacing to Navigation */
+  padding-top: var(--nav__height);
+}
+
+.header-wrap__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-wrap__inner {
+  position: relative;
+  width: var(--innerwrap__width);
+  height: auto;
+  margin: auto;
+}
+
+.header-wrap__inner:not([class*="pxy"], [class*="px-"], [class*="pl-"]) {
+  padding-left: var(--innerwrap__px);
+}
+
+.header-wrap__inner:not([class*="pxy"], [class*="px-"], [class*="pr-"]) {
+  padding-right: var(--innerwrap__px);
+}
+
+.header-wrap__inner:not([class*="pxy"], [class*="py-"], [class*="pt-"]) {
+  padding-top: var(--innerwrap__py);
+}
+
+.header-wrap__inner:not([class*="pxy"], [class*="py-"], [class*="pb-"]) {
+  padding-bottom: var(--innerwrap__py);
+}
+
+.header-wrap__inner.full {
+  width: 100%;
+}
+
+.header-wrap__inner.slim {
+  width: var(--innerwrap__width--slim);
+}
+
+.header-wrap__inner.slimmer {
+  width: var(--innerwrap__width--slimmer);
+}
+
+.header-wrap__inner.slim-af {
+  width: var(--innerwrap__width--slim-af);
+}
+
+/* ***** Text columns */
+
+.text-2-columns {
+  column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  column-gap: 1.875em;
+  -webkit-column-gap: 1.875em;
+  -moz-column-gap: 1.875em;
+  -ms-column-gap: 1.875em;
+  margin: 1.875em 0;
+}
+
+.text-3-columns {
+  column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  column-gap: 2em;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  -ms-column-gap: 2em;
+}
+
+/* ***** Text overflow */
+
+.nobreak {
+  white-space: nowrap;
+}
+
+.shorten {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Centered Text */
+
+.centered-text,
+.centered-text * {
+  text-align: center;
+}
+
+/* ***** Centered image */
+
+.centered-image-wrap {
+  width: 100%;
+  margin: auto;
+  height: 28em;
+  position: relative;
+  overflow: hidden;
+  /* fallback for bg-img usage */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.centered-image-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.centered-image-wrap.full img {
+  width: 100%;
+}
+
+/* ***** Covered image wrap */
+
+.covered-image-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.covered-image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* ***** Contained image wrap */
+
+.contained-image-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.contained-image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+/**** ie-browser fixes */
+
+.browser-ie .covered-image-wrap,
+.browser-edge .covered-image-wrap {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ***** Vertical centered */
+
+.centered--vertical {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*
+-----------------------------------------------------------------------------
+
+02. Footer
+
+-----------------------------------------------------------------------------
+*/
+
+.footer-wrap {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: auto;
+  color: var(--color__light);
+  background: var(--color__accent);
+}
+
+.footer-wrap__inner {
+  padding: 2em;
+}
+
+.footer-wrap a,
+.footer-wrap a:hover {
+  color: var(--color__light);
+}
+
+/* MINI-DESKTOP //////////////////////////////////////////////////////////////// */
+/*
+01. Presets
+02. Footer
+*/
+
+@media only screen and (max-width: 80em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. Presets
+
+  -----------------------------------------------------------------------------
+  */
+
+  /* MISC *******************************************************************************/
+
+  html,
+  body {
+    font-size: min(1em, 1.8vw);
+  }
+}
+
+/* TABLET //////////////////////////////////////////////////////////////// */
+/*
+01. Presets
+02. Footer
+*/
+
+@media only screen and (max-width: 55em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. Presets
+
+  -----------------------------------------------------------------------------
+  */
+
+  /* MISC *******************************************************************************/
+
+  html,
+  body {
+    font-size: min(1em, 2.25vw);
+  }
+
+  /* LAYOUT *******************************************************************************/
+
+  .main__inner {
+    margin-top: 0;
+  }
+
+  /*
+  -----------------------------------------------------------------------------
+
+  02. Footer
+
+  -----------------------------------------------------------------------------
+  */
+
+  footer.site-footer {
+    margin-bottom: 6rem;
+  }
+}
+
+/* MOBILE //////////////////////////////////////////////////////////////// */
+/*
+01. Presets
+02. Footer
+*/
+
+@media only screen and (max-width: 36em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. Presets
+
+  -----------------------------------------------------------------------------
+  */
+
+  /* MISC *******************************************************************************/
+
+  :root {
+    /* ***** Font Sizes */
+    --fsize__p: 1.25rem;
+    --fsize__s: 1rem;
+
+    /* ***** Icon Sizes */
+    --isize__small: 1rem;
+    --isize__regular: 1.75rem;
+    --isize__large: 5rem;
+  }
+
+  html,
+  body {
+    font-size: min(1em, 2.325vw);
+  }
+
+  /* LAYOUT *******************************************************************************/
+
+  .main__inner {
+    margin-top: 0;
+    /* Space to Navigation */
+  }
+
+  /**/
+
+  .text-2-columns {
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+  }
+
+  .text-3-columns {
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+  }
+
+  /*
+  -----------------------------------------------------------------------------
+
+  02. Footer
+
+  -----------------------------------------------------------------------------
+  */
+}
+
+/* MINI-MOBILE //////////////////////////////////////////////////////////////// */
+/*
+01. Presets
+02. Footer
+*/
+
+@media only screen and (max-width: 27em) {
+  /*
+  -----------------------------------------------------------------------------
+
+  01. Presets
+
+  -----------------------------------------------------------------------------
+  */
+
+  /* MISC *******************************************************************************/
+
+  :root {
+    /* ***** Font Sizes */
+    --fsize__p: 1.5rem;
+    --fsize__s: 1.175rem;
+  }
+
+  html,
+  body {
+    font-size: min(1em, 2.375vw);
+  }
+
+  /*
+  -----------------------------------------------------------------------------
+
+  02. Footer
+
+  -----------------------------------------------------------------------------
+  */
+}
+
+/* SPECIAL BREAKPOINTS //////////////////////////////////////////////////////// */
+
+/* Printer */
+
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
+  header,
+  nav,
+  footer {
+    display: none;
+  }
+
+  img {
+    max-width: 31.25em;
+    visibility: visible !important;
+  }
+}

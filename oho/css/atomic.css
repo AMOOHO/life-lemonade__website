@@ -1,0 +1,190 @@
+/* Atomic Styles */
+
+/* ///////////////////// */
+
+/* ***** Font Colors */
+
+/* --- Default */
+
+.fcolor--dark {
+  color: var(--color__dark);
+}
+
+.fcolor--light {
+  color: var(--color__light);
+}
+
+/* --- Corporate */
+
+.fcolor--primary {
+  color: var(--color__primary);
+}
+
+.fcolor--secondary {
+  color: var(--color__secondary);
+}
+
+.fcolor--accent {
+  color: var(--color__accent);
+}
+
+/* --- System */
+
+.fcolor--success {
+  color: var(--color__success);
+}
+
+.fcolor--warning {
+  color: var(--color__warning);
+}
+
+.fcolor--error {
+  color: var(--color__error);
+}
+
+/* ***** Background Colors*/
+
+/* --- Default */
+
+.bg--dark {
+  background-color: var(--color__dark);
+}
+
+.bg--light {
+  background-color: var(--color__light);
+}
+
+/* --- Corporate */
+
+.bg--primary {
+  background-color: var(--color__primary);
+}
+
+.bg--secondary {
+  background-color: var(--color__secondary);
+}
+
+.bg--accent {
+  background-color: var(--color__accent);
+}
+
+/* --- System */
+
+.bg--success {
+  background-color: var(--color__success);
+}
+
+.bg--warning {
+  background-color: var(--color__warning);
+}
+
+.bg--error {
+  background-color: var(--color__error);
+}
+
+/* ***** Borders */
+
+.radius--small {
+  border-radius: var(--radius__small);
+}
+
+.radius--regular {
+  border-radius: var(--radius__regular);
+}
+
+.radius--large {
+  border-radius: var(--radius__large);
+}
+
+/* ***** Overflows */
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
+/* ***** Display */
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* ***** Width */
+
+.w-full {
+  width: 100%;
+}
+
+/* ***** Height */
+
+.h-full {
+  height: 100%;
+}
+
+/* ***** Fixed Ratios */
+
+[class*="ratio--"] {
+  position: relative;
+  height: auto;
+}
+
+[class*="ratio--"]::before {
+  display: block;
+  content: "";
+  width: 100%;
+}
+
+[class*="ratio--"] > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio--1_1::before {
+  padding-top: calc(1 / 1 * 100%);
+}
+
+.ratio--3_2::before {
+  padding-top: calc(2 / 3 * 100%);
+}
+
+.ratio--2_3::before {
+  padding-top: calc(3 / 2 * 100%);
+}
+
+.ratio--3_4::before {
+  padding-top: calc(4 / 3 * 100%);
+}
+
+.ratio--4_3::before {
+  padding-top: calc(3 / 4 * 100%);
+}
+
+.ratio--5_2::before {
+  padding-top: calc(2 / 5 * 100%);
+}
+
+.ratio--2_5::before {
+  padding-top: calc(5 / 2 * 100%);
+}
+
+.ratio--16_9::before {
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.ratio--9_16::before {
+  padding-top: calc(16 / 9 * 100%);
+}
+
+.ratio--16_10::before {
+  padding-top: calc(10 / 16 * 100%);
+}
+
+.ratio--10_16::before {
+  padding-top: calc(16 / 10 * 100%);
+}

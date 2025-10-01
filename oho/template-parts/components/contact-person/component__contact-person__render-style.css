@@ -1,0 +1,11 @@
+/*
+* Add additional styles to the Contact person block render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+
+.render-wrap.block--contact-person h2 {
+  padding: 0 !important;
+}
+
+.render-wrap.block--contact-person .grid-wrap {
+  align-items: flex-start;
+}

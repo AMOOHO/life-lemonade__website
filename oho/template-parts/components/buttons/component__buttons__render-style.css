@@ -1,0 +1,22 @@
+/*
+* Add additional styles to the buttons render template,
+additional you can use the backend loades styles in css/default.css */
+
+.render-wrap.block--buttons {
+  text-align: center;
+}
+
+.render-wrap.block--buttons .buttons-wrap {
+  margin-top: -10px;
+}
+
+.render-wrap.block--buttons .button {
+  margin: 0 5px 0;
+  border: 0px !important;
+  border-radius: 0;
+  text-align: center;
+  padding: 10px 20px;
+  background: #e4e4e4 !important;
+  margin-top: 10px;
+  color: #787878 !important;
+}

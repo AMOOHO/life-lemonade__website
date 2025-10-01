@@ -1,0 +1,221 @@
+# Copyright (C) 2023 OHO Design
+msgid ""
+msgstr ""
+
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2022-06-08 16:00+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Last-Translator:\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+
+# Advanced Cookie-Banner
+msgid "Cookie-Einstellungen"
+
+# Advanced Cookie-Banner
+msgid "Ein"
+
+# Advanced Cookie-Banner
+msgid "Aus"
+
+# Advanced Cookie-Banner
+msgid "Cookie Banner"
+
+# Advanced Cookie-Banner
+msgid "Eigentümer der Website"
+
+# Advanced Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in den globalen Cookie-Einstellungen ausgewählt wurden."
+
+# Advanced Cookie-Banner
+msgid "Nur Essenzielle"
+
+# Advanced Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies."
+
+# Advanced Cookie-Banner
+msgid "Alle umschalten"
+
+# Advanced Cookie-Banner
+msgid "Essenziell"
+
+# Advanced Cookie-Banner
+msgid "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich."
+
+# Advanced Cookie-Banner
+msgid "Statistiken"
+
+# Advanced Cookie-Banner
+msgid "Statistik Cookies erfassen Informationen anonym. Diese Informationen helfen uns zu verstehen, wie unsere Besucher unsere Website nutzen."
+
+# Advanced Cookie-Banner
+msgid "Marketing"
+
+# Advanced Cookie-Banner
+msgid "Marketing-Cookies speichern Informationen über besuchte Websites von Nutzern. Diese Daten werden verwendet, um personalisierte Werbung anzuzeigen, die auf die Interessen der Nutzer zugeschnitten ist."
+
+# Advanced Cookie-Banner
+msgid "Medien"
+
+# Advanced Cookie-Banner
+msgid "Inhalte von Videoplattformen und Social Media Plattformen werden standardmässig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr."
+
+# Advanced Cookie-Banner
+msgid "Cookie von Facebook, das für Website-Analysen, Ad-Targeting und Anzeigenmessung verwendet wird."
+
+# Advanced Cookie-Banner
+msgid "Wir nutzen Google Analytics, um die Besucherzahlen unserer Webseite zu messen."
+
+# Advanced Cookie-Banner
+msgid "Wird zum Entsperren von Youtube-Inhalten verwendet."
+
+# Advanced Cookie-Banner
+msgid "Wird zum Entsperren von Google Maps-Inhalten verwendet.
+
+# Advanced Cookie-Banner
+msgid "Name"
+
+# Advanced Cookie-Banner
+msgid "Cookie-Name"
+
+# Advanced Cookie-Banner
+msgid "Anbieter"
+
+# Advanced Cookie-Banner
+msgid "Zweck"
+
+# Advanced Cookie-Banner
+msgid "Laufzeit"
+
+# Advanced Cookie-Banner
+msgid "Datenschutz"
+
+# Advanced Cookie-Banner
+msgid "Statistiken"
+
+# Advanced Cookie-Banner
+msgid "Details anzeigen"
+
+# Advanced Cookie-Banner
+msgid "1 Jahr"
+
+# Advanced Cookie-Banner
+msgid "2 Jahre"
+
+# Advanced Cookie-Banner
+msgid "6 Monate"
+
+# Advanced Cookie-Banner
+msgid "Details ausblenden"
+
+# Advanced Cookie-Banner
+msgid "Alle akzeptieren"
+
+# Advanced Cookie-Banner
+msgid "akzeptieren"
+
+# Advanced Cookie-Banner
+msgid "Individuelle Datenschutzeinstellungen"
+
+# Advanced Cookie-Banner
+msgid "Datenschutzerklärung"
+
+# Advanced Cookie-Banner
+msgid "Impressum"
+
+# Advanced Cookie-Banner
+msgid "Speichern"
+
+# Advanced Cookie-Banner
+msgid "Datenschutzeinstellungen"
+
+# Advanced Cookie-Banner
+msgid "zurück"
+
+# Advanced Cookie-Banner
+msgid "nur essentielle Cookies akzeptieren"
+
+# Advanced Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies. Sie können Ihre Einwilligung zu ganzen Kategorien geben oder sich weitere Informationen anzeigen lassen und so nur bestimmte Cookies auswählen."
+
+# Advanced Cookie-Banner
+msgid "Wir verwenden Cookies auf unserer Website."
+
+# Advanced Cookie-Banner
+msgid "Einige von ihnen sind essenziell, während andere uns helfen die Website für dich zu optimieren."
+
+# Advanced Cookie-Banner
+msgid "Einstellungen anpassen"
+
+# Simple Cookie-Banner
+msgid "Durch die weitere Nutzung dieser Webseite stimmen Sie der Verwendung von Cookies zu."
+
+# Simple Cookie-Banner
+msgid "Durch die weitere Nutzung dieser Webseite stimmst Du der Verwendung von Cookies zu."
+
+# Simple Cookie-Banner
+msgid "Einverstanden"
+
+# Simple Cookie-Banner
+msgid "Weitere Infos"
+
+# Cookie-Banner
+msgid "Name"
+
+# Cookie-Banner
+msgid "Cookie-Name"
+
+# Cookie-Banner
+msgid "Anbieter"
+
+# Cookie-Banner
+msgid "Zweck"
+
+# Cookie-Banner
+msgid "Datenschutz"
+
+# Cookie-Banner
+msgid "Laufzeit"
+
+# Cookie-Banner
+msgid "Akzeptieren"
+
+# Cookie-Banner
+msgid "Cookie-Informationen anzeigen"
+
+# Cookie-Banner
+msgid "Cookie-Informationen ausblenden"
+
+# Cookie-Banner
+msgid "Ein"
+
+# Cookie-Banner
+msgid "Aus"
+
+# Cookie-Banner
+msgid "Essentiell"
+
+# Cookie-Banner
+msgid "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich."
+
+# Cookie-Banner
+msgid "Eigentümer der Website"
+
+# Cookie-Banner
+msgid "1 Jahr"
+
+# Cookie-Banner
+msgid "2 Jahre"
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in der Cookie Box von OHO Cookie ausgewählt wurden."
+
+# Cookie-Banner
+msgid "Marketing"
+
+# Cookie-Banner
+msgid "Wir nutzen Google Analytics, um die Besucherzahlen unserer Webseite zu messen."

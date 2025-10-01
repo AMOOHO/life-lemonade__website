@@ -1,0 +1,115 @@
+/*
+*––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+*  Copyright © 2025 OHO Design GmbH
+*  Do not use this software or replicate without permission of the owner.
+*––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/**
+*   Use this file to add custom admin styles
+*   to keep the backend beautiful :)
+*/
+
+/* BASE SETUP ////////////////////////////////////////////////////////////////*/
+
+strong,
+b {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #000;
+  hyphens: none;
+}
+
+/* overwrite default img styles */
+
+.wp-admin img {
+  max-width: auto;
+  width: auto;
+}
+
+/* WORDPRESS MANIPULATION ////////////////////////////////////////////////////////////////
+*
+*  Do not add too much styles here because things may change
+*  in future wordpress versions
+*/
+
+/*** Dashboard */
+#dashboard-widgets .postbox-container:nth-of-type(even) {
+  width: 38%;
+}
+
+#dashboard-widgets .postbox-container:nth-of-type(odd) {
+  width: 62%;
+}
+
+/*** Toolbar */
+.wp-toolbar,
+.wp-admin,
+#wpadminbar a {
+  letter-spacing: 0.03em;
+}
+
+/*** Admin Menu */
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap {
+  width: 10.9375em;
+}
+
+#wpcontent,
+#wpfooter {
+  margin-left: 10.9375em;
+}
+
+#adminmenu .wp-submenuli.current a,
+#adminmenu .wp-submenu li.current a:hover,
+#adminmenu .current div.wp-menu-image:before {
+  color: #000 !important;
+}
+
+#adminmenu li.menu-top:hover div.wp-menu-image:before,
+#adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
+  color: #000 !important;
+}
+
+/**/
+#adminmenu .dashicons-dashboard:before {
+  font-family: "Custom Dashicons Backendbranding";
+  content: "\eb3f";
+}
+
+#adminmenu .dashicons-admin-media:before {
+  font-family: "Custom Dashicons Backendbranding";
+  content: "\edd9";
+}
+
+#adminmenu .dashicons-admin-page:before {
+  font-family: "Custom Dashicons Backendbranding";
+  content: "\ede9";
+}
+
+.dashicons-admin-users:before {
+  font-family: "Custom Dashicons Backendbranding";
+  content: "\ea8b";
+}
+
+/*** Media Upload fields */
+
+.media-sidebar .setting[data-setting="title"],
+.media-sidebar .setting[data-setting="caption"],
+.media-sidebar .setting[data-setting="description"],
+.acf-gallery-side tr[data-name="title"],
+.acf-gallery-side tr[data-name="caption"],
+.acf-gallery-side tr[data-name="description"],
+.acf-gallery-side #alt-text-description {
+  display: none !important;
+}
+
+/*** Law Tab Icons */
+
+.acf-tab-button[data-key="field_5ef495086b333"]::after,
+.acf-tab-button[data-key="field_5ef495946b336"]::after {
+  font-family: "Custom Dashicons Backendbranding";
+  content: " \eb7b";
+}

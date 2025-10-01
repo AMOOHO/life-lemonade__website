@@ -1,0 +1,4 @@
+[30-Sep-2025 13:46:47 Europe/Zurich] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/ohostudi/public_html/dev/bp-dev.ohodesign.ch/wp-content/themes/oho/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/ohostudi/public_html/dev/bp-dev.ohodesign.ch/wp-content/themes/oho/index.php on line 16

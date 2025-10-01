@@ -1,0 +1,200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3\n"
+
+# Cookie-Banner
+msgid "1 Jahr"
+msgstr "1 year"
+
+# Cookie-Banner
+msgid "2 Jahre"
+msgstr "2 years"
+
+# Cookie-Banner
+msgid "6 Monate"
+msgstr "6 months"
+
+# Cookie-Banner
+msgid "Akzeptieren"
+msgstr "Accept"
+
+# Cookie-Banner
+msgid "akzeptieren"
+msgstr "accept"
+
+# Cookie-Banner
+msgid "Alle akzeptieren"
+msgstr "Accept all"
+
+# Cookie-Banner
+msgid "Alle umschalten"
+msgstr "Toggle all"
+
+# Cookie-Banner
+msgid "Anbieter"
+msgstr "Supplier"
+
+# Cookie-Banner
+msgid "Aus"
+msgstr "Off"
+
+# Cookie-Banner
+msgid "Cookie Banner"
+msgstr "Cookie Banner"
+
+# Cookie-Banner
+msgid "Cookie von Facebook, das für Website-Analysen, Ad-Targeting und Anzeigenmessung verwendet wird."
+msgstr "Cookie from Facebook used for website analytics, ad targeting and ad measurement."
+
+# Cookie-Banner
+msgid "Cookie-Einstellungen"
+msgstr "Cookie settings"
+
+# Cookie-Banner
+msgid "Cookie-Informationen anzeigen"
+msgstr "Show cookie information"
+
+# Cookie-Banner
+msgid "Cookie-Informationen ausblenden"
+msgstr "Hide cookie information"
+
+# Cookie-Banner
+msgid "Cookie-Name"
+msgstr "Cookie name"
+
+# Cookie-Banner
+msgid "Datenschutz"
+msgstr "Data protection"
+
+# Cookie-Banner
+msgid "Datenschutzeinstellungen"
+msgstr "Privacy settings"
+
+# Cookie-Banner
+msgid "Datenschutzerklärung"
+msgstr "Privacy policy"
+
+# Cookie-Banner
+msgid "Details anzeigen"
+msgstr "Show details"
+
+# Cookie-Banner
+msgid "Details ausblenden"
+msgstr "Hide details"
+
+# Cookie-Banner
+msgid "Eigentümer der Website"
+msgstr "Website owner"
+
+# Cookie-Banner
+msgid "Ein"
+msgstr "On"
+
+# Cookie-Banner
+msgid "Einige von ihnen sind essenziell, während andere uns helfen die Website für dich zu optimieren."
+msgstr "Some of them are essential, while others help us optimize the website for you."
+
+# Cookie-Banner
+msgid "Einstellungen anpassen"
+msgstr "Customize settings"
+
+# Cookie-Banner
+msgid "Essentiell"
+msgstr "Essential"
+
+# Cookie-Banner
+msgid "Essenziell"
+msgstr "Essential"
+
+# Cookie-Banner
+msgid "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich."
+msgstr "Essential cookies enable basic functions and are necessary for the proper functioning of the website."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies."
+msgstr "Here you can find an overview of all cookies used."
+
+# Cookie-Banner
+msgid "Hier finden Sie eine Übersicht über alle verwendeten Cookies. Sie können Ihre Einwilligung zu ganzen Kategorien geben oder sich weitere Informationen anzeigen lassen und so nur bestimmte Cookies auswählen."
+msgstr "Here you will find an overview of all cookies used. You can give your consent to entire categories or display further information and thus select only certain cookies."
+
+# Cookie-Banner
+msgid "Individuelle Datenschutzeinstellungen"
+msgstr "Individual privacy settings"
+
+# Cookie-Banner
+msgid "Inhalte von Videoplattformen und Social Media Plattformen werden standardmässig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr."
+msgstr "Content from video platforms and social media platforms is blocked by default. If cookies from external media are accepted, access to this content no longer requires manual consent."
+
+# Cookie-Banner
+msgid "Laufzeit"
+msgstr "Runtime"
+
+# Cookie-Banner
+msgid "Marketing"
+msgstr "Marketing"
+
+# Cookie-Banner
+msgid "Marketing-Cookies speichern Informationen über besuchte Websites von Nutzern. Diese Daten werden verwendet, um personalisierte Werbung anzuzeigen, die auf die Interessen der Nutzer zugeschnitten ist."
+msgstr "Marketing cookies store information about websites visited by users. This data is used to display personalized advertising tailored to the interests of users."
+
+# Cookie-Banner
+msgid "Medien"
+msgstr "Media"
+
+# Cookie-Banner
+msgid "nur essentielle Cookies akzeptieren"
+msgstr "accept only essential cookies"
+
+# Cookie-Banner
+msgid "Nur Essenzielle"
+msgstr "Essentials only"
+
+# Cookie-Banner
+msgid "Speichern"
+msgstr "Save"
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in den globalen Cookie-Einstellungen ausgewählt wurden."
+msgstr "Saves the settings of the visitors selected in the global cookie settings."
+
+# Cookie-Banner
+msgid "Speichert die Einstellungen der Besucher, die in der Cookie Box von OHO Cookie ausgewählt wurden."
+msgstr "Saves the settings of the visitors selected in the cookie box of OHO Cookie."
+
+# Cookie-Banner
+msgid "Statistik Cookies erfassen Informationen anonym. Diese Informationen helfen uns zu verstehen, wie unsere Besucher unsere Website nutzen."
+msgstr "Statistics cookies collect information anonymously. This information helps us understand how our visitors use our website."
+
+# Cookie-Banner
+msgid "Statistiken"
+msgstr "Statistics"
+
+# Cookie-Banner
+msgid "Wir nutzen Google Analytics, um die Besucherzahlen unserer Webseite zu messen."
+msgstr "We use Google Analytics to measure the number of visitors to our website."
+
+# Cookie-Banner
+msgid "Wir verwenden Cookies auf unserer Website."
+msgstr "We use cookies on our website."
+
+#: Kontaktformular Meldung bei Erfolg
+msgid "Wir werden sobald als möglich mit Ihnen Kontakt aufnehmen."
+msgstr "We will contact you as soon as possible."
+
+# Cookie-Banner
+msgid "Wird zum Entsperren von Youtube-Inhalten verwendet."
+msgstr "Used to unlock Youtube content."
+
+# Cookie-Banner
+msgid "Zweck"
+msgstr "Purpose"

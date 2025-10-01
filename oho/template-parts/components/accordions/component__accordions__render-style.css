@@ -1,0 +1,36 @@
+/*
+* Add additional styles to the accordions block render template,
+additional you can use the backend loades styles in css/default.css */
+
+.render-wrap.block--accordions .accordions {
+  width: 100%;
+  height: auto;
+}
+
+.render-wrap.block--accordions .accordion-wrap {
+  position: relative;
+  display: block;
+  padding: 15px 55px 15px 0px;
+  border-bottom: 1px solid #787878;
+}
+
+.render-wrap.block--accordions .accordion-wrap:last-child {
+  border-bottom: none;
+}
+
+.render-wrap.block--accordions .accordion-wrap::after {
+  font-family: "Icons Base";
+  content: "\0045";
+  position: absolute;
+  right: 19px;
+  top: 11px;
+  font-size: 20px;
+  color: #b7b7b7;
+}
+
+.render-wrap.block--accordions .accordion-wrap h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 !important;
+}

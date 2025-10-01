@@ -1,0 +1,12 @@
+/*
+* Add additional styles to the team block render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+
+.render-wrap.block--team .vakanz-box,
+.render-wrap.block--team .covered-image-wrap {
+  width: 100%;
+}
+
+.render-wrap.block--team .grid-wrap {
+  align-items: flex-start;
+}
