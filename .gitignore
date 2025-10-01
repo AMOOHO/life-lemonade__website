@@ -1,0 +1,18 @@
+# OS FILES
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# IDE SPECIFIC (TOP SECRET)
+.remote-sync.json
+.atom-sftp-sync.json
+sftp.json
+.vscode/
+
+# OTHERS
+*.log
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+.github/
