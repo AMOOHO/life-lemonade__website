@@ -60,6 +60,7 @@ REPLACE-GUIDE:
   --fsize__s: 1.164375rem;
   --fsize__xs: 0.875rem;
   --fsize__button: 1.216875rem;
+  --fsize__teaser: 1.51375rem;
   --fsize__nav: 1.51375rem;
 
   /* ***** Icon Sizes */
@@ -319,6 +320,10 @@ address {
   font-size: var(--fsize__xs);
   color: var(--color__dark);
   text-decoration: none;
+}
+
+.text-teaser {
+  font-size: var(--fsize__teaser);
 }
 
 a,

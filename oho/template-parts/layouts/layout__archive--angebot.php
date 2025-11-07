@@ -48,16 +48,24 @@ get_header();
         <div class="grid-wrap gap-xl-2">
           <?php while ($query->have_posts()) : $query->the_post();
             $color = get_field('colorpicker');
+            $teaserTitle = get_field('teaser-title');
+            $teaserSubtitle = get_field('teaser-subtitle');
             $teaserText = get_field('teaser-text');
           ?>
             <div class="post-item box box-xl-4 box-sm-6">
               <a href="<?php the_permalink(); ?>">
                 <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
                   <div class="mb-xl-4">
-                    <h3 class="post-title h2 mt0 mb05 factor-a-bold-ss01"><?php the_title(); ?></h3>
-                    <p class="my0"><?= $teaserText; ?></p>
+                    <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
+                    <?php if ($teaserSubtitle): ?>
+                      <h3 class="mt05 mb0 factor-a-bold-ss01"><?= $teaserSubtitle; ?></h3>
+                    <?php endif; ?>
+                    <div class="mt25"></div>
+                    <p class="text-teaser my0"><?= mb_substr($teaserText, 0, 500) . (mb_strlen($teaserText) > 500 ? '...' : ''); ?></p>
                   </div>
-                  <span class="button button--themed block w-fit">mehr erfahren</span>
+                  <div>
+                    <span class="button button--themed block w-fit">mehr erfahren</span>
+                  </div>
                 </div>
               </a>
             </div>

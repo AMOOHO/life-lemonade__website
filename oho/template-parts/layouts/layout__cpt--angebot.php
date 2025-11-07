@@ -21,7 +21,7 @@ get_header();
         <span class="breadcrumb-separator mx-xl-05"><span class="icon-arrow-twisted isize-sm"></span></span>
         <span class="breadcrumb-current p"><?= get_the_title(); ?></span>
       </nav>
-      <h1 class="my0 fcolor--dark factor-a-bold-ss01"><?= get_the_title(); ?></h1>
+      <h1 class="my0 fcolor--dark factor-a-bold-ss01 pr-xl-4"><?= get_the_title(); ?></h1>
     </div>
   </div>
 </header>
@@ -73,12 +73,22 @@ get_header();
       if ($random_query->have_posts()) :
         while ($random_query->have_posts()) : $random_query->the_post();
           $color = get_field('colorpicker');
+          $teaserTitle = get_field('teaser-title');
+          $teaserSubtitle = get_field('teaser-subtitle');
+          $teaserText = get_field('teaser-text');
       ?>
           <div class="post-item box box-xl-4 box-sm-6">
             <a href="<?php the_permalink(); ?>">
               <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pb-xl-25 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
-                <h3 class="post-title h2 mt0 mb05 factor-a-bold-ss01"><?php the_title(); ?></h3>
-                <span class="button button--themed block w-fit">mehr erfahren</span>
+                <div>
+                  <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
+                  <?php if ($teaserSubtitle): ?>
+                    <h3 class="post-title mt05 mb0 factor-a-bold-ss01"><?= $teaserSubtitle; ?></h3>
+                  <?php endif; ?>
+                </div>
+                <div class="mt25">
+                  <span class="button button--themed block w-fit">mehr erfahren</span>
+                </div>
               </div>
             </a>
           </div>

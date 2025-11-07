@@ -314,7 +314,8 @@
     aspect-ratio: 16 / 10;
   }
   .ratio--angebot-teaser {
-    aspect-ratio: 608 / 586;
+    /* aspect-ratio: 608 / 586; */
+    aspect-ratio: 608 / 670;
   }
 
   /* Optional: padding entfernen */

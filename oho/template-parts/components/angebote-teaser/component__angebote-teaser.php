@@ -29,14 +29,20 @@ $offersPosts = $component['offers'] ?? get_sub_field('offers');
         $title = esc_html($title);
       }
       $color = get_field('colorpicker');
+      $teaserTitle = get_field('teaser-title');
+      $teaserSubtitle = get_field('teaser-subtitle');
       $teaserText = get_field('teaser-text');
     ?>
-      <div class="angebot-item ratio--angebot-teaser box box-xl-4 box-md-6 box-sm-12">
+      <div class="angebot-item box box-xl-4 box-md-6 box-sm-12">
         <a href="<?php the_permalink(); ?>">
-          <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
+          <div class="flex-wrap dir-col space-between-xl pxy-xl-3 pr-xl-5 pb-xl-25 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
             <div class="mb-xl-4">
-              <h3 class="post-title h2 mt0 mb05 factor-a-bold-ss01"><?= $title; ?></h3>
-              <p class="my0"><?= mb_substr($teaserText, 0, 500) . (mb_strlen($teaserText) > 500 ? '...' : ''); ?></p>
+              <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
+              <?php if ($teaserSubtitle): ?>
+                <h3 class="mt05 mb0 factor-a-bold-ss01"><?= $teaserSubtitle; ?></h3>
+              <?php endif; ?>
+              <div class="mt25"></div>
+              <p class="text-teaser my0"><?= mb_substr($teaserText, 0, 500) . (mb_strlen($teaserText) > 500 ? '...' : ''); ?></p>
             </div>
             <div>
               <span class="button button--themed block w-fit">mehr erfahren</span>
