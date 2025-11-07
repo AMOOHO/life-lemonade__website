@@ -46,24 +46,24 @@ additional you can use the backend loades styles in css/default.css */
   align-items: center;
 }
 
-.render-wrap .centered-text h1,
-.render-wrap .centered-text h2,
-.render-wrap .centered-text h3,
-.render-wrap .centered-text h4,
-.render-wrap .centered-text h5,
-.render-wrap .centered-text h6,
-.render-wrap .centered-text p,
-.render-wrap .centered-text span,
-.render-wrap .centered-text a,
-.render-wrap h1.centered-text,
-.render-wrap h2.centered-text,
-.render-wrap h3.centered-text,
-.render-wrap h4.centered-text,
-.render-wrap h5.centered-text,
-.render-wrap h6.centered-text,
-.render-wrap p.centered-text,
-.render-wrap span.centered-text,
-.render-wrap a.centered-text {
+.render-wrap .text-center h1,
+.render-wrap .text-center h2,
+.render-wrap .text-center h3,
+.render-wrap .text-center h4,
+.render-wrap .text-center h5,
+.render-wrap .text-center h6,
+.render-wrap .text-center p,
+.render-wrap .text-center span,
+.render-wrap .text-center a,
+.render-wrap h1.text-center,
+.render-wrap h2.text-center,
+.render-wrap h3.text-center,
+.render-wrap h4.text-center,
+.render-wrap h5.text-center,
+.render-wrap h6.text-center,
+.render-wrap p.text-center,
+.render-wrap span.text-center,
+.render-wrap a.text-center {
   text-align: center;
 }
 

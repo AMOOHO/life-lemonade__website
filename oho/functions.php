@@ -33,6 +33,43 @@ add_filter('body_class', function ($classes) {
   // 	$classes[] = 'wuup-wuup';
   // }
 
+
+  if (is_front_page() || is_page(1079) /* Contact */) {
+    $classes[] = 'theme--lemon';
+  } elseif (is_page(1077) /* Portrait */) {
+    $classes[] = 'theme--mint';
+  } elseif (is_singular('angebot')) {
+    $color = get_field('colorpicker');
+    $allowed_colors = ['lemon', 'mint', 'grape', 'strawberry', 'berry'];
+    if (in_array($color['slug'], $allowed_colors)) {
+      $classes[] = 'theme--' . $color['slug'];
+    } else {
+      $classes[] = 'theme--default';
+    }
+    $classes[] = 'bg--offwhite';
+  } elseif (is_singular('blog')) {
+    $color = get_field('colorpicker');
+    $allowed_colors = ['lemon', 'mint', 'grape', 'strawberry', 'berry'];
+    if (in_array($color['slug'], $allowed_colors)) {
+      $classes[] = 'theme--' . $color['slug'];
+    } else {
+      $classes[] = 'theme--default';
+    }
+    $classes[] = 'bg--offwhite--yellow';
+  } else {
+    $classes[] = 'theme--default';
+    $classes[] = 'bg--offwhite';
+  }
+
+  if (is_page(1077) /* Portrait */) {
+    $classes[] = 'bg--primary';
+  }
+
+  if (is_page(1079) /* Contact */) {
+    $classes[] = 'contact';
+  }
+
+
   return $classes;
 });
 
@@ -107,6 +144,11 @@ function oho_custom_menu_order($menu_ord) {
     'edit-comments.php', // Comments
     'upload.php', // Media
     'edit.php?post_type=page', // Pages
+    'startseite', // Startseite
+    'portrait', // Portrait
+    'edit.php?post_type=blog', // Blog
+    'edit.php?post_type=angebot', // Angebot
+    'kontakt', // Kontakt
     'separator2', // Second separator
     'themes.php', // Appearance
     'plugins.php', // Plugins
@@ -210,6 +252,50 @@ function ajax_load_more_posts() {
 };
 add_action('wp_ajax_nopriv_ajax_load_more_posts', 'ajax_load_more_posts');
 add_action('wp_ajax_ajax_load_more_posts', 'ajax_load_more_posts');
+
+
+
+/**
+ * Get all terms which are actually used by posts
+ * 
+ * Wordperss does not provide a function for this by default
+ * The param "hide_empty" only hides terms which are not used by any post
+ * but if a term is used on a draft / private post, it will not be hidden
+ * 
+ * @param string $taxonomy taxonomy slug
+ * @param array $queryArgs WP_Query arguments
+ * @return array $terms array of term objects
+ */
+
+function get_used_terms($taxonomy, $queryArgs = []) {
+
+  // Override arguments 
+  $queryArgs['posts_per_page'] = -1;    // check all posts
+  $queryArgs['fields']         = 'ids'; // only return post IDs (faster query)
+
+  // Create a new WP_Query instance
+  $query = new WP_Query($queryArgs);
+
+  // Get the post IDs
+  $post_ids = $query->posts;
+
+  // Check if there are posts
+  if (empty($post_ids)) {
+    return [];
+  }
+
+  // Get terms associated with the post IDs
+  $terms = wp_get_object_terms($post_ids, $taxonomy, ['fields' => 'all']);
+
+  // Check for errors
+  if (is_wp_error($terms)) {
+    return [];
+  }
+
+  // Return the terms
+  return $terms;
+}
+
 
 
 
@@ -341,6 +427,25 @@ add_filter('the_title', 'the_title_trim');
 
 /***** REST API */
 
+// Register API endpoints
+add_action('rest_api_init', function () {
+
+  // Dynamic route to accept different post types
+  register_rest_route('fma-load-more', '/(?P<post_type>[\w-]+)', [
+    'methods'  => 'GET',
+    'callback' => 'fma_load_more',
+    'args' => [
+      'post_type' => [
+        'validate_callback' => function ($param, $request, $key) {
+          return post_type_exists($param);
+        },
+        'sanitize_callback' => 'sanitize_text_field'
+      ],
+    ],
+  ]);
+});
+
+
 /**
  * Disable the REST API for the public (calls are permitted only if a user is logged in)
  * @source https://developer.wordpress.org/rest-api/frequently-asked-questions/#can-i-disable-the-rest-api
@@ -350,12 +455,99 @@ add_filter('rest_authentication_errors', function ($result) {
     return $result; // return if authentication was done previousely
   }
 
-  if (!is_user_logged_in()) {
+  // list of allowed route namespaces / endpoints
+  $allowedEndpoints = [
+    "/fma-load-more/blog",
+  ];
+
+  global $wp;
+  if (!in_array(ltrim($wp->request, 'wp-json'), $allowedEndpoints) && !is_user_logged_in()) {
     return new WP_Error('rest_not_logged_in', __('You are not currently logged in.'), array('status' => 401));
   }
-
   return $result;
 });
+
+function fma_load_more(WP_REST_Request $request) {
+
+  // default params
+  $existing_ids = [];
+
+  // check id params
+  if (!empty($request->get_param('existing_ids'))) {
+    $existing_ids = $request->get_param('existing_ids');
+
+    // convert string to array
+    $existing_ids = !is_array($existing_ids) ? explode(',', $existing_ids) : $existing_ids;
+    $existing_ids = array_map('intval', $existing_ids);
+  }
+
+  // check category filter param
+  if (!empty($request->get_param('terms') && is_array($request->get_param('terms')))) {
+    $tax_filter = $request->get_param('terms');
+    $tax_filter = array_map('esc_attr', $tax_filter);;
+  }
+
+  // get post type from request
+  $post_type = $request->get_param('post_type');
+
+  // set up WP query
+  $args = [
+    'post_type'        => $post_type,
+    'posts_per_page'   => 6,
+    'orderby'          => 'date',
+    'order'            => 'DESC',
+    'post_status'      => 'publish',
+    'has_password'     => false,
+    'post__not_in'     => $existing_ids,
+  ];
+
+  // add taxonomy filter
+  if (!empty($tax_filter)) {
+    $args['tax_query'] = [
+      [
+        'taxonomy' => 'category',
+        'field'    => 'slug',
+        'terms'    => $tax_filter,
+      ],
+    ];
+  }
+
+  // set default response
+  $response = ['new_items' => []];
+
+  // generate json output 
+  $wp_query = new WP_Query($args);
+
+  while ($wp_query->have_posts()) {
+    $wp_query->the_post();
+    $postData = include(get_template_directory() . "/template-parts/snippets/{$post_type}/snippet__grid-item--data.php");
+    if ($postData) {
+      $postData['html'] = load_template_part("template-parts/snippets/{$post_type}/snippet__grid-item--html", null, ['data' => $postData]);
+      $response['new_items'][] = $postData;
+    }
+  }
+  wp_reset_postdata();
+
+  // add meta data to response
+  $response['num_items']     = $wp_query->post_count;
+  $response['num_remaining'] = $wp_query->found_posts - $wp_query->post_count;
+  $response['locale']        = get_locale();
+
+  // Return response as JSON
+  return new WP_REST_Response($response, 200);
+}
+
+
+/*
+ * LOAD TEMPLATE PART
+ */
+if (!function_exists('load_template_part')) {
+  function load_template_part($template_name, $part_name = null, $args = []) {
+    ob_start();
+    get_template_part($template_name, $part_name, $args);
+    return ob_get_clean();
+  }
+}
 
 
 /***** RSS */

@@ -16,8 +16,10 @@ get_header();
     <?php
     // CPT ARCHIVE LAYOUTS
 
-    if (is_post_type_archive('xxxxxxxxxx')) {  // Check if is Archive of CPT "xxxxxxxxxx"
-      get_template_part('template-parts/layouts/layout__archive--xxxxxxxxxx');
+    if (is_post_type_archive('blog')) {  // Check if is Archive of CPT "blog"
+      get_template_part('template-parts/layouts/layout__archive--blog');
+    } elseif (is_post_type_archive('angebot')) {  // Check if is Archive of CPT "angebot"
+      get_template_part('template-parts/layouts/layout__archive--angebot');
     } else {
       get_template_part('template-parts/content-single', 'none');
     }

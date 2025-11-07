@@ -18,11 +18,11 @@ get_header();
 
       <section class="sec-wrap">
         <div class="sec-wrap__inner">
-          <div class="centered-text">
+          <div class="text-center">
             <h1>TacoCat Boilerplate</h1>
           </div>
 
-          <div class="centered-text">
+          <div class="text-center">
             <div class="centered-button">
               <a href="/kontakt">
                 <span class="button p">Erfahre mehr!</span>

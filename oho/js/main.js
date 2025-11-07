@@ -53,8 +53,205 @@ const scripts = {
 
   default: function () {
     // ----------------------------
+    // MARQUEES
+    // ----------------------------
+
+    const marqueeSections = document.querySelectorAll("section.__marquees");
+    if (marqueeSections.length > 0) {
+      marqueeSections.forEach((marqueeSection) => {
+        // console.log("Marquee section found:", marqueeSection);
+        const marqueeWrap1 = marqueeSection.querySelector(".marquee-wrap--1");
+        const marqueeWrap2 = marqueeSection.querySelector(".marquee-wrap--2");
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: marqueeSection,
+              start: "top bottom",
+              // end: "bottom bottom",
+              scrub: 2.5,
+              // markers: true,
+            },
+          })
+          .from(
+            marqueeWrap1,
+            {
+              xPercent: 15, // Start from the right
+              ease: "none",
+            },
+            "<"
+          )
+          .from(
+            marqueeWrap2,
+            {
+              xPercent: -15, // Start from the left
+              ease: "none",
+            },
+            "<"
+          );
+      });
+    }
+
+    // ----------------------------
+    // SLANTED IMAGES switch ANIMATION
+    // ----------------------------
+
+    const slantedImageSwitches = document.querySelectorAll("[data-anim='slanted-images-switch']");
+
+    slantedImageSwitches.forEach((switchWrap) => {
+      let isSwitched = false; // Zustand merken: welches Bild ist oben
+
+      const slantedImage1 = switchWrap.querySelector(".slanted-image--1");
+      const slantedImage2 = switchWrap.querySelector(".slanted-image--2");
+
+      const createTimeline = (forward = true) => {
+        const tl = gsap.timeline({ paused: true });
+        if (forward) {
+          tl.to(slantedImage1, { zIndex: 0, duration: 0 })
+            .to(slantedImage2, { zIndex: 1, duration: 0 }, "<")
+            .to(slantedImage1, { rotation: 14, scale: 1, duration: 0.75, ease: "power4.out" }, "<")
+            .to(slantedImage2, { scale: 0.9, duration: 0, ease: "power4.out" }, "<")
+            .to(slantedImage2, { scale: 1, duration: 0.75, ease: "power4.out" }, "<0.01")
+            .to(slantedImage2, { rotation: 7, duration: 0.75, ease: "power4.out" }, "<");
+        } else {
+          tl.to(slantedImage2, { zIndex: 0, duration: 0 })
+            .to(slantedImage1, { zIndex: 1, duration: 0 }, "<")
+            .to(slantedImage2, { rotation: 14, scale: 1, duration: 0.75, ease: "power4.out" }, "<")
+            .to(slantedImage1, { scale: 0.9, duration: 0, ease: "power4.out" }, "<")
+            .to(slantedImage1, { scale: 1, duration: 0.75, ease: "power4.out" }, "<0.01")
+            .to(slantedImage1, { rotation: 7, duration: 0.75, ease: "power4.out" }, "<");
+        }
+        return tl;
+      };
+
+      // Erstes Timeline-Setup
+      let slantedImageTimeline = createTimeline(true);
+
+      switchWrap.addEventListener("mouseenter", () => {
+        if (slantedImageTimeline.isActive()) return; // Verhindern, dass Animation doppelt startet
+
+        slantedImageTimeline.play().then(() => {
+          // Nach Animation umschalten
+          isSwitched = !isSwitched;
+          slantedImageTimeline = createTimeline(!isSwitched);
+        });
+      });
+    });
+
+    // ----------------------------
+    // ANGEBOT TEASER ANIMATION
+    // ----------------------------
+
+    const angebotTeasers = document.querySelectorAll("[data-anim='angebot-teasers-move-up']");
+    if (angebotTeasers.length > 0) {
+      angebotTeasers.forEach((teasersBlock) => {
+        const teaserItems = teasersBlock.querySelectorAll(".angebot-item");
+
+        gsap.fromTo(
+          teaserItems,
+          { y: 50 },
+          {
+            y: 0,
+            duration: 1,
+            stagger: 0.075,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: teasersBlock,
+              start: "top 80%",
+              // markers: true,
+            },
+          }
+        );
+      });
+    }
+
+    // ----------------------------
+    // TWISTED LINE ANIMATION
+    // ----------------------------
+
+    // Draw on scroll
+
+    const twistedLines = document.querySelectorAll(".twisted-line.anim__draw--onscroll");
+    twistedLines.forEach((line) => {
+      const path = line.querySelector("path");
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = pathLength;
+      path.style.strokeDashoffset = pathLength;
+
+      let drawStart = "top 25%"; // default start
+      if (line.classList.contains("start-draw--top")) {
+        drawStart = "top 2%";
+      } else if (line.classList.contains("start-draw--early")) {
+        drawStart = "top -50%";
+      }
+
+      const tl = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: line,
+            start: drawStart,
+            end: "bottom bottom",
+            scrub: 2,
+            // markers: true,
+          },
+        })
+        .to(line, { visibility: "visible", duration: 0 }) // make visible when animation starts
+        .to(
+          path,
+          {
+            strokeDashoffset: 0,
+            ease: "none",
+          },
+          "<"
+        );
+    });
+
+    // Draw on load
+
+    const twistedLinesOnLoad = document.querySelectorAll(".twisted-line.anim__draw--onload");
+    twistedLinesOnLoad.forEach((line) => {
+      const path = line.querySelector("path");
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = pathLength;
+      path.style.strokeDashoffset = pathLength;
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: "power1.inOut",
+        duration: 2,
+        delay: 0,
+      });
+    });
+
+    // ----------------------------
     // NAVIGATION
     // ----------------------------
+
+    /* ***** Desktop Navigation */
+    const desktopNav = document.getElementById("nav--desktop");
+    if (desktopNav) {
+      /* --- Navbar onScroll (Home) */
+
+      if (document.body.classList.contains("home")) {
+        const navWrap = desktopNav.querySelector(".nav-wrap");
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: document.body,
+              start: "top+=1% top",
+              end: 99999,
+              toggleClass: { targets: navWrap, className: "nav--scrolled" },
+              toggleActions: "play none none reverse",
+              // markers: true,
+            },
+          })
+          .to(navWrap, {
+            yPercent: 100,
+            duration: 0.75,
+            ease: "power4.out",
+          });
+      }
+    }
 
     /* ***** Mobile Navigation */
     const mobileNav = document.getElementById("nav--mobile");

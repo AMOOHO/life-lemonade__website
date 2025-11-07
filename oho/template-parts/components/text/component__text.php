@@ -16,7 +16,7 @@ $text = $component['text'] ?? get_sub_field('text');
 ?>
 
 <div class="block--text block--<?= $rowIndex; ?><?= $componentIndex ?? '' ?>">
-  <div class="wysiwyg">
+  <div class="wysiwyg max-w-text">
     <?= $text; ?>
   </div>
 </div>

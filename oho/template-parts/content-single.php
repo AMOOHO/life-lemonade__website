@@ -15,24 +15,18 @@
   <?php
   // Static Pages
   if (is_front_page()) { // Home
-    get_template_part('template-parts/layouts/layout__page--home', get_post_type());
-  } elseif (is_page(array(48))) { // Fonts
-    get_template_part('template-parts/layouts/layout__page--fonts', get_post_type());
-  } elseif (is_page(array(50))) { // Contact
-    get_template_part('template-parts/layouts/layout__page--contact', get_post_type());
-  } elseif (is_page(array(52))) { // Posts
-    get_template_part('template-parts/layouts/layout__page--posts', get_post_type());
+    get_template_part('template-parts/layouts/layout__page--home', get_post_type(), ['scope' => 'options_home']);
+  } elseif (is_page(1077)) { // Portrait
+    get_template_part('template-parts/layouts/layout__page--portrait', get_post_type(), ['scope' => 'options_portrait']);
+  } elseif (is_page(1079)) { // Kontakt
+    get_template_part('template-parts/layouts/layout__page--contact', get_post_type(), ['scope' => 'options_kontakt']);
   }
-
   // Custom Post Types
-  // elseif ( is_singular( 'default-cpt' ) ) { // CPT
-  //   set_post_views( get_the_ID() );
-  //   get_template_part( 'template-parts/layouts/layout__cpt--default', get_post_type() );
-  // }
-  // // Default post type page
-  // elseif ( is_singular( 'page' ) && (!is_page( array( 50, 2473 ) )) ) { // Kontakt
-  //   get_template_part( 'template-parts/layouts/layout__pt--page', get_post_type() );
-  // }
+  elseif (is_singular('blog')) { // CPT "blog"
+    get_template_part('template-parts/layouts/layout__cpt--blog', get_post_type());
+  } elseif (is_singular('angebot')) { // CPT "angebot"
+    get_template_part('template-parts/layouts/layout__cpt--angebot', get_post_type());
+  }
 
   // All other cases + header
   else {

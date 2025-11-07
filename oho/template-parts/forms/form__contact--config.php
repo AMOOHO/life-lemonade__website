@@ -9,11 +9,11 @@ $form = FormRepository::getInstance()->createFormInstance('contact', [
 ]);
 
 // define form fields
-$form->addField('Name',             'text',      ['label' => 'Name / Vorname *']);
-$form->addField('Firma',            'text',      ['label' => 'Firma *']);
-$form->addField('E-Mail',           'email',     ['label' => 'E-Mail *']);
-$form->addField('Telefon',          'tel',       ['label' => 'Telefon *']);
-$form->addField('Mitteilung',       'textarea',  ['label' => 'Ihre Mitteilung', 'rows' => 4, 'required' => false]);
+$form->addField('Name',             'text',      ['placeholder' => 'Name / Vorname']);
+$form->addField('Firma',            'text',      ['placeholder' => 'Firma / Organisation']);
+$form->addField('E-Mail',           'email',     ['placeholder' => 'E-Mail']);
+$form->addField('Telefon',          'tel',       ['placeholder' => 'Telefon']);
+$form->addField('Mitteilung',       'textarea',  ['label' => 'Nachricht', 'rows' => 4]);
 
 // Add Google reCAPTCHA
 /*

@@ -1,0 +1,9 @@
+/*
+* Add additional styles to the header scene render template,
+additional you can use the backend loades styles in css/default.css + css/atomic.css */
+
+.render-wrap header.__bg-img {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}

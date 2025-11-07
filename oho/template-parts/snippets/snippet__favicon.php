@@ -22,7 +22,7 @@
 <link id="favicon-svg" rel="icon" type="image/svg+xml" href="<?= theme_URL(); ?>/media/icons/favicon.svg" />
 <link id="favicon-ico" rel="shortcut icon" href="<?= theme_URL(); ?>/media/icons/favicon.ico" />
 <link id="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="<?= theme_URL(); ?>/media/icons/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="XXXXXXXXXXXXXXXXXXXX" />
+<meta name="apple-mobile-web-app-title" content="Life Lemonade" />
 <link rel="manifest" href="<?= theme_URL(); ?>/media/icons/site.webmanifest" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">

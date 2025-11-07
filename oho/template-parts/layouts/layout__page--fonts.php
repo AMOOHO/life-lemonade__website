@@ -24,7 +24,7 @@
 
     <p>Lorem <b>ipsum dolor sit amet</b>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, <a href="">no sea takimata sanctus</a> est.</p>
 
-    <p class="s">Lorem <b>ipsum dolor sit amet</b>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, <a href="">no sea takimata sanctus</a> est.</p>
+    <p class="mt0">Lorem <b>ipsum dolor sit amet</b>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, <a href="">no sea takimata sanctus</a> est.</p>
 
   </div>
 </section>

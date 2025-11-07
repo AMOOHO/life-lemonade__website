@@ -28,7 +28,7 @@
   --border__small: 0.0625em solid var(--color__primary);
 
   /* ***** Radiuses */
-  --radius: 0;
+  --radius: 0.4375em;
 
   /* --- Font Sizes */
   --fsize__h1: 5rem;

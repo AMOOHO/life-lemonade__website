@@ -7,52 +7,48 @@
  */
 ?>
 
+<?php if (!is_page(1079)) : /* Contact Page */ ?>
+  <?php get_template_part('template-parts/snippets/snippet__marquees', get_post_type()); ?>
+<?php endif; ?>
+
 <footer id="footer" class="site-footer">
-  <div class="footer-wrap bg--primary">
+  <div class="footer-wrap">
     <div class="footer-wrap__inner">
-      <div class="flex-wrap space-between-xl dir-col-sm gap-xl-2">
+
+      <div class="flex-wrap space-between-xl align-middle-xl">
         <div class="box">
           <div class="flex-wrap gap-xl-2">
             <div class="box">
-              <address>
-                <span class="p fcolor--light">
-                  XXXXXXXXX<br>
-                  XXXXXXX<br>
-                  XXXXXXXXXXXX
-                </span>
-              </address>
+              <span class="xs"><b>©</b>&nbsp;Life&nbsp;Lemonade&nbsp;GmbH</span>
             </div>
             <div class="box">
-              <span class="p fcolor--light">
-                XXXXXXXXX<br>
-                XXXXXXXXX
-              </span>
+              <a href="/impressum/" class="xs">Impressum</a>
+            </div>
+            <div class="box">
+              <a href="/datenschutz/" class="xs">Datenschutz</a>
+            </div>
+            <div class="box">
+              <span class="adjustCookieSettingsBtn xs">Cookies</span>
             </div>
           </div>
         </div>
         <div class="box">
-          <span class="p fcolor--light">
-            XXXXXXXXX<br>
-            <a class="mail-link" data-name="XXXXXXXXXXX" data-domain="XXXXXXXXXXX"></a><br>
-            <a href="tel:<?= format_phone_nr("XXXXXXXXXX", true, ''); ?>"><?= format_phone_nr("XXXXXXXXXX"); ?></a>
-          </span>
+          <span class="xs">Design&nbsp;&&nbsp;Code:&nbsp;OHO&nbsp;Design</span>
         </div>
       </div>
 
     </div>
   </div>
-
-  <div class="flex-wrap justify-center-xl align-middle-xl pxy1">
-    <span class="s">
-      ©&#8198; <?php echo date('Y'); ?> XXXXXXXXXXXXXXXX • <a href="/impressum">Impressum</a> • <a href="/datenschutz">Datenschutz</a> •
-      <span class="adjustCookieSettingsBtn">
-        Cookies
-      </span>
-      • <a href="https://ohodesign.ch" target="_blank" rel="noopener">Design&nbsp;&&nbsp;Realisation:&nbsp;OHO&nbsp;Design</a>
-    </span>
-  </div>
 </footer>
+
 </div><?php /* .site-content */ ?>
+
+<?php if (is_page(1079)) : /* Contact Page */ ?>
+  <div class="twisted-line-wrap">
+    <?php include(get_template_directory() . "/media/placeholders/twisted-line-4.svg"); ?>
+  </div>
+<?php endif; ?>
+
 </div><?php /* data-barba: container */ ?>
 </div><?php /* #page */ ?>
 
@@ -66,8 +62,15 @@
 <script defer src="<?= append_version('/js/splide/splide.min.js') ?>"></script>
 <script defer src="<?= append_version('/js/splide/splide-extension-auto-scroll.min.js') ?>"></script>
 <script defer src="<?= append_version('/js/lenis/lenis.min.js') ?>"></script>
+<script defer src="<?= append_version('/js/fma/mixitup.min.js') ?>"></script>
 
 <?php /* Custom JS Libs */ ?>
+<script defer src="<?= append_version('/js/fma/engine/FilterEngine.js') ?>"></script>
+<script defer src="<?= append_version('/js/fma/engine/AsyncLoader.js') ?>"></script>
+<script defer src="<?= append_version('/js/fma/engine/UrlHandler.js') ?>"></script>
+<script defer src="<?= append_version('/js/fma/engine/InfiniteScrollHandler.js') ?>"></script>
+<script defer src="<?= append_version('/js/fma/filters/TaxonomyFilter.js') ?>"></script>
+<script defer src="<?= append_version('/js/fma/fma-config.js') ?>"></script>
 
 <?php /* Custom JS */ ?>
 <script defer src="<?= append_version('/js/default.js') ?>"></script>

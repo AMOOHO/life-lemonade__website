@@ -15,7 +15,7 @@
 <section class="sec-wrap">
   <div class="sec-wrap__inner grid">
 
-    <h2 class="centered-text">Basic</h2>
+    <h2 class="text-center">Basic</h2>
 
     <div class="grid-wrap post-grid gap-xl-2 gap-sm-1 gap-xs-0"> <?php // If needed place your Sub-Class here 
                                                                   ?>

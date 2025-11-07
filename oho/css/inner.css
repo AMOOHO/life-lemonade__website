@@ -57,8 +57,55 @@
 
 /* ***** Post grid */
 
-.post-grid .covered-image-wrap {
-  height: 15.5em;
+.post-item .post-title {
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.load-more.disabled {
+  display: none;
+}
+
+/* SECTIONS *******************************************************************************/
+
+/* ***** Section Marquees */
+
+section.__marquees .marquee-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* transform: translateX(-25vw); */
+}
+
+section.__marquees .marquee-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 200vw;
+  white-space: nowrap;
+  margin-left: 2.1875em;
 }
 
 /* SINGLE POST *******************************************************************************/
@@ -69,8 +116,11 @@
 
 .form-wrap span.label {
   display: inline-block;
-  margin-bottom: 0.35em;
-  font-size: var(--fsize__p);
+  font-family: "Factor A Bold", sans-serif;
+  font-weight: 700;
+  font-size: var(--fsize__h3);
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 /* ***** Input fields  */
@@ -92,13 +142,16 @@ input[type="datetime-local"],
 input[type="color"],
 .field-wrap.dropdown select,
 textarea {
-  font-size: var(--fsize__p);
-  border: var(--border__regular);
-  padding: 0.6em;
+  font-family: "Factor A Bold", sans-serif;
+  font-weight: 700;
+  font-size: var(--fsize__h3);
+  border: unset;
+  border-bottom: 0.275rem solid var(--color__dark);
+  padding: 0.5em 0 0.375em;
   border-radius: 0;
   margin-bottom: 0;
-  background: var(--color__light);
-  color: var(--color__primary);
+  background: var(--color__secondary);
+  color: var(--color__dark);
 }
 
 .search-form input[type="search"] {
@@ -116,27 +169,31 @@ textarea {
 input,
 select,
 textarea {
-  color: var(--color__primary);
+  color: var(--color__dark);
   width: 100%;
 }
 
 textarea {
   line-height: 1.5625em;
   max-height: 20em;
-  margin: 0em;
+  border: 0.275rem solid var(--color__dark);
+  border-radius: var(--radius__small);
+  padding: 0.5em 0.75em;
+  margin: 0;
   resize: none;
 }
 
 textarea:focus,
 input:focus {
-  color: var(--color__primary);
-  outline: 0.0625rem solid var(--color__primary);
+  color: var(--color__dark);
+  outline: unset;
+  /* outline: 0.0625rem solid var(--color__dark); */
 }
 
 .field-wrap input[type="submit"]:focus {
   background: var(--color__light);
-  color: var(--color__primary);
-  border: 0.0625rem solid var(--color__primary);
+  color: var(--color__dark);
+  border: 0.0625rem solid var(--color__dark);
 }
 
 /* ***** Radio & Checkbox */
@@ -239,19 +296,19 @@ input:focus {
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--color__primary);
+  color: var(--color__dark);
   opacity: 1;
   /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: var(--color__primary);
+  color: var(--color__dark);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: var(--color__primary);
+  color: var(--color__dark);
 }
 
 /* ***** Captcha */
@@ -278,14 +335,15 @@ input:focus {
 
 input[type="submit"],
 .field-wrap input[type="submit"] {
-  float: right;
-  font-size: var(--fsize__p);
-  background: var(--color__primary);
-  color: var(--color__light);
+  font-family: "Factor A Bold", sans-serif;
+  font-weight: 700;
+  font-size: var(--fsize__button);
+  line-height: 1em;
+  background: var(--color__dark);
+  color: var(--color__theme);
   border-radius: var(--radius__regular);
-  padding: 0.3em 1em 0.35em;
+  padding: 0.825em 1.375em;
   border: 0;
-  margin-top: 1em;
   display: inline-block;
   cursor: pointer;
   width: auto;
@@ -360,6 +418,98 @@ span.custom-password-message {
   margin: 0;
 }
 
+/* TWISTED LINES *******************************************************************************/
+
+.twisted-line-wrap {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.twisted-line-wrap svg.twisted-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.twisted-line-wrap svg.twisted-line--4 {
+  left: unset;
+  top: unset;
+  bottom: 0;
+  right: 0;
+  width: 45rem;
+}
+
+/* ***** Twisted Line on Home */
+
+body.home .twisted-line-wrap--1 {
+  z-index: 0;
+  width: 55rem;
+  height: 135rem;
+  transform: translate3d(6.5rem, -41.5rem, 0);
+}
+
+body.home .twisted-line-wrap--2 {
+  z-index: 10;
+  width: 120rem;
+  height: 122rem;
+  transform: translate3d(69rem, 0, 0);
+}
+
+/* ***** Slanted Image with twisted line */
+
+.slanted-image-wrap .slanted-image {
+  transform: rotate(7deg);
+}
+
+.slanted-image-wrap .twisted-line-wrap {
+  z-index: 0;
+  left: unset;
+  width: 40rem;
+  height: 120rem;
+  right: 0;
+  transform: translate3d(27rem, 18rem, 0);
+}
+
+.slanted-image-wrap .slanted-image--overlap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  transform: rotate(-7deg);
+}
+
+/* --- Slanted Image with multiple layered images */
+
+.slanted-image-wrap .slanted-image--1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: rotate(7deg);
+  cursor: pointer;
+}
+
+.slanted-image-wrap .slanted-image--2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: rotate(14deg);
+  cursor: pointer;
+}
+
 /*
 -----------------------------------------------------------------------------
 
@@ -373,7 +523,7 @@ span.custom-password-message {
 .content-wrap [class*="block--"] {
   max-width: var(--innerwrap__width);
   padding: 0 var(--innerwrap__px);
-  margin: 3em auto;
+  margin: 5em auto;
 }
 
 .content-wrap [class*="block--"].full {
@@ -395,6 +545,25 @@ span.custom-password-message {
 
 .content-wrap [class*="block--"]:last-child {
   margin-bottom: 0;
+}
+
+.content-wrap .max-w-media {
+  max-width: 70rem;
+}
+
+/* ***** Anbegote Teaser */
+
+.block--angebote-teaser .angebot-item:first-child {
+  transform: rotate(-8.64deg);
+}
+
+.block--angebote-teaser .angebot-item:nth-child(2) {
+  transform: rotate(7.24deg);
+  margin-top: 6rem;
+}
+
+.block--angebote-teaser .angebot-item:nth-child(3) {
+  transform: rotate(-2.79deg);
 }
 
 /* ***** Image */
@@ -431,6 +600,10 @@ span.custom-password-message {
   display: inline-block;
   margin-right: 0.5em;
   margin-top: 0.75em;
+}
+
+.content-wrap .block--buttons .button {
+  color: var(--color__light);
 }
 
 /* ***** Timetable */
@@ -519,6 +692,13 @@ span.custom-password-message {
 
 /* ***** Gallery Slider */
 
+.content-wrap .block--gallery-slider .splide__track {
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  border-top-left-radius: var(--radius__small);
+  border-top-right-radius: var(--radius__small);
+}
+
 .content-wrap .block--gallery-slider .splide__track,
 .content-wrap .block--gallery-slider .splide__slide img {
   height: 40rem;
@@ -534,32 +714,35 @@ span.custom-password-message {
 /* --- Gallery Navigation */
 
 .content-wrap .block--gallery-slider .splide__nav {
-  position: absolute;
-  top: 50%;
-  left: 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: auto;
-  transform: translate3d(0, -50%, 0);
+  height: 4rem;
+  transform: translate3d(0, 0, 0);
   pointer-events: none;
+  background: var(--color__dark);
+  overflow: hidden;
+  border-bottom-left-radius: var(--radius__small);
+  border-bottom-right-radius: var(--radius__small);
 }
 
 .content-wrap .block--gallery-slider .nav-button {
   position: relative;
   font-size: var(--isize__regular);
-  padding: 0.5em;
+  color: var(--color__light);
+  padding: 0 0.325em;
   cursor: pointer;
   pointer-events: all;
 }
 
-.content-wrap .block--gallery-slider .nav-button.prev-slide {
-  transform: translateX(-100%);
+.content-wrap .block--gallery-slider .icon-arrow-twisted:before {
+  transform: translate3d(0, 0, 0);
 }
 
-.content-wrap .block--gallery-slider .nav-button.next-slide {
-  transform: translateX(100%);
+.content-wrap .block--gallery-slider .icon-arrow-twisted-back:before {
+  transform: translate3d(0, 0, 0) rotate(11deg);
 }
 
 /* --- Gallery Slider Lightbox */
@@ -605,7 +788,7 @@ span.custom-password-message {
 }
 
 .content-wrap .block--gallery-slider .lightbox__splide .lightbox__close > * {
-  font-size: var(--isize__regular);
+  font-size: var(--isize__small);
 }
 
 .content-wrap .block--gallery-slider .lightbox__splide .lightbox__inner {
@@ -639,12 +822,14 @@ span.custom-password-message {
   object-fit: cover;
   -o-object-fit: cover;
   object-position: center center;
+  border-radius: var(--radius__small);
 }
 
 /* --- Splide Lightbox - Navigation */
 
 .content-wrap .block--gallery-slider .lightbox__splide .splide__nav {
   position: absolute;
+  bottom: unset;
   top: 50%;
   left: 0;
   display: flex;
@@ -653,13 +838,15 @@ span.custom-password-message {
   width: 100%;
   height: auto;
   pointer-events: none;
+  background: transparent;
+  overflow: visible;
 }
 
 .content-wrap .block--gallery-slider .lightbox__splide .nav-button {
   position: relative;
   font-size: var(--isize__regular);
   padding: 0.5em;
-  color: var(--color__light);
+  color: var(--color__dark);
   cursor: pointer;
   pointer-events: all;
 }
@@ -829,15 +1016,24 @@ span.custom-password-message {
   padding-right: 0;
 }
 
-/* HEADER SCENE COMPONENTS *******************************************************************************/
+/* HEADER COMPONENTS *******************************************************************************/
 
-/* ***** Header - Background Image */
+/* ***** Header – Home */
+
+header.__home {
+  height: 67.5rem;
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
+  min-height: 45rem;
+}
+
+/* ***** Header – Background Image */
 
 header.__bg-img {
   height: 30rem;
 }
 
-/* ***** Header - Text with BG-Image */
+/* ***** Header – Text with BG-Image */
 
 header.__text-bg-img .header-wrap__inner {
   height: 30rem;

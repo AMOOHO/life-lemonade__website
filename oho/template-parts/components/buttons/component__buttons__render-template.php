@@ -19,7 +19,7 @@ $btns = $component['button--repeater'] ?? get_sub_field('button--repeater');
 
   <div class="sec-wrap">
     <div class="sec-wrap__inner">
-      <div class="buttons-wrap centered-text">
+      <div class="buttons-wrap text-center">
         <?php foreach ($btns as $btn) :
           $url = "";
           $type = $btn['type'];

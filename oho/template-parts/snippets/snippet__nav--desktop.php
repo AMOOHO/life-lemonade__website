@@ -25,15 +25,16 @@
         <!-- Logo -->
 
         <a class="<?php the_nav_class(2); ?>" href="/">
-          <span style="font-size: 25px; letter-spacing: 0.004em; color: #fff;">Boilerplate
-            <?= wp_get_theme()['Version']; ?></span><br>
-          <span style="font-size: 0.79em; opacity: 0.5; color: #fff;"><?php echo get_bloginfo('name'); ?></span>
+          <img class="logo" src="<?= theme_URL(); ?>/media/placeholders/life-lemonade-logo-placeholder.png" alt="Life Lemonade Logo">
         </a>
 
         <!-- Nav-List -->
 
         <ul class="nav-list">
-          <?php /* <li><a class="<?php the_nav_class(xxx); ?>" href="/">Posts</a></li> */ ?>
+          <li><a class="<?php the_nav_class(1077); ?>" href="<?= get_permalink(1077); /* Portrait */ ?>"><b>Portrait</b></a></li>
+          <li><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?>" href="<?= get_post_type_archive_link('blog'); ?>"><b>Blog</b></a></li>
+          <li><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?>" href="<?= get_post_type_archive_link('angebot'); ?>"><b>Angebot</b></a></li>
+          <li class="has-icon"><a lass="<?php the_nav_class(1079); ?>" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--dark"></span></span></a></li>
         </ul>
       </div>
 

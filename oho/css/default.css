@@ -35,8 +35,8 @@
   font-style: normal;
 }
 
-[class^="icon-base_"],
-[class*=" icon-base_"] {
+[class^="icon_base_"],
+[class*=" icon_base_"] {
   font-family: "Icons Base";
   speak: never;
   font-style: normal;
@@ -50,43 +50,43 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-base_arrow_alternate-up:before {
+.icon_base_arrow_alternate-up:before {
   content: "\0041";
 }
 
-.icon-base_arrow_alternate-down:before {
+.icon_base_arrow_alternate-down:before {
   content: "\0042";
 }
 
-.icon-base_arrow_alternate-next:before {
+.icon_base_arrow_alternate-next:before {
   content: "\0043";
 }
 
-.icon-base_arrow_alternate-prev:before {
+.icon_base_arrow_alternate-prev:before {
   content: "\0044";
 }
 
-.icon-base_arrow-down:before {
+.icon_base_arrow-down:before {
   content: "\0045";
 }
 
-.icon-base_arrow-next:before {
+.icon_base_arrow-next:before {
   content: "\0046";
 }
 
-.icon-base_arrow-prev:before {
+.icon_base_arrow-prev:before {
   content: "\0047";
 }
 
-.icon-base_arrow-up:before {
+.icon_base_arrow-up:before {
   content: "\0048";
 }
 
-.icon-base_check:before {
+.icon_base_check:before {
   content: "\0049";
 }
 
-.icon-base_cross:before {
+.icon_base_cross:before {
   content: "\004a";
 }
 
@@ -2317,7 +2317,7 @@ body {
 }
 
 header.site-header {
-  z-index: 100;
+  z-index: 110;
   position: absolute;
 }
 
@@ -2690,7 +2690,7 @@ th {
 }
 
 /* ***** Clearings */
-.clear:before,
+/* .clear:before,
 .clear:after,
 .entry-content:before,
 .entry-content:after,
@@ -2714,7 +2714,7 @@ footer:after {
 .site-content:after,
 footer:after {
   clear: both;
-}
+} */
 
 /* ***** Infinite scroll */
 /* ***** Globally hidden elements when Infinite Scroll is supported and in use. */

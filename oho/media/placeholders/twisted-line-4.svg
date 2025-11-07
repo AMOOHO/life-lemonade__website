@@ -1,0 +1,9 @@
+<svg class="twisted-line twisted-line--4 anim__draw--onload" width="100%" height="100%" viewBox="0 0 725 1295" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:1.5;">
+	<rect x="0" y="0" width="724.5" height="1294.25" style="fill:none;" />
+	<clipPath id="_clip1">
+		<rect x="0" y="0" width="724.5" height="1294.25" />
+	</clipPath>
+	<g clip-path="url(#_clip1)">
+		<path d="M724.5,43.5c0,0 -242.249,81.423 -127.25,434.25c114.999,352.827 -84.513,437.795 -151.25,459.25c-125.691,40.408 -490.711,-47.225 -386.25,-251.25c107.411,-209.785 448.977,116.376 387.75,334.25c-44.543,158.507 -238.726,254.919 -321.75,292.5" style="fill:none;stroke:#f3b5ba;stroke-width:72.1px;" />
+	</g>
+</svg>

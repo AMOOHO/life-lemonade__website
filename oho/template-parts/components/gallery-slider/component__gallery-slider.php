@@ -16,7 +16,7 @@ $galleryImgs = $component['gallery'] ?? get_sub_field('gallery');
 ?>
 
 <div class="block--gallery-slider block--<?= $rowIndex; ?><?= $componentIndex ?? '' ?>">
-  <div class="splide splide-default">
+  <div class="splide splide-default max-w-media">
     <div class="splide__track">
       <ul class="splide__list">
         <?php
@@ -37,11 +37,11 @@ $galleryImgs = $component['gallery'] ?? get_sub_field('gallery');
     <div class="splide__nav">
       <div
         class="prev-slide nav-button">
-        <span class="icon-base_arrow-prev inline-block"></span>
+        <span class="icon-arrow-twisted-back inline-block isize-md"></span>
       </div>
       <div
         class="next-slide nav-button">
-        <span class="icon-base_arrow-next inline-block"></span>
+        <span class="icon-arrow-twisted inline-block isize-md"></span>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@ $galleryImgs = $component['gallery'] ?? get_sub_field('gallery');
   <div class="lightbox lightbox__splide" style="visibility: hidden; pointer-events:none;">
     <div class="lightbox__bg"></div>
     <div class="lightbox__close">
-      <span class="icon-base_cross fcolor--light"></span>
+      <span class="icon_base_cross fcolor--dark"></span>
     </div>
     <div class="lightbox__inner">
 
@@ -76,11 +76,11 @@ $galleryImgs = $component['gallery'] ?? get_sub_field('gallery');
         <div class="splide__nav">
           <div
             class="prev-slide nav-button">
-            <span class="icon-base_arrow-prev"></span>
+            <span class="icon-arrow-twisted-back isize-md"></span>
           </div>
           <div
             class="next-slide nav-button">
-            <span class="icon-base_arrow-next"></span>
+            <span class="icon-arrow-twisted isize-md"></span>
           </div>
         </div>
       </div>
