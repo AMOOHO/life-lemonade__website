@@ -9,20 +9,55 @@
  */
 
 // Vars
+$titleGroup = get_sub_field('title--group');
+$contextTitle = $titleGroup['context-title'];
+$title = $titleGroup['title'];
 $imgGroup = get_sub_field('img--group');
-$img = $imgGroup['img'];
-$imgPosition = $imgGroup['img-position'];
+$img1 = $imgGroup['img'];
+$img2 = $imgGroup['img_2'];
+$quoteGroup = get_sub_field('quote--group');
+$quote = $quoteGroup['quote'];
+$quoteAuthor = $quoteGroup['author'];
 ?>
 
-<div class="render-wrap header--bg-img">
-  <header class="__bg-img header-wrap">
-    <div class="header-wrap__bg">
-      <div class="covered-image-wrap <?= esc_attr($imgPosition); ?>">
-        <picture>
-          <source media="(max-width: 27em)" srcset="<?= $img['sizes']['size_600']; ?>">
-          <source media="(max-width: 55em)" srcset="<?= $img['sizes']['size_1200']; ?>">
-          <img src="<?= $img['sizes']['size_2200']; ?>" alt="<?= get_alt_tag($img['id']); ?>">
-        </picture>
+<div class="render-wrap">
+  <header class="__portrait header-wrap">
+    <div class="header-wrap__bg"></div>
+    <div class="header-wrap__inner">
+      <div class="mt-xl-5">
+        <div class="grid-wrap">
+          <div class="box box-xl-8 pr-xl-10">
+            <span class="inline-block p optical-alignment"><b><?= $contextTitle; ?></b></span>
+            <div class="mt-xl-1">
+              <h1 class="my0 fcolor--dark factor-a-bold-ss01"><?= $title; ?></h1>
+            </div>
+          </div>
+          <div class="box box-xl-4">
+            <div class="slanted-image-wrap relative" data-anim="slanted-images-switch" data-anim-trigger="hover">
+              <div class="slanted-image slanted-image--2 covered-image-wrap ratio--16_10 bg--mint rounded-sm">
+                <picture>
+                  <source media="(max-width: 27em)" srcset="<?= $img2['sizes']['size_1200']; ?>">
+                  <source media="(max-width: 55em)" srcset="<?= $img2['sizes']['size_1800']; ?>">
+                  <img src="<?= $img2['sizes']['size_1800']; ?>" alt="<?= get_alt_tag($img2['id']); ?>">
+                </picture>
+              </div>
+              <div class="slanted-image slanted-image--1 covered-image-wrap ratio--16_10 bg--mint rounded-sm">
+                <picture>
+                  <source media="(max-width: 27em)" srcset="<?= $img1['sizes']['size_1200']; ?>">
+                  <source media="(max-width: 55em)" srcset="<?= $img1['sizes']['size_1800']; ?>">
+                  <img src="<?= $img1['sizes']['size_1800']; ?>" alt="<?= get_alt_tag($img1['id']); ?>">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-wrap mt-xl-8 pr-xl-4">
+          <div class="box box-xl-8 offset-xl-4">
+            <blockquote class="quote text-right">
+              <p class="h2 mb-0 factor-a-bold-ss01"><?= $quote; ?>&nbsp;–&nbsp;<?= $quoteAuthor; ?></p>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </header>

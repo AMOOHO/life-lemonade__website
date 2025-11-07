@@ -22,6 +22,41 @@ additional you can use the backend loades styles in css/default.css */
     rgba(255, 255, 255, 1) 96.22%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  /* ***** Colors */
+
+  /* --- Default */
+  --color__dark: #000000;
+  --color__light: #ffffff;
+
+  /* --- Corporate */
+  --color__primary: #c2decb;
+  --color__secondary: #faf069;
+  --color__accent: #4ba777;
+
+  --color__lemon: #faf069;
+  --color__mint: #4ba777;
+  --color__grape: #c2decb;
+  --color__strawberry: #f3b5ba;
+  --color__berry: #eb5b89;
+  --color__background: #fff3f4;
+  --color__background--yellow: #fffde9;
+
+  --color__lemon--light: #fffab2;
+  --color__mint--light: #60cd94;
+  --color__grape--light: #d7fce3;
+  --color__strawberry--light: #ffced2;
+  --color__berry--light: #ff7fa8;
+
+  /* --- System */
+  --color__success: #00871b;
+  --color__warning: #fea137;
+  --color__error: #cd0000;
+
+  /* ***** Radiuses */
+  --radius__small: 0.4375em;
+  --radius__regular: 2em;
+  --radius__large: 4em;
 }
 
 .render-wrap .fcolor--light {
@@ -228,4 +263,108 @@ additional you can use the backend loades styles in css/default.css */
 
 .render-wrap .ratio--10_16::before {
   padding-top: calc(16 / 10 * 100%);
+}
+
+.render-wrap .ratio--angebot-teaser::before {
+  padding-top: calc(586 / 608 * 100%);
+}
+
+/* ***** Background Colors*/
+
+/* --- Default */
+
+.render-wrap .bg--dark {
+  background-color: var(--color__dark);
+}
+
+.render-wrap .bg--light {
+  background-color: var(--color__light);
+}
+
+/* --- Corporate */
+
+.render-wrap .bg--primary {
+  background-color: var(--color__primary);
+}
+
+.render-wrap .bg--secondary {
+  background-color: var(--color__secondary);
+}
+
+.render-wrap .bg--accent {
+  background-color: var(--color__accent);
+}
+
+.render-wrap .bg--lemon {
+  background-color: var(--color__lemon);
+}
+
+.render-wrap .bg--mint {
+  background-color: var(--color__mint);
+}
+
+.render-wrap .bg--grape {
+  background-color: var(--color__grape);
+}
+
+.render-wrap .bg--strawberry {
+  background-color: var(--color__strawberry);
+}
+
+.render-wrap .bg--strawberry--light {
+  background-color: var(--color__strawberry--light);
+}
+
+.render-wrap .bg--split-dark__strawberry--light {
+  background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
+}
+
+.render-wrap .bg--berry {
+  background-color: var(--color__berry);
+}
+
+.render-wrap .bg--offwhite {
+  background-color: var(--color__background);
+}
+
+.render-wrap .bg--offwhite--yellow {
+  background-color: var(--color__background--yellow);
+}
+
+.render-wrap .bg--theme {
+  background-color: var(--color__theme);
+}
+
+/* --- Special Cases */
+
+.render-wrap .bg--darksplit {
+  background: linear-gradient(180deg, var(--color__background) 40%, var(--color__dark) 40%);
+}
+
+/* --- System */
+
+.render-wrap .bg--success {
+  background-color: var(--color__success);
+}
+
+.render-wrap .bg--warning {
+  background-color: var(--color__warning);
+}
+
+.render-wrap .bg--error {
+  background-color: var(--color__error);
+}
+
+/* ***** Borders */
+
+.render-wrap .rounded-sm {
+  border-radius: var(--radius__small);
+}
+
+.render-wrap .rounded-md {
+  border-radius: var(--radius__regular);
+}
+
+.render-wrap .rounded-lg {
+  border-radius: var(--radius__large);
 }

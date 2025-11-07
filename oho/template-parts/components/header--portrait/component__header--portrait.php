@@ -53,7 +53,7 @@ $quoteAuthor = $quoteGroup['author'];
           </div>
         </div>
       </div>
-      <div class="grid-wrap mt-xl-4 pr-xl-4">
+      <div class="grid-wrap mt-xl-8 pr-xl-4">
         <div class="box box-xl-8 offset-xl-4">
           <blockquote class="quote text-right">
             <p class="h2 mb-0 factor-a-bold-ss01"><?= $quote; ?>&nbsp;–&nbsp;<?= $quoteAuthor; ?></p>

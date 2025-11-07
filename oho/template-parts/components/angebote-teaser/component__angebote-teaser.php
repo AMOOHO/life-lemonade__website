@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ACF layout builder component — Text block
+ * ACF layout builder component — angebote teaser block
  *
  * @package    TacoCat Boilerplate
  * @copyright  © 2025 OHO Design GmbH (https://ohodesign.ch)
@@ -16,8 +16,6 @@ $offersPosts = $component['offers'] ?? get_sub_field('offers');
 ?>
 
 <div class="block--angebote-teaser block--<?= $rowIndex; ?><?= $componentIndex ?? '' ?>" data-anim="angebot-teasers-move-up" data-trigger="scroll">
-
-
   <div class="grid-wrap">
 
     <?php
@@ -52,6 +50,4 @@ $offersPosts = $component['offers'] ?? get_sub_field('offers');
     ?>
 
   </div>
-
-
 </div>

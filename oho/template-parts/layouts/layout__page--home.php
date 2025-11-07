@@ -49,10 +49,9 @@ $scope = $args['scope'] ?? null;
       <div class="box box-xl-12">
         <div class="grid-wrap">
           <div class="box box-xl-12">
-            <span class="inline-block p optical-alignment"><b>Mentale Gesundheit im Job</b></span>
+            <span class="inline-block p optical-alignment"><b>Mentale Gesundheit & Corporate Happiness</b></span>
             <div class="mt-xl-1">
-              <h1 class="my0 fcolor--dark factor-a-bold-ss01">Glückliche Mitarbeitende,<br>
-                erfolgreiche Unternehmen</h1>
+              <h1 class="my0 fcolor--dark factor-a-bold-ss01">Zufriedenheit als<br>Schlüssel zum Erfolg</h1>
             </div>
           </div>
         </div>
@@ -69,7 +68,9 @@ $scope = $args['scope'] ?? null;
   <div class="sec-wrap__bg bg--dark"></div>
   <div class="sec-wrap__inner slim">
     <h2 class="leading-large text-center fcolor--strawberry">
-      Life Lemonade unterstützt Menschen und Organisationen dabei, Zufriedenheit und mentale Gesundheit nachhaltig zu stärken. Mit wissenschaftlich fundierten <a href="<?= get_post_type_archive_link('angebot'); ?>" class="underline">Workshops, Kursen und Impulsen</a> rund um Positive Psychologie und Life Design hilft <a href="<?= get_permalink(1077); /* Portrait */ ?>" class="underline">Monika Spring</a> Teams und Unternehmen, ihr volles Potenzial zu entfalten – für mehr Wohlbefinden und nachhaltigen Erfolg.
+
+      Life Lemonade stärkt die Zufriedenheit, mentale Gesundheit und Innovationskraft deiner Mitarbeitenden nachhaltig und spürbar. Mit <a href="<?= get_post_type_archive_link('angebot'); ?>" class="underline">Workshops und Impulsen</a> rund um Positive Psychologie und Life Design machen wir aus den Zitronen des Arbeitsalltags spritzige Erfolge und verwandeln Potenzial in Wirkung:
+      Für starke Teams, kreative Lösungen und mehr Impact für die Zukunft.
     </h2>
   </div>
 </section>

@@ -2,8 +2,33 @@
 * Add additional styles to the header scene render template,
 additional you can use the backend loades styles in css/default.css + css/atomic.css */
 
-.render-wrap header.__bg-img {
+.render-wrap header.__portrait {
   position: relative;
   width: 100%;
-  height: 20rem;
+  background-color: var(--color__primary);
+  /* height: 20rem; */
+}
+
+/* ***** Slanted Image with twisted line */
+
+/* --- Slanted Image with multiple layered images */
+
+.render-wrap header.__portrait .slanted-image-wrap .slanted-image--1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: auto;
+  transform: rotate(7deg);
+  cursor: pointer;
+}
+
+.render-wrap header.__portrait .slanted-image-wrap .slanted-image--2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: auto;
+  transform: rotate(14deg);
+  cursor: pointer;
 }

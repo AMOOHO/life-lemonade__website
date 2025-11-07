@@ -1,18 +1,27 @@
 /*
-* Add additional styles to the text block render template,
+* Add additional styles to the  angebote teaser block render template,
 additional you can use the backend loades styles in css/default.css */
 
-.render-wrap.block--text {
-  padding-bottom: 1em;
+.render-wrap.block--angebote-teaser {
+  padding-bottom: 2em;
 }
 
-.render-wrap.block--text .sec-wrap {
+.render-wrap.block--angebote-teaser * {
+  color: var(--color__dark) !important;
+}
+
+.render-wrap.block--angebote-teaser .sec-wrap {
   position: relative;
   overflow: hidden;
-  max-height: 150px;
+  max-height: unset;
 }
 
-.render-wrap.block--text .sec-wrap::after {
+.render-wrap.block--angebote-teaser .sec-wrap__inner {
+  max-width: 100em;
+  padding-bottom: 2em;
+}
+
+/* .render-wrap.block--angebote-teaser .sec-wrap::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -21,4 +30,17 @@ additional you can use the backend loades styles in css/default.css */
   height: 50px;
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+} */
+
+.render-wrap.block--angebote-teaser .angebot-item:first-child {
+  transform: rotate(-8.64deg);
+}
+
+.render-wrap.block--angebote-teaser .angebot-item:nth-child(2) {
+  transform: rotate(7.24deg);
+  margin-top: 6rem;
+}
+
+.render-wrap.block--angebote-teaser .angebot-item:nth-child(3) {
+  transform: rotate(-2.79deg);
 }
