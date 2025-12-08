@@ -1063,7 +1063,27 @@ header.__text-bg-img .header-wrap__inner {
   -----------------------------------------------------------------------------
   */
 
-  /* SINGLE POST *******************************************************************************/
+  /* TWISTED LINES *******************************************************************************/
+
+  .twisted-line-wrap svg.twisted-line--4 {
+    width: 45rem;
+  }
+
+  /* ***** Twisted Line on Home */
+
+  body.home .twisted-line-wrap--1 {
+    width: 35rem;
+    height: 88rem;
+    transform: translate3d(-8rem, -25.5rem, 0);
+  }
+
+  body.home .twisted-line-wrap--2 {
+    width: 68rem;
+    height: 86rem;
+    transform: translate3d(35%, -4rem, 0);
+  }
+
+  /* SINGLE POST ********************************************************************************/
 
   /*  IMPRINT + DATA PRIVACY *******************************************************************************/
 
@@ -1099,6 +1119,24 @@ header.__text-bg-img .header-wrap__inner {
   .content-wrap .block--quote .covered-image-wrap,
   .content-wrap .block--quote-slider .covered-image-wrap {
     height: 20rem;
+  }
+
+  /* ***** Anbegote Teaser */
+
+  .block--angebote-teaser .angebot-item:first-child {
+    transform: rotate(-8.64deg) translate3d(3rem, 0, 0);
+  }
+
+  .block--angebote-teaser .angebot-item:nth-child(2) {
+    z-index: 2;
+    transform: rotate(7.24deg) translate3d(-1.5rem, 0, 0);
+    margin-top: 3rem;
+  }
+
+  .block--angebote-teaser .angebot-item:nth-child(3) {
+    z-index: 1;
+    transform: rotate(-2.79deg) translate3d(8rem, 0, 0);
+    margin-top: -7rem;
   }
 
   /* HEADER SCENE COMPONENTS *******************************************************************************/

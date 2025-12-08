@@ -13,12 +13,20 @@ $postData = $args['data'] ?? [];
 if (empty($postData)) {
   exit('Template part arguments missing in snippet__grid-item--html.php');
 }
+
+$bgPlaceholderClass = $postData['color'] && $postData['color'] !== 'strawberry'
+  ? 'bg--' . $postData['color'] . '--light'
+  : 'bg--offwhite--yellow';
+
+$bgClass = $postData['color'] ? 'bg--' . $postData['color'] : 'bg--offwhite';
+
+
 ?>
 <div class="mix post-item box box-xl-4 box-sm-6" data-id="<?= $postData['id']; ?>">
   <a href="<?= $postData['permalink']; ?>">
     <div class="flex-wrap dir-col rounded-sm overflow-hidden h-full">
       <!-- Main Image -->
-      <div class="covered-image-wrap ratio--3_2 bg--dark <?= $postData['img']['position']; ?>">
+      <div class="covered-image-wrap ratio--3_2 <?= $bgPlaceholderClass; ?> <?= $postData['img']['position']; ?>">
         <?php if (!empty($postData['img']['sizes'])) : ?>
           <?php $imgData = $postData['img']; ?>
           <picture>
@@ -29,7 +37,7 @@ if (empty($postData)) {
         <?php endif; ?>
       </div>
 
-      <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $postData['color'] ? 'bg--' . $postData['color'] : 'bg--offwhite'; ?>">
+      <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 pxy-md-15 pxy-sm-1 <?= $bgClass; ?>">
         <div class="mb-xl-25">
           <h3 class="post-title mt0 factor-a-bold-ss01"><?= $postData['title'] ?></h3>
           <p class="s my0"><?= $postData['teaser_text'] ?></p>

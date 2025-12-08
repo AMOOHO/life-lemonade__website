@@ -224,6 +224,20 @@ body.home .nav--desktop .nav-wrap {
     padding: 0.6em 2em;
   }
 
+  /* --- Nav-Styling */
+
+  .nav--home svg.lab-logo {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .nav--desktop ul.nav-list .icon-wrap,
+  .nav--home ul.nav-list .icon-wrap {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8125rem;
+  }
+
   .nav--mobile .logo-wrap {
     position: fixed;
     bottom: 1.625rem;

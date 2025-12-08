@@ -45,6 +45,57 @@ const scripts = {
 
   home: function () {
     // home scripts here
+
+    const twistedLines = document.querySelectorAll("header.__home .twisted-line");
+
+    twistedLines.forEach((line) => {
+      const path = line.querySelector("path");
+      const pathLength = path.getTotalLength();
+
+      path.style.strokeDasharray = pathLength;
+      path.style.strokeDashoffset = pathLength;
+
+      let drawStart;
+      if (line.classList.contains("twisted-line--2")) {
+        drawStart = "top top";
+      } else if (line.classList.contains("twisted-line--1")) {
+        drawStart = "top -55%";
+      }
+
+      // ScrollTrigger-Timeline erstellen, aber pausieren
+      const scrollTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: line,
+          start: drawStart,
+          end: "bottom bottom",
+          scrub: 2,
+          // markers: true,
+        },
+        paused: true,
+      });
+
+      scrollTl.fromTo(
+        path,
+        { strokeDashoffset: pathLength * 0.55 },
+        { strokeDashoffset: 0, ease: "none" }
+      );
+
+      // 👉 Intro-Animation
+      gsap.fromTo(
+        path,
+        { strokeDashoffset: pathLength },
+        {
+          strokeDashoffset: pathLength * 0.55,
+          duration: 1.2,
+          ease: "power2.out",
+          onStart: () => (line.style.visibility = "visible"),
+          onComplete: () => scrollTl.scrollTrigger.enable(), // ScrollTrigger erst dann aktivieren
+        }
+      );
+
+      // ScrollTrigger anfangs deaktivieren, bis die Intro fertig ist
+      scrollTl.scrollTrigger.disable();
+    });
   }, // end home scripts
 
   contact: function () {
@@ -58,38 +109,77 @@ const scripts = {
 
     const marqueeSections = document.querySelectorAll("section.__marquees");
     if (marqueeSections.length > 0) {
-      marqueeSections.forEach((marqueeSection) => {
-        // console.log("Marquee section found:", marqueeSection);
-        const marqueeWrap1 = marqueeSection.querySelector(".marquee-wrap--1");
-        const marqueeWrap2 = marqueeSection.querySelector(".marquee-wrap--2");
+      /* --- Media Queries --- */
 
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: marqueeSection,
-              start: "top bottom",
-              // end: "bottom bottom",
-              scrub: 2.5,
-              // markers: true,
-            },
-          })
-          .from(
-            marqueeWrap1,
-            {
-              xPercent: 15, // Start from the right
-              ease: "none",
-            },
-            "<"
-          )
-          .from(
-            marqueeWrap2,
-            {
-              xPercent: -15, // Start from the left
-              ease: "none",
-            },
-            "<"
-          );
-      });
+      let mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          xl: "(min-width: 1281px)",
+          lg: "(max-width: 1280px) and (min-width: 881px)",
+          md: "(max-width: 880px) and (min-width: 577px)",
+          sm: "(max-width: 576px) and (min-width: 433px)",
+          xs: "(max-width: 432px)",
+        },
+        (context) => {
+          let { xl, lg, md, sm, xs } = context.conditions;
+
+          // define xPercent values depending on breakpoint
+          let x1, x2;
+
+          if (xl) {
+            x1 = 15;
+            x2 = -15;
+          } else if (lg) {
+            x1 = 20;
+            x2 = -20;
+          } else if (md) {
+            x1 = 90;
+            x2 = -60;
+          } else if (sm) {
+            x1 = 30;
+            x2 = -30;
+          } else if (xs) {
+            x1 = 40;
+            x2 = -40;
+          }
+
+          marqueeSections.forEach((marqueeSection) => {
+            const marqueeWrap1 = marqueeSection.querySelector(".marquee-wrap--1");
+            const marqueeWrap2 = marqueeSection.querySelector(".marquee-wrap--2");
+
+            // kill old ScrollTriggers if re-inited
+            gsap.killTweensOf([marqueeWrap1, marqueeWrap2]);
+            ScrollTrigger.getAll().forEach((st) => st.kill(false, true));
+
+            // create new timeline with breakpoint-specific xPercent
+            gsap
+              .timeline({
+                scrollTrigger: {
+                  trigger: marqueeSection,
+                  start: "top bottom",
+                  scrub: 2.5,
+                },
+              })
+              .from(
+                marqueeWrap1,
+                {
+                  xPercent: x1,
+                  ease: "none",
+                },
+                "<"
+              )
+              .from(
+                marqueeWrap2,
+                {
+                  xPercent: x2,
+                  ease: "none",
+                },
+                "<"
+              );
+          });
+        }
+      );
     }
 
     // ----------------------------
@@ -179,11 +269,6 @@ const scripts = {
       path.style.strokeDashoffset = pathLength;
 
       let drawStart = "top 25%"; // default start
-      if (line.classList.contains("start-draw--top")) {
-        drawStart = "top 2%";
-      } else if (line.classList.contains("start-draw--early")) {
-        drawStart = "top -50%";
-      }
 
       const tl = gsap
         .timeline({

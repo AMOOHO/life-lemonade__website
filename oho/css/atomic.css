@@ -110,12 +110,24 @@
   background-color: var(--color__lemon);
 }
 
+.bg--lemon--light {
+  background-color: var(--color__lemon--light);
+}
+
 .bg--mint {
   background-color: var(--color__mint);
 }
 
+.bg--mint--light {
+  background-color: var(--color__mint--light);
+}
+
 .bg--grape {
   background-color: var(--color__grape);
+}
+
+.bg--grape--light {
+  background-color: var(--color__grape--light);
 }
 
 .bg--strawberry {
@@ -126,12 +138,16 @@
   background-color: var(--color__strawberry--light);
 }
 
-.bg--split-dark__strawberry--light {
-  background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
-}
-
 .bg--berry {
   background-color: var(--color__berry);
+}
+
+.bg--berry--light {
+  background-color: var(--color__berry--light);
+}
+
+.bg--split-dark__strawberry--light {
+  background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
 }
 
 .bg--offwhite {
@@ -321,5 +337,17 @@
   /* Optional: padding entfernen */
   [class*="ratio--"]::before {
     display: none;
+  }
+}
+
+/* TABLET //////////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 55em) {
+  .bg--split-dark__strawberry--light {
+    background: linear-gradient(
+      180deg,
+      var(--color__dark) 55%,
+      var(--color__strawberry--light) 55%
+    );
   }
 }

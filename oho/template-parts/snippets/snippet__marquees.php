@@ -10,8 +10,8 @@
 ?>
 
 <section class="__marquees sec-wrap bg--dark">
-  <div class="sec-wrap__inner full px-xl-0 pt-xl-2">
-    <a href="<?= get_permalink(794); /* Leistungen */ ?>">
+  <div class="sec-wrap__inner full px-xl-0 pt-xl-2 pt-md-15">
+    <a href="<?= get_permalink(1079);/* Kontakt */; ?>">
       <div class="marquee-wrap marquee-wrap--1">
         <div class="marquee-item">
           <span class="s button bg--strawberry fcolor--dark  mt-xl-05">Lorem Ipsum Dolor<span class="icon-arrow_right"></span></span>
@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <div class="marquee-wrap marquee-wrap--2 mt-xl-1">
+      <div class="marquee-wrap marquee-wrap--2 mt-xl-1 mt-md-0">
         <div class="marquee-item">
           <span class="s button bg--strawberry fcolor--dark mt-xl-05">Lorem Ipsum Dolor<span class="icon-arrow_right"></span></span>
         </div>

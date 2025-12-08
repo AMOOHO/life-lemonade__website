@@ -180,6 +180,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .site-content main {
@@ -713,10 +715,9 @@ body.home .main__inner {
 /* ***** Sections */
 
 .sec-wrap {
+  position: relative;
   width: 100%;
   height: auto;
-  background: var(--color_secondary);
-  position: relative;
 }
 
 .sec-wrap__bg {
@@ -1054,9 +1055,32 @@ body.contact .footer-wrap a:hover {
 
   /* MISC *******************************************************************************/
 
+  :root {
+    /* ***** Font Sizes */
+    --fsize__h1: calc(7.169375rem * 0.65);
+    --fsize__h2: calc(3.86375rem * 0.65);
+    --fsize__h3: calc(1.75625rem * 0.65);
+    --fsize__h4: calc(1.75625rem * 0.65);
+    --fsize__h5: calc(1.75625rem * 0.65);
+    --fsize__h6: calc(1.75625rem * 0.65);
+    --fsize__p: calc(1.75625rem * 0.65);
+    --fsize__s: calc(1.164375rem * 0.65);
+    --fsize__xs: calc(0.875rem * 0.65);
+    --fsize__button: calc(1.216875rem * 0.65);
+    --fsize__teaser: calc(1.51375rem * 0.65);
+    --fsize__nav: calc(1.51375rem * 0.65);
+
+    /* ***** Icon Sizes */
+    --isize__small: calc(3.5rem * 0.65);
+    --isize__regular: calc(4.5rem * 0.65);
+
+    --innerwrap__px: 1.125rem;
+    --innerwrap__py: 2.5rem;
+  }
+
   html,
   body {
-    font-size: min(1em, 2.25vw);
+    font-size: 1rem;
   }
 
   /* LAYOUT *******************************************************************************/

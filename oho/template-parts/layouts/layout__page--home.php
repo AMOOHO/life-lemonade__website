@@ -128,7 +128,7 @@ $scope = $args['scope'] ?? null;
     $query = new WP_Query($args);
 
     if ($query->have_posts()) : ?>
-      <div class="grid-wrap gap-xl-2 mt-xl-4">
+      <div class="grid-wrap gap-xl-2 gap-md-15 mt-xl-4 mt-md-3">
         <?php while ($query->have_posts()) : $query->the_post();
           $color = get_field('colorpicker');
           $teaserText = get_field('teaser-text');
@@ -143,8 +143,15 @@ $scope = $args['scope'] ?? null;
                 $img = get_field('main-img--group');
                 $imgData = $img ? $img['main-img'] : null;
                 $imgPosition = $imgData['img-position'] ?? 'center-center';
+
+                $bgClass = $color ? 'bg--' . $color['slug'] : 'bg--offwhite';
+
+                $placehoderBgClass = $color && $color['slug'] !== 'strawberry'
+                  ? 'bg--' . $color['slug'] . '--light'
+                  : 'bg--offwhite--yellow';
+
                 ?>
-                <div class="covered-image-wrap ratio--3_2 bg--dark <?= $imgPosition; ?>">
+                <div class="covered-image-wrap ratio--3_2 <?= $placehoderBgClass; ?> <?= $imgPosition; ?>">
                   <?php if (!empty($imgData['sizes'])) : ?>
                     <picture>
                       <source media="(max-width: 27em)" srcset="<?= $imgData['sizes']['size_600']; ?>">
@@ -154,7 +161,7 @@ $scope = $args['scope'] ?? null;
                   <?php endif; ?>
                 </div>
 
-                <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
+                <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 pxy-md-15 pxy-sm-1 <?= $bgClass; ?>">
                   <div class="mb-xl-25">
                     <h3 class="post-title mt0 factor-a-bold-ss01"><?= get_the_title(); ?></h3>
                     <p class="s my0"><?= $teaserText; ?></p>

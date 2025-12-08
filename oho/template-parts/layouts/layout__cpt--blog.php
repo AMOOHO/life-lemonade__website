@@ -25,7 +25,7 @@ if ($img) {
         <div class="box box-xl-7 pr-xl-4">
           <nav class="breadcrumb mb2 fcolor--dark" aria-label="Breadcrumb">
             <span class="breadcrumb-separator mr-xl-05"><span class="icon-arrow-twisted-back isize-sm"></span></span>
-            <a href="<?= get_post_type_archive_link('angebot'); ?>" class="p">zurück zur Übersicht</a>
+            <a href="<?= get_post_type_archive_link('blog'); ?>" class="p">zurück zur Übersicht</a>
           </nav>
           <h1 class="h2 my0 fcolor--dark factor-a-bold-ss01"><?= get_the_title(); ?></h1>
         </div>
@@ -71,10 +71,17 @@ if ($img) {
     $query = new WP_Query($args);
 
     if ($query->have_posts()) : ?>
-      <div class="grid-wrap gap-xl-2 mt-xl-4">
+      <div class="grid-wrap gap-xl-2 gap-md-15 mt-xl-4 mt-md-3">
         <?php while ($query->have_posts()) : $query->the_post();
           $color = get_field('colorpicker');
           $teaserText = get_field('teaser-text');
+
+          $bgClass = $color ? 'bg--' . $color['slug'] : 'bg--offwhite';
+
+          $placehoderBgClass = $color && $color['slug'] !== 'strawberry'
+            ? 'bg--' . $color['slug'] . '--light'
+            : 'bg--offwhite--yellow';
+
         ?>
 
 
@@ -87,7 +94,7 @@ if ($img) {
                 $imgData = $img ? $img['main-img'] : null;
                 $imgPosition = $imgData['img-position'] ?? 'center-center';
                 ?>
-                <div class="covered-image-wrap ratio--3_2 bg--dark <?= $imgPosition; ?>">
+                <div class="covered-image-wrap ratio--3_2 <?= $placehoderBgClass; ?> <?= $imgPosition; ?>">
                   <?php if (!empty($imgData['sizes'])) : ?>
                     <picture>
                       <source media="(max-width: 27em)" srcset="<?= $imgData['sizes']['size_600']; ?>">
@@ -97,7 +104,7 @@ if ($img) {
                   <?php endif; ?>
                 </div>
 
-                <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
+                <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 pxy-md-15 pxy-sm-1 <?= $bgClass; ?>">
                   <div class="mb-xl-25">
                     <h3 class="post-title mt0"><?= get_the_title(); ?></h3>
                     <p class="my0 s"><?= $teaserText; ?></p>
