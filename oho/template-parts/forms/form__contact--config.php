@@ -53,10 +53,10 @@ if ($form->validate()) {
 
     $form->sendMail(
       'wordpress@ohodesign.ch', // to
-      'noreply@vsa-firate.cyon.net', // from (if possible, use a real email address over SMTP to avoid spam filter issues)
-      '', // replyTo (better leave this empty due to spam filter issues)
+      'noreply@lifelemonade.ch', // from (if possible, use a real email address over SMTP to avoid spam filter issues)
+      'noreply@lifelemonade.ch', // replyTo (better leave this empty due to spam filter issues)
       $site_name . ' – Kontaktformular', // sender name
-      'Kontaktformular – Neue Anfrage' // subject
+      'Life Lemonade Website – Neue Anfrage via Kontaktformular' // subject
     );
 
     if (isset($form) && method_exists($form, 'usesAjax') && $form->usesAjax()) {
@@ -80,7 +80,7 @@ if ($form->validate()) {
     $to      = "wordpress@ohodesign.ch";
     $subject = sprintf("%s :: Error while submitting a form over SMTP", $site_name);
     $message = $e->getMessage();
-    $headers = "From: noreply@vsa-firate.cyon.net";
+    $headers = "From: noreply@lifelemonade.ch";
 
     // Try to send the fallback mail (use @ to suppress potential warnings)
     @mail($to, $subject, $message, $headers);

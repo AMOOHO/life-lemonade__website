@@ -479,6 +479,7 @@ const initAjaxFormHandling = () => {
         top: firstErrorEl.offsetTop - 200,
         behavior: "smooth",
       });
+      if (lenis) lenis.resize();
     }
   };
 

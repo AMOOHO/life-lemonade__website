@@ -669,7 +669,7 @@ function createMailer() {
   //Server settings
   $mailer->isSMTP();
   $mailer->Host       = 'mail.cyon.ch';                     // Set the SMTP server to send through
-  $mailer->Username   = '';                                 // SMTP username
+  $mailer->Username   = 'noreply@lifelemonade.ch';          // SMTP username
   $mailer->Password   = SMTP_PASSWORD;                     // SMTP password
   $mailer->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
   $mailer->SMTPAuth   = true;                               // Enable SMTP authentication

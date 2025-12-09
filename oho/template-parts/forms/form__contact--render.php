@@ -42,10 +42,9 @@ $form = FormRepository::getInstance()->getForm('contact');
     </div>
   </div>
 
-</div>
-<?php $form->closeForm(); ?>
+  <?php $form->closeForm(); ?>
 
-<?php if ($form->isValid() && !$form->usesAjax()) {
-  require_once(get_template_directory() . "/template-parts/forms/form__{$form->getFormName()}--success.php");
-} ?>
+  <?php if ($form->isValid() && !$form->usesAjax()) {
+    require_once(get_template_directory() . "/template-parts/forms/form__{$form->getFormName()}--success.php");
+  } ?>
 </div>

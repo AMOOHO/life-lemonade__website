@@ -8,6 +8,7 @@ __MACOSX/
 .atom-sftp-sync.json
 sftp.json
 .vscode/
+smtp-config.php
 
 # OTHERS
 *.log

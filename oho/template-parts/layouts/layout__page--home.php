@@ -61,7 +61,7 @@ $scope = $args['scope'] ?? null;
     <div class="twisted-line-wrap twisted-line-wrap--2">
       <?php include(get_template_directory() . "/media/placeholders/twisted-line-2.svg"); ?>
     </div>
-
+  </div>
 </header>
 
 <section class="sec-wrap">

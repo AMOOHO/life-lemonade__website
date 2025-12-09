@@ -1,11 +1,3 @@
-/* //////////////////////
-
-REPLACE-GUIDE:
---> Life Lemonade (Firmenname)
---> rename path in robots.txt (root)
-
-////////////////////// */
-
 /* -------------- */
 /* SETUP */
 /* DESKTOP */
@@ -141,6 +133,7 @@ REPLACE-GUIDE:
 }
 .icon-arrow-twisted:before {
   content: "\0041";
+  -webkit-transform: translate3d(0, 0.375em, 0);
   transform: translate3d(0, 0.375em, 0);
 }
 .icon-mail:before {
@@ -148,6 +141,7 @@ REPLACE-GUIDE:
 }
 .icon-arrow-twisted-back:before {
   content: "\0043";
+  -webkit-transform: translate3d(0, 0.375em, 0) rotate(11deg);
   transform: translate3d(0, 0.375em, 0) rotate(11deg);
 }
 .icon-cross:before {
@@ -182,7 +176,12 @@ body {
 /* ***** Main Height */
 
 .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
@@ -191,6 +190,8 @@ body {
 }
 
 .site-content main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -455,12 +456,13 @@ ul.plain li::before {
   padding: 0 0 0.0625em 0;
 }
 
-@supports (text-decoration-skip-ink: none) {
+@supports ((-webkit-text-decoration-skip-ink: none) or (text-decoration-skip-ink: none)) {
   .wysiwyg p a,
   .wysiwyg u {
     border-bottom: unset;
     padding: 0;
     text-decoration: underline;
+    -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.0625em;
     text-underline-offset: 0.2em;
@@ -542,7 +544,7 @@ p a:hover,
   padding: 0 0 0.0625em 0;
 }
 
-@supports (text-decoration-skip-ink: none) {
+@supports ((-webkit-text-decoration-skip-ink: none) or (text-decoration-skip-ink: none)) {
   .underline,
   .underline:hover,
   a.underline,
@@ -554,6 +556,7 @@ p a:hover,
     border-bottom: unset;
     padding: 0;
     text-decoration: underline;
+    -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.0625em;
     text-underline-offset: 0.2em;
@@ -564,8 +567,10 @@ p a:hover,
   h2 > a.underline,
   h2 > a.underline:hover {
     text-decoration: underline;
+    -webkit-text-decoration-color: var(--color__strawberry);
     text-decoration-color: var(--color__strawberry);
     display: inline;
+    -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
     text-underline-offset: 0.2125em;
     text-decoration-thickness: 0.12em;
@@ -689,7 +694,7 @@ img[data-lazyloaded] {
 
 img.litespeed-loaded {
   -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
   opacity: 1;
 }
