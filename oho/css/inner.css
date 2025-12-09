@@ -231,9 +231,8 @@ input:focus {
 }
 
 .field-wrap input[type="submit"]:focus {
-  background: var(--color__light);
-  color: var(--color__dark);
-  border: 0.0625rem solid var(--color__dark);
+  background: var(--color__dark);
+  color: var(--color__yellow);
 }
 
 /* ***** Radio & Checkbox */
@@ -1264,6 +1263,15 @@ header.__text-bg-img .header-wrap__inner {
   }
 
   /* SINGLE POST *******************************************************************************/
+
+  /* GENERAL FORM STYLES *******************************************************************************/
+
+  /* ***** error handling */
+
+  .form-wrap .error-msg {
+    font-size: var(--fsize__s);
+    margin-top: 0.25em;
+  }
 
   /*  IMPRINT + DATA PRIVACY *******************************************************************************/
 
