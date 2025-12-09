@@ -123,9 +123,9 @@
 
 /* ***** Nav-Wrap Scrolled Case (Home) */
 
-body.home .nav--desktop .nav-wrap {
+/* body.home .nav--desktop .nav-wrap {
   transform: translate3d(0, -100%, 0);
-}
+} */
 
 /* ***** Home Navigation */
 
@@ -155,6 +155,14 @@ body.home .nav--desktop .nav-wrap {
 .nav--home svg.lab-logo {
   width: 18rem;
   height: 18rem;
+}
+
+.nav--home svg.lab-logo path.l {
+  fill: var(--color__primary);
+}
+
+.nav--home svg.lab-logo g.letters {
+  transform-origin: center center;
 }
 
 .nav--home ul.nav-list .icon-wrap {
@@ -201,6 +209,13 @@ body.home .nav--desktop .nav-wrap {
 
   .nav--mobile {
     display: block;
+    --navheight: 5rem;
+  }
+
+  /* ***** Nav-Styling */
+
+  .nav--mobile a {
+    color: var(--color__primary);
   }
 
   /* ***** Nav-Wrap */
@@ -209,38 +224,161 @@ body.home .nav--desktop .nav-wrap {
     z-index: 100;
     position: fixed;
     bottom: 0;
-    top: unset;
-    border-bottom: 0;
+    left: 0;
     width: 100%;
-    height: 6rem;
-    background: var(--color__light);
-    box-shadow: 0 0 0.5em 0.125em rgb(0 0 0 / 10%);
+    height: var(--navheight);
+    background: var(--color__dark);
   }
 
   .nav--mobile .nav-wrap__inner {
-    margin: auto;
-    height: 100%;
     width: 100%;
-    padding: 0.6em 2em;
+    height: 100%;
+    margin: auto;
   }
 
-  /* --- Nav-Styling */
+  /* ***** Navbar */
 
-  .nav--home svg.lab-logo {
-    width: 12rem;
-    height: 12rem;
+  .nav--mobile .navbar {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--navheight);
   }
+
+  .nav--mobile .navbar__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+  }
+
+  .nav--mobile .navbar .logo-wrap {
+    position: fixed;
+    bottom: 1.5em;
+  }
+
+  .nav--mobile .navbar .logo-wrap svg.logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  /* --- Nav Trigger */
+
+  .nav--mobile .navbar .nav-trigger {
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    width: 6rem;
+    height: var(--navheight);
+    cursor: pointer;
+  }
+
+  .nav--mobile .navbar .nav-trigger .icon-cross {
+    font-size: 1em;
+    display: block;
+    color: var(--color__primary);
+    position: absolute;
+    left: -0.1em;
+    transform: translate3d(0, 0.1em, 0);
+  }
+
+  /* ***** Menu */
+
+  .nav--mobile .menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .nav--mobile .menu__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .nav--mobile .menu__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 1.5rem);
+    background: var(--color__primary);
+    opacity: 0.9;
+  }
+
+  /* --- Menu Card */
+
+  .nav--mobile .menu-card {
+    position: relative;
+    width: 100%;
+    max-width: 33rem;
+    height: auto;
+    background: var(--color__dark);
+    aspect-ratio: 1 / 1;
+    transform: rotate(-5deg);
+  }
+
+  /* --- Close Menu Card */
+
+  .nav--mobile .menu-card .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .nav--mobile .menu-card .close .icon-cross {
+    font-size: 2rem;
+    color: var(--color__primary);
+  }
+
+  /* --- Overflow Wrap */
+
+  .nav--mobile .menu .overflow-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav--mobile .menu .overflow-wrap__inner {
+    overflow: auto;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* --- Navlist */
 
   .nav--desktop ul.nav-list .icon-wrap,
   .nav--home ul.nav-list .icon-wrap {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 0.8125rem;
-  }
-
-  .nav--mobile .logo-wrap {
-    position: fixed;
-    bottom: 1.625rem;
   }
 
   .nav--mobile ul {
@@ -250,43 +388,38 @@ body.home .nav--desktop .nav-wrap {
   }
 
   .nav--mobile ul.nav-list {
-    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    left: 0;
-    top: 0.625em;
-    margin: 1.25em 0;
-    height: auto;
-    padding: 0 2.1875em;
+    height: 100%;
+    padding: 2em 2.1875em;
+    overflow: visible;
   }
 
   .nav--mobile ul.nav-list li {
-    margin: 0;
-    line-height: 1.8em;
     display: block;
-    visibility: hidden;
+    font-size: 3.5rem;
+    line-height: 1.1em;
+    margin-bottom: 0.5em;
   }
 
-  /* ***** Nav-Wrap Trigger */
+  /* ***** Home Navigation */
 
-  .nav--mobile .nav-trigger {
-    display: block;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    height: 6rem;
-    width: 6.75rem;
-    cursor: pointer;
-    z-index: 99;
+  /* --- Nav-Styling */
+
+  .nav--home svg.lab-logo {
+    width: 12rem;
+    height: 12rem;
   }
 
-  .nav--mobile .nav-trigger span {
-    position: absolute;
-    left: 1.5625em;
-    bottom: 2.75em;
-    height: 0.125rem;
-    width: 3.125rem;
-    background: var(--color__primary);
-  }
+  /* ***** Lab Logo */
+
+  /* .nav--home svg.lab-logo {
+    width: 12rem;
+    height: 12rem;
+  } */
 }
 
 /* MOBILE //////////////////////////////////////////////////////////////// */
@@ -302,6 +435,14 @@ body.home .nav--desktop .nav-wrap {
 
   -----------------------------------------------------------------------------
   */
+
+  /* ***** Home Navigation */
+
+  /* --- Nav-Styling */
+
+  .nav--home svg.lab-logo {
+    position: absolute;
+  }
 }
 
 /* MINI-MOBILE //////////////////////////////////////////////////////////////// */

@@ -15,13 +15,13 @@ get_header();
 <header class="__default header-wrap bg--theme">
   <div class="header-wrap__bg bg--theme"></div>
   <div class="header-wrap__inner">
-    <div class="mt-xl-5">
+    <div class="mt-xl-5 mt-md-0">
       <nav class="breadcrumb mb2 fcolor--dark" aria-label="Breadcrumb">
         <a href="<?= get_post_type_archive_link('angebot'); ?>" class="p">Angebot</a>
         <span class="breadcrumb-separator mx-xl-05"><span class="icon-arrow-twisted isize-sm"></span></span>
         <span class="breadcrumb-current p"><?= get_the_title(); ?></span>
       </nav>
-      <h1 class="my0 fcolor--dark factor-a-bold-ss01 pr-xl-4"><?= get_the_title(); ?></h1>
+      <h1 class="my0 fcolor--dark factor-a-bold-ss01 pr-xl-4 pr-md-0"><?= get_the_title(); ?></h1>
     </div>
   </div>
 </header>
@@ -30,7 +30,7 @@ get_header();
 
 <section class="sec-wrap">
   <div class="sec-wrap__inner">
-    <div class="pr-xl-8">
+    <div class="pr-xl-8 pr-md-4 pr-sm-0">
 
 
       <!-- Text -->
@@ -55,8 +55,8 @@ get_header();
 <section class="sec-wrap">
   <div class="sec-wrap__inner full pb-xl-2">
     <div class="grid-wrap gap-xl-2">
-      <div class="box box-xl-4 box-md-6 box-sm-12">
-        <h2 class="factor-a-bold-ss01">weitere<br>Themen für dein Unternehmen</h2>
+      <div class="box box-xl-4 box-md-8 box-sm-12">
+        <h2 class="factor-a-bold-ss01 my0">weitere<br>Themen für dein Unternehmen</h2>
       </div>
 
       <?php
@@ -77,16 +77,16 @@ get_header();
           $teaserSubtitle = get_field('teaser-subtitle');
           $teaserText = get_field('teaser-text');
       ?>
-          <div class="post-item box box-xl-4 box-sm-6">
+          <div class="post-item box box-xl-4 box-md-6 box-sm-12">
             <a href="<?php the_permalink(); ?>">
-              <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pb-xl-25 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
+              <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pb-xl-25 pxy-md-2 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
                 <div>
                   <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
                   <?php if ($teaserSubtitle): ?>
                     <h3 class="post-title mt05 mb0 factor-a-bold-ss01"><?= $teaserSubtitle; ?></h3>
                   <?php endif; ?>
                 </div>
-                <div class="mt25">
+                <div class="mt-xl-25 mt-md-15">
                   <span class="button button--themed block w-fit">mehr erfahren</span>
                 </div>
               </div>

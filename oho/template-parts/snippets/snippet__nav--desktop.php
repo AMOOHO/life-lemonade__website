@@ -11,7 +11,7 @@
 
 
 <div id="nav--desktop" class="nav--desktop">
-  <div class="nav-wrap">
+  <div class="nav-wrap" style="<?= is_home() || is_front_page() ? 'visibility:hidden;' : ''; ?>">
     <div class="nav-wrap__inner">
       <?php
       // ! ACHTUNG  *******
@@ -25,7 +25,7 @@
         <!-- Logo -->
 
         <a class="<?php the_nav_class(2); ?>" href="/">
-          <img class="logo" src="<?= theme_URL(); ?>/media/placeholders/life-lemonade-logo-placeholder.png" alt="Life Lemonade Logo">
+          <?php include(get_template_directory() . "/media/life-lemonade-logo.svg"); ?>
         </a>
 
         <!-- Nav-List -->
@@ -34,7 +34,7 @@
           <li><a class="<?php the_nav_class(1077); ?>" href="<?= get_permalink(1077); /* Portrait */ ?>"><b>Portrait</b></a></li>
           <li><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?>" href="<?= get_post_type_archive_link('blog'); ?>"><b>Blog</b></a></li>
           <li><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?>" href="<?= get_post_type_archive_link('angebot'); ?>"><b>Angebot</b></a></li>
-          <li class="has-icon"><a lass="<?php the_nav_class(1079); ?>" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--dark"></span></span></a></li>
+          <li class="has-icon"><a class="<?php the_nav_class(1079); ?>" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--dark"></span></span></a></li>
         </ul>
       </div>
 

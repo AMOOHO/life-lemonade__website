@@ -25,7 +25,7 @@ $scope = $args['scope'] ?? null;
           <div class="flex-wrap space-between-xl align-top-xl h-full">
 
             <div class="logo-wrap pxy-xl-1">
-              <?php include(get_template_directory() . "/media/lab-logo.svg"); ?>
+              <?php include(get_template_directory() . "/media/Life_Lemonade_Signet_RZ.svg"); ?>
             </div>
 
             <!-- Nav-List -->
@@ -76,7 +76,7 @@ $scope = $args['scope'] ?? null;
 </section>
 
 <section class="sec-wrap">
-  <div class="sec-wrap__bg bg--split-dark__strawberry--light"></div>
+  <div class="sec-wrap__bg bg--split-dark__primary"></div>
   <div class="sec-wrap__inner wide pt-xl-0">
 
 
@@ -102,7 +102,7 @@ $scope = $args['scope'] ?? null;
 
 
 <section class="sec-wrap">
-  <div class="sec-wrap__bg bg--strawberry--light"></div>
+  <div class="sec-wrap__bg bg--primary"></div>
 
 
   <div class="sec-wrap__inner">
@@ -128,55 +128,59 @@ $scope = $args['scope'] ?? null;
     $query = new WP_Query($args);
 
     if ($query->have_posts()) : ?>
-      <div class="grid-wrap gap-xl-2 gap-md-15 mt-xl-4 mt-md-3">
-        <?php while ($query->have_posts()) : $query->the_post();
-          $color = get_field('colorpicker');
-          $teaserText = get_field('teaser-text');
-        ?>
+      <div class="mt-xl-4 mt-md-3">
+        <div class="flex-wrap gap-xl-2 justify-center-md">
+          <?php while ($query->have_posts()) : $query->the_post();
+            $color = get_field('colorpicker');
+            $teaserText = get_field('teaser-text');
+          ?>
 
 
-          <div class="post-item box box-xl-4 box-sm-6">
-            <a href="<?= get_permalink(); ?>">
-              <div class="flex-wrap dir-col rounded-sm overflow-hidden h-full">
-                <!-- Main Image -->
-                <?php
-                $img = get_field('main-img--group');
-                $imgData = $img ? $img['main-img'] : null;
-                $imgPosition = $imgData['img-position'] ?? 'center-center';
+            <div class="post-item box box-xl-4 box-md-9 box-sm-12">
+              <a href="<?= get_permalink(); ?>">
+                <div class="flex-wrap dir-col overflow-hidden h-full">
+                  <!-- Main Image -->
+                  <?php
+                  $img = get_field('main-img--group');
+                  $imgData = $img ? $img['main-img'] : null;
+                  $imgPosition = $imgData['img-position'] ?? 'center-center';
 
-                $bgClass = $color ? 'bg--' . $color['slug'] : 'bg--offwhite';
+                  $bgClass = $color ? 'bg--' . $color['slug'] : 'bg--offwhite';
 
-                $placehoderBgClass = $color && $color['slug'] !== 'strawberry'
-                  ? 'bg--' . $color['slug'] . '--light'
-                  : 'bg--offwhite--yellow';
+                  $placehoderBgClass = $color && $color['slug'] !== 'strawberry'
+                    ? 'bg--' . $color['slug'] . '--light'
+                    : 'bg--offwhite--yellow';
 
-                ?>
-                <div class="covered-image-wrap ratio--3_2 <?= $placehoderBgClass; ?> <?= $imgPosition; ?>">
-                  <?php if (!empty($imgData['sizes'])) : ?>
-                    <picture>
-                      <source media="(max-width: 27em)" srcset="<?= $imgData['sizes']['size_600']; ?>">
-                      <source media="(max-width: 55em)" srcset="<?= $imgData['sizes']['size_1200']; ?>">
-                      <img src="<?= $imgData['sizes']['size_1800']; ?>" alt="<?= get_alt_tag($imgData['id']); ?>">
-                    </picture>
-                  <?php endif; ?>
-                </div>
-
-                <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 pxy-md-15 pxy-sm-1 <?= $bgClass; ?>">
-                  <div class="mb-xl-25">
-                    <h3 class="post-title mt0 factor-a-bold-ss01"><?= get_the_title(); ?></h3>
-                    <p class="s my0"><?= $teaserText; ?></p>
+                  ?>
+                  <div class="covered-image-wrap ratio--3_2 <?= $placehoderBgClass; ?> <?= $imgPosition; ?>">
+                    <?php if (!empty($imgData['sizes'])) : ?>
+                      <picture>
+                        <source media="(max-width: 27em)" srcset="<?= $imgData['sizes']['size_600']; ?>">
+                        <source media="(max-width: 55em)" srcset="<?= $imgData['sizes']['size_1200']; ?>">
+                        <img src="<?= $imgData['sizes']['size_1800']; ?>" alt="<?= get_alt_tag($imgData['id']); ?>">
+                      </picture>
+                    <?php endif; ?>
                   </div>
-                  <span class="button button--themed block w-fit">mehr erfahren</span>
-                </div>
-              </div>
-            </a>
-          </div>
 
-        <?php endwhile; ?>
+                  <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
+                    <div class="mb-xl-25">
+                      <h3 class="post-title mt0 factor-a-bold-ss01"><?= get_the_title(); ?></h3>
+                      <p class="s my0"><?= $teaserText; ?></p>
+                    </div>
+                    <div>
+                      <span class="button button--themed block w-fit">mehr erfahren</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          <?php endwhile; ?>
+        </div>
       </div>
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
-    <div class="flex-wrap justify-center-xl mt-xl-5">
+    <div class="flex-wrap justify-center-xl mt-xl-5 mt-md-3 mt-sm-2">
       <div class="box">
         <a href="<?= get_post_type_archive_link('blog'); ?>">
           <div class="button p bg--dark fcolor--strawberry">alle Beiträge ansehen</div>

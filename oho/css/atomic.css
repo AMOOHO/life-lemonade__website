@@ -38,6 +38,11 @@
   color: var(--color__lemon);
 }
 
+.fcolor--lemon--light,
+.fcolor--lemon--light * {
+  color: var(--color__lemon--light);
+}
+
 .fcolor--mint,
 .fcolor--mint * {
   color: var(--color__mint);
@@ -134,8 +139,16 @@
   background-color: var(--color__strawberry);
 }
 
+.bg--split-dark__strawberry {
+  background: linear-gradient(180deg, var(--color__strawberry) 45%, var(--color__dark) 45%);
+}
+
 .bg--strawberry--light {
   background-color: var(--color__strawberry--light);
+}
+
+.bg--split-dark__strawberry--light {
+  background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
 }
 
 .bg--berry {
@@ -146,8 +159,8 @@
   background-color: var(--color__berry--light);
 }
 
-.bg--split-dark__strawberry--light {
-  background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
+.bg--split-dark__primary {
+  background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__primary) 45%);
 }
 
 .bg--offwhite {
@@ -194,6 +207,12 @@
 
 .rounded-lg {
   border-radius: var(--radius__large);
+}
+
+/* ***** Box Shadow */
+
+.shadow {
+  box-shadow: var(--shadow__regular);
 }
 
 /* ***** Icon Sizes */
@@ -349,5 +368,9 @@
       var(--color__dark) 55%,
       var(--color__strawberry--light) 55%
     );
+  }
+
+  .bg--split-dark__primary {
+    background: linear-gradient(180deg, var(--color__dark) 55%, var(--color__primary) 55%);
   }
 }

@@ -15,9 +15,9 @@ get_header();
 <header class="header-wrap">
   <div class="header-wrap__bg"></div>
   <div class="header-wrap__inner full pb-xl-0">
-    <div class="mt-xl-5">
+    <div class="mt-xl-5 mt-md-0">
       <div class="grid-wrap">
-        <div class="box box-xl-12 pr-xl-10">
+        <div class="box box-xl-12 pr-xl-10 pr-md-0">
           <span class="inline-block p optical-alignment"><b>Unsere Angebote für dein<br>betriebliches Gesundheitsmanagement</b></span>
           <div class="mt-xl-1">
             <h1 class="my0 fcolor--dark factor-a-bold-ss01">Die Glücksforschung<br>für Unternehmen nutzen</h1>
@@ -30,8 +30,8 @@ get_header();
 </header>
 
 <section class="sec-wrap">
-  <div class="sec-wrap__bg bg--darksplit"></div>
-  <div class="sec-wrap__inner full pt-xl-2">
+  <div class="sec-wrap__bg bg--split-dark__strawberry"></div>
+  <div class="sec-wrap__inner full pt-xl-2 pt-md-4">
     <div class="max-w--content">
 
 
@@ -45,22 +45,22 @@ get_header();
       $query = new WP_Query($args);
 
       if ($query->have_posts()) : ?>
-        <div class="grid-wrap gap-xl-2">
+        <div class="flex-wrap gap-xl-2">
           <?php while ($query->have_posts()) : $query->the_post();
             $color = get_field('colorpicker');
             $teaserTitle = get_field('teaser-title');
             $teaserSubtitle = get_field('teaser-subtitle');
             $teaserText = get_field('teaser-text');
           ?>
-            <div class="post-item box box-xl-4 box-sm-6">
+            <div class="post-item box box-xl-4 box-md-10 box-sm-12">
               <a href="<?php the_permalink(); ?>">
-                <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-4 pb-md-15 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
-                  <div class="mb-xl-4">
+                <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-4 pb-md-15 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
+                  <div class="mb-xl-4 mb-md-2 mb-sm-15">
                     <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
                     <?php if ($teaserSubtitle): ?>
                       <h3 class="mt05 mb0 factor-a-bold-ss01"><?= $teaserSubtitle; ?></h3>
                     <?php endif; ?>
-                    <div class="mt25"></div>
+                    <div class="mt-xl-25 mt-md-15"></div>
                     <p class="text-teaser my0"><?= mb_substr($teaserText, 0, 500) . (mb_strlen($teaserText) > 500 ? '...' : ''); ?></p>
                   </div>
                   <div>

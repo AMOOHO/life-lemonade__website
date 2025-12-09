@@ -35,8 +35,8 @@ $offersPosts = $component['offers'] ?? get_sub_field('offers');
         ?>
           <div class="angebot-item ratio--angebot-teaser box box-xl-4 box-md-6 box-sm-12">
             <a href="<?php the_permalink(); ?>">
-              <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-4 pb-md-15 rounded-sm <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
-                <div class="mb-xl-4">
+              <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-4 pb-md-15 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
+                <div class="mb-xl-4 mb-md-2 mb-sm-15">
                   <h3 class="post-title h2 mt0 mb05 factor-a-bold-ss01"><?= $title; ?></h3>
                   <p class="my0"><?= mb_substr($teaserText, 0, 500) . (mb_strlen($teaserText) > 500 ? '...' : ''); ?></p>
                 </div>

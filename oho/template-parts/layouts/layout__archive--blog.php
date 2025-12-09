@@ -15,9 +15,9 @@ get_header();
 <header class="header-wrap">
   <div class="header-wrap__bg"></div>
   <div class="header-wrap__inner pb-xl-1">
-    <div class="mt-xl-5">
+    <div class="mt-xl-5 mt-md-0">
       <div class="grid-wrap">
-        <div class="box box-xl-12 pr-xl-10">
+        <div class="box box-xl-12 pr-xl-10 pr-md-0">
           <span class="inline-block p optical-alignment"><b>Lemonade Lab Insights und neuste Forschungs-Ergebnisse</b></span>
           <div class="mt-xl-1">
             <h1 class="my0 fcolor--dark factor-a-bold-ss01">Happiness-Blog</h1>
@@ -73,7 +73,7 @@ if ($query->have_posts()) : ?>
     ?>
       <div class="post-item box box-xl-4 box-sm-6">
         <a href="<?php the_permalink(); ?>">
-          <div class="rounded-sm overflow-hidden">
+          <div class="overflow-hidden">
             <?php
             if ($mainImg && isset($mainImg['main-img'])) :
               $MainImg = $mainImg['main-img'];

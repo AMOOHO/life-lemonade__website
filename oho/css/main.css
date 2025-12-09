@@ -81,6 +81,9 @@ REPLACE-GUIDE:
   --radius__regular: 2em;
   --radius__large: 4em;
 
+  /* ***** Shadows */
+  --shadow__regular: 0 0 1em 0.5em rgba(0, 0, 0, 0.03);
+
   /* ***** Layout */
   --innerwrap__width: min(100vw, 110em);
   --innerwrap__width--wide: min(100vw, 120em);
@@ -118,12 +121,12 @@ REPLACE-GUIDE:
 
 @font-face {
   font-family: "Icons Life Lemonade";
-  src: url("/wp-content/themes/oho/font/icon/icons-lifelemonade.eot");
-  src: url("/wp-content/themes/oho/font/icon/icons-lifelemonade.eot?#iefix")
+  src: url("/wp-content/themes/oho/font/icon/icons-lifelemonade-v2.eot");
+  src: url("/wp-content/themes/oho/font/icon/icons-lifelemonade-v2.eot?#iefix")
       format("embedded-opentype"),
-    url("/wp-content/themes/oho/font/icon/icons-lifelemonade.woff") format("woff"),
-    url("/wp-content/themes/oho/font/icon/icons-lifelemonade.ttf") format("truetype"),
-    url("/wp-content/themes/oho/font/icon/icons-lifelemonade.svg#Glyphter") format("svg");
+    url("/wp-content/themes/oho/font/icon/icons-lifelemonade-v2.woff") format("woff"),
+    url("/wp-content/themes/oho/font/icon/icons-lifelemonade-v2.ttf") format("truetype"),
+    url("/wp-content/themes/oho/font/icon/icons-lifelemonade-v2.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -146,6 +149,9 @@ REPLACE-GUIDE:
 .icon-arrow-twisted-back:before {
   content: "\0043";
   transform: translate3d(0, 0.375em, 0) rotate(11deg);
+}
+.icon-cross:before {
+  content: "\ea0f";
 }
 
 /* BASE STYLES */
@@ -196,6 +202,14 @@ body.theme--default {
 
 body.theme--lemon {
   --color__theme: var(--color__lemon);
+}
+
+body.theme--lemon {
+  --color__theme: var(--color__lemon);
+}
+
+body.theme--lemon--light {
+  --color__theme: var(--color__lemon--light);
 }
 
 body.theme--mint {
@@ -587,23 +601,23 @@ p a:hover,
   color: var(--color__dark);
 }
 
-.bg--lemon .button--themed {
+.bg--lemon > div > .button--themed {
   background: var(--color__lemon--light);
 }
 
-.bg--mint .button--themed {
+.bg--mint > div > .button--themed {
   background: var(--color__mint--light);
 }
 
-.bg--grape .button--themed {
+.bg--grape > div > .button--themed {
   background: var(--color__grape--light);
 }
 
-.bg--strawberry .button--themed {
+.bg--strawberry > div > .button--themed {
   background: var(--color__strawberry--light);
 }
 
-.bg--berry .button--themed {
+.bg--berry > div > .button--themed {
   background: var(--color__berry--light);
 }
 
@@ -1063,24 +1077,24 @@ body.contact .footer-wrap a:hover {
     --fsize__h4: calc(1.75625rem * 0.65);
     --fsize__h5: calc(1.75625rem * 0.65);
     --fsize__h6: calc(1.75625rem * 0.65);
-    --fsize__p: calc(1.75625rem * 0.65);
-    --fsize__s: calc(1.164375rem * 0.65);
-    --fsize__xs: calc(0.875rem * 0.65);
-    --fsize__button: calc(1.216875rem * 0.65);
-    --fsize__teaser: calc(1.51375rem * 0.65);
-    --fsize__nav: calc(1.51375rem * 0.65);
+    --fsize__p: calc(1.75625rem * 0.85);
+    --fsize__s: calc(1.164375rem * 0.85);
+    --fsize__xs: calc(0.875rem * 0.85);
+    --fsize__button: calc(1.216875rem * 0.85);
+    --fsize__teaser: calc(1.51375rem * 0.85);
+    --fsize__nav: calc(1.51375rem * 0.85);
 
     /* ***** Icon Sizes */
     --isize__small: calc(3.5rem * 0.65);
     --isize__regular: calc(4.5rem * 0.65);
 
-    --innerwrap__px: 1.125rem;
-    --innerwrap__py: 2.5rem;
+    --innerwrap__px: 3rem;
+    --innerwrap__py: 3rem;
   }
 
   html,
   body {
-    font-size: 1rem;
+    font-size: min(1rem, 2vw);
   }
 
   /* LAYOUT *******************************************************************************/
@@ -1098,7 +1112,8 @@ body.contact .footer-wrap a:hover {
   */
 
   footer.site-footer {
-    margin-bottom: 6rem;
+    height: auto;
+    padding-bottom: 5rem;
   }
 }
 
@@ -1121,18 +1136,30 @@ body.contact .footer-wrap a:hover {
 
   :root {
     /* ***** Font Sizes */
-    --fsize__p: 1.25rem;
-    --fsize__s: 1rem;
+    --fsize__h1: calc(7.169375rem * 0.6);
+    --fsize__h2: calc(3.86375rem * 0.65);
+    --fsize__h3: calc(1.75625rem * 0.8);
+    --fsize__h4: calc(1.75625rem * 0.8);
+    --fsize__h5: calc(1.75625rem * 0.8);
+    --fsize__h6: calc(1.75625rem * 0.8);
+    --fsize__p: calc(1.75625rem * 0.8);
+    --fsize__s: calc(1.164375rem * 0.95);
+    --fsize__xs: calc(0.875rem * 0.8);
+    --fsize__button: calc(1.216875rem * 0.85);
+    /* --fsize__teaser: calc(1.51375rem * 0.5);
+    --fsize__nav: calc(1.51375rem * 0.5); */
 
     /* ***** Icon Sizes */
-    --isize__small: 1rem;
-    --isize__regular: 1.75rem;
-    --isize__large: 5rem;
+    /* --isize__small: calc(3.5rem * 0.5);
+    --isize__regular: calc(4.5rem * 0.5); */
+
+    --innerwrap__px: 2rem;
+    --innerwrap__py: 3rem;
   }
 
   html,
   body {
-    font-size: min(1em, 2.325vw);
+    font-size: min(1rem, 2.49vw);
   }
 
   /* LAYOUT *******************************************************************************/
@@ -1186,13 +1213,11 @@ body.contact .footer-wrap a:hover {
 
   :root {
     /* ***** Font Sizes */
-    --fsize__p: 1.5rem;
-    --fsize__s: 1.175rem;
   }
 
   html,
   body {
-    font-size: min(1em, 2.375vw);
+    /* font-size: 1rem; */
   }
 
   /*

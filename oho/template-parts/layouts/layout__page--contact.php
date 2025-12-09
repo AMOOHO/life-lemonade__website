@@ -15,13 +15,13 @@ get_header();
 <header class="header-wrap">
   <div class="header-wrap__bg bg--secondary"></div>
   <div class="header-wrap__inner pb-xl-0">
-    <div class="mt-xl-10">
+    <div class="mt-xl-10 mt-md-0">
       <div class="grid-wrap">
-        <div class="box box-xl-8 pr-xl-10">
+        <div class="box box-xl-8 box-sm-12 pr-xl-10 pr-md-0">
           <h1 class="my0 fcolor--dark">BGM-<span class="factor-a-bold-ss01">Angebote</span><br>anfragen</h1>
         </div>
-        <div class="box box-xl-4">
-          <div class="bg--dark pxy-xl-25 rounded-sm">
+        <div class="box box-xl-4 box-md-8 mt-md-3 mb-md-4">
+          <div class="bg--dark pxy-xl-25 pxy-md-2">
             <address class="h3 fcolor--secondary">
               Life Lemonade GmbH<br><br>
 
@@ -43,7 +43,7 @@ get_header();
   <div class="sec-wrap__inner pt-xl-0">
 
     <div class="grid-wrap">
-      <div class="box box-xl-8">
+      <div class="box box-xl-8 box-md-10 box-sm-12">
 
         <?php get_template_part('template-parts/forms/form__contact--render'); ?>
       </div>

@@ -24,9 +24,9 @@ $quoteAuthor = $quoteGroup['author'];
   <header class="__portrait header-wrap">
     <div class="header-wrap__bg"></div>
     <div class="header-wrap__inner">
-      <div class="mt-xl-5">
+      <div class="mt-xl-5 mt-md-0">
         <div class="grid-wrap">
-          <div class="box box-xl-8 pr-xl-10">
+          <div class="box box-xl-8 pr-xl-10 pr-md-0">
             <span class="inline-block p optical-alignment"><b><?= $contextTitle; ?></b></span>
             <div class="mt-xl-1">
               <h1 class="my0 fcolor--dark factor-a-bold-ss01"><?= $title; ?></h1>
@@ -34,14 +34,14 @@ $quoteAuthor = $quoteGroup['author'];
           </div>
           <div class="box box-xl-4">
             <div class="slanted-image-wrap relative" data-anim="slanted-images-switch" data-anim-trigger="hover">
-              <div class="slanted-image slanted-image--2 covered-image-wrap ratio--16_10 bg--mint rounded-sm">
+              <div class="slanted-image slanted-image--2 covered-image-wrap ratio--16_10 bg--mint">
                 <picture>
                   <source media="(max-width: 27em)" srcset="<?= $img2['sizes']['size_1200']; ?>">
                   <source media="(max-width: 55em)" srcset="<?= $img2['sizes']['size_1800']; ?>">
                   <img src="<?= $img2['sizes']['size_1800']; ?>" alt="<?= get_alt_tag($img2['id']); ?>">
                 </picture>
               </div>
-              <div class="slanted-image slanted-image--1 covered-image-wrap ratio--16_10 bg--mint rounded-sm">
+              <div class="slanted-image slanted-image--1 covered-image-wrap ratio--16_10 bg--mint">
                 <picture>
                   <source media="(max-width: 27em)" srcset="<?= $img1['sizes']['size_1200']; ?>">
                   <source media="(max-width: 55em)" srcset="<?= $img1['sizes']['size_1800']; ?>">

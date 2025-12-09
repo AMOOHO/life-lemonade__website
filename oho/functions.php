@@ -36,8 +36,10 @@ add_filter('body_class', function ($classes) {
 
   if (is_front_page() || is_page(1079) /* Contact */) {
     $classes[] = 'theme--lemon';
+    $classes[] = 'bg--lemon';
   } elseif (is_page(1077) /* Portrait */) {
-    $classes[] = 'theme--mint';
+    $classes[] = 'theme--lemon';
+    $classes[] = 'bg--lemon--light';
   } elseif (is_singular('angebot')) {
     $color = get_field('colorpicker');
     $allowed_colors = ['lemon', 'mint', 'grape', 'strawberry', 'berry'];
@@ -56,14 +58,20 @@ add_filter('body_class', function ($classes) {
       $classes[] = 'theme--default';
     }
     $classes[] = 'bg--offwhite--yellow';
+  } elseif (is_post_type_archive('angebot')) {
+    $classes[] = 'theme--strawberry';
+    $classes[] = 'bg--strawberry';
+  } elseif (is_post_type_archive('blog')) {
+    $classes[] = 'theme--mint';
+    $classes[] = 'bg--primary';
   } else {
     $classes[] = 'theme--default';
     $classes[] = 'bg--offwhite';
   }
 
-  if (is_page(1077) /* Portrait */) {
-    $classes[] = 'bg--primary';
-  }
+  // if (is_page(1077) /* Portrait */) {
+  //   $classes[] = 'bg--primary';
+  // }
 
   if (is_page(1079) /* Contact */) {
     $classes[] = 'contact';

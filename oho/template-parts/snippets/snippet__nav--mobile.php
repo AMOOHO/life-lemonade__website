@@ -12,38 +12,48 @@
 <div id="nav--mobile" class="nav--mobile">
   <div class="nav-wrap">
     <div class="nav-wrap__inner">
-      <?php
-      // ! ACHTUNG  *******
-      // * Die Navigation wird hier für Mobile und Desktop in zwei DOM-Snippers integriert.
-      // * Die Inhalte / Navigationselemente müssen also in beiden Snippets angepasst werden.
-      // * *************************
-      ?>
 
-      <!-- Logo -->
+      <?php /* Menu */ ?>
 
-      <div class="logo-wrap">
-        <a class="<?php the_nav_class(2); ?>" href="/">
-          <span style="font-size: 15px; letter-spacing: 0.004em;">Boilerplate
-            <?= wp_get_theme()['Version']; ?></span><br>
-          <span style="font-size: 0.79em; opacity: 0.5;"><?php echo get_bloginfo('name'); ?></span>
-        </a>
-      </div>
+      <div class="menu" style="visibility: hidden; pointer-events: none;">
+        <div class="menu__bg" style="opacity: 0;"></div>
+        <div class="menu__inner pxy4 pb7 pxy-sm-25 pb-sm-4 pxy-xs-2 pb-xs-25">
+          <div class="menu-card" style="visibility: hidden;">
+            <div class="close"><span class="icon icon-cross"></span></div>
 
+            <!-- Nav-List -->
+            <ul class="nav-list">
+              <li class="factor-a-bold-ss01"><a class="<?php the_nav_class(1077); ?>" href="<?= get_permalink(1077); /* Portrait */ ?>">Portrait</a></li>
+              <li class="factor-a-bold-ss01"><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?>" href="<?= get_post_type_archive_link('blog'); ?>">Blog</a></li>
+              <li class="factor-a-bold-ss01"><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?>" href="<?= get_post_type_archive_link('angebot'); ?>">Angebot</a></li>
+              <li class="factor-a-bold-ss01"><a class="<?php the_nav_class(1079); ?>" href="<?= get_permalink(1079);/* Kontakt */ ?>">Kontakt</a></li>
+            </ul>
+          </div>
 
-      <!-- Nav-List -->
-
-      <ul class="nav-list">
-        <li><a class="<?php the_nav_class("xxx"); ?>" href="/">XXX</a></li>
-        <li><a class="<?php the_nav_class("xxx"); ?>" href="/">XXX</a></li>
-        <li><a class="<?php the_nav_class("xxx"); ?>" href="/">XXX</a></li>
-      </ul>
-
-      <!-- Nav-Trigger -->
-
-      <div id="nav-trigger" class="nav-trigger">
-        <span></span>
-        <span></span>
+        </div>
       </div>
     </div>
+
+    <?php /* Navbar */ ?>
+
+    <div class="navbar bg--dark">
+      <div class="navbar__inner">
+
+        <!-- Logo -->
+        <div class="logo-wrap">
+          <a class="<?php the_nav_class(2); ?>" href="/">
+            <?php include(get_template_directory() . "/media/life-lemonade-logo.svg"); ?>
+          </a>
+        </div>
+
+        <!-- Nav-Trigger -->
+        <div id="nav-trigger" class="nav-trigger">
+          <span class="icon icon-cross" style="visibility:hidden;"></span>
+          <span class="menu-label h3 fcolor--primary">Menü</span>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </div>

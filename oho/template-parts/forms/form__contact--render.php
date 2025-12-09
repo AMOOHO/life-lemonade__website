@@ -4,7 +4,7 @@ $form = FormRepository::getInstance()->getForm('contact');
 
 <div class="form-wrap <?= $form->usesAjax() ? 'use-ajax' : ''; ?>">
   <?php $form->openForm(); ?>
-  <div class="grid-wrap row-gap-xl-2 pr-xl-10">
+  <div class="grid-wrap row-gap-xl-2 pr-xl-10 pr-md-0">
 
     <div class="box box-xl-12">
       <?php $form->renderField('Name'); ?>

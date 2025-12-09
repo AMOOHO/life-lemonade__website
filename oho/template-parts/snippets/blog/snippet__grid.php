@@ -46,7 +46,7 @@ $terms = get_used_terms($taxonomySlug, $post_query_args);
   </div>
 <?php endif; ?>
 
-<div class="grid-wrap mixitup-grid mixitup--ajax gap-xl-2" data-posttype="<?= $postTypeSlug; ?>">
+<div class="flex-wrap mixitup-grid mixitup--ajax gap-xl-2" data-posttype="<?= $postTypeSlug; ?>">
   <?php
   $initialData = [];
 
@@ -68,21 +68,18 @@ $terms = get_used_terms($taxonomySlug, $post_query_args);
   </script>
 </div>
 
-<div class="mt-xl-5"></div>
 <?php if ($the_query->found_posts > $postsPerPage) : ?>
-
-  <div class="flex-wrap justify-center-xl">
-    <div class="box">
-      <div class="load-more button p bg--dark fcolor--strawberry">mehr Beiträge laden</div>
+  <div class="mt-xl-5 mt-md-3 mt-sm-2">
+    <div class="flex-wrap justify-center-xl">
+      <div class="box">
+        <div class="load-more button p bg--dark fcolor--strawberry">mehr Beiträge laden</div>
+      </div>
     </div>
   </div>
-
 <?php endif; ?>
 
-<div class="grid-wrap">
+<div id="empty-notice" class="grid-wrap empty-notice" style="visibility: hidden;">
   <div class="box box-xl-8 box-md-12">
-    <div id="empty-notice" class="empty-notice" style="visibility: hidden;">
-      <p>Leider ist unter dieser Kategorie noch kein Beitrag vorhanden.</p>
-    </div>
+    <p>Leider ist unter dieser Kategorie noch kein Beitrag vorhanden.</p>
   </div>
 </div>

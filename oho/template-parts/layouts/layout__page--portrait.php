@@ -27,7 +27,7 @@ $text = get_sub_field('text', $scope);
   <?php endwhile; ?>
 <?php else : ?>
   <?php /* Fallback */ ?>
-  <header class="header-wrap bg--primary header--default">
+  <header class="header-wrap bg--lemon--light header--default">
     <div class="header-wrap__inner pb3">
       <h1 class="mb0 mt-xl-15 mt-lg-1 fcolor--light factor-a-bold-ss01"><?= get_the_title(); ?></h1>
     </div>
@@ -38,7 +38,7 @@ $text = get_sub_field('text', $scope);
 
 <section class="sec-wrap">
   <div class="sec-wrap__inner">
-    <div class="pr-xl-8">
+    <div class="pr-xl-8 pr-md-4 pr-sm-0">
 
       <!-- Text -->
 

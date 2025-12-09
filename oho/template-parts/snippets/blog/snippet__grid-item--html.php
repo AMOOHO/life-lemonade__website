@@ -22,9 +22,9 @@ $bgClass = $postData['color'] ? 'bg--' . $postData['color'] : 'bg--offwhite';
 
 
 ?>
-<div class="mix post-item box box-xl-4 box-sm-6" data-id="<?= $postData['id']; ?>">
+<div class="mix post-item box box-xl-4 box-md-6 box-sm-12" data-id="<?= $postData['id']; ?>">
   <a href="<?= $postData['permalink']; ?>">
-    <div class="flex-wrap dir-col rounded-sm overflow-hidden h-full">
+    <div class="flex-wrap dir-col overflow-hidden h-full">
       <!-- Main Image -->
       <div class="covered-image-wrap ratio--3_2 <?= $bgPlaceholderClass; ?> <?= $postData['img']['position']; ?>">
         <?php if (!empty($postData['img']['sizes'])) : ?>
@@ -37,12 +37,14 @@ $bgClass = $postData['color'] ? 'bg--' . $postData['color'] : 'bg--offwhite';
         <?php endif; ?>
       </div>
 
-      <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 pxy-md-15 pxy-sm-1 <?= $bgClass; ?>">
+      <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
         <div class="mb-xl-25">
           <h3 class="post-title mt0 factor-a-bold-ss01"><?= $postData['title'] ?></h3>
           <p class="s my0"><?= $postData['teaser_text'] ?></p>
         </div>
-        <span class="button button--themed block w-fit">mehr erfahren</span>
+        <div>
+          <span class="button button--themed block w-fit">mehr erfahren</span>
+        </div>
       </div>
     </div>
   </a>

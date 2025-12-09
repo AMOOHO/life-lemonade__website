@@ -20,7 +20,7 @@ $img = $component['img'] ?? get_sub_field('img');
     <picture>
       <source media="(max-width: 27em)" srcset="<?= $img['sizes']['size_600']; ?>">
       <source media="(max-width: 55em)" srcset="<?= $img['sizes']['size_1200']; ?>">
-      <img class="rounded-sm" src="<?= $img['sizes']['size_2200']; ?>" alt="<?= get_alt_tag($img['id']); ?>">
+      <img src="<?= $img['sizes']['size_2200']; ?>" alt="<?= get_alt_tag($img['id']); ?>">
     </picture>
   </div>
 </div>

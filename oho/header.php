@@ -50,7 +50,8 @@
 </head>
 
 <body <?php body_class(); ?> id="body">
-  <?php /* === start developer mode === */ if ($_SERVER['REMOTE_ADDR'] != '62.12.150.60'): ?>
+
+  <?php /* === start developer mode === */ if ($_SERVER['REMOTE_ADDR'] != '62.12.150.60' && $_SERVER['REMOTE_ADDR'] != '84.181.125.74'): ?>
 
     <aside id="popup-previewlockdown-wrap">
       <div id="previewlockdown-popup">
