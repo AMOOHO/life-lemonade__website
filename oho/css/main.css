@@ -1213,7 +1213,7 @@ body.contact .footer-wrap a:hover {
 
   :root {
     /* ***** Font Sizes */
-    --fsize__h1: calc(7.169375rem * 0.6);
+    --fsize__h1: calc(7.169375rem * 0.59);
     --fsize__h2: calc(3.86375rem * 0.65);
     --fsize__h3: calc(1.75625rem * 0.9);
     --fsize__h4: calc(1.75625rem * 0.9);
