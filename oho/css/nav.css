@@ -447,6 +447,15 @@
   .nav--home svg.lab-logo {
     position: absolute;
   }
+
+  /* --- Navlist */
+
+  .nav--desktop ul.nav-list .icon-wrap,
+  .nav--home ul.nav-list .icon-wrap {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.375rem;
+  }
 }
 
 /* MINI-MOBILE //////////////////////////////////////////////////////////////// */
@@ -473,5 +482,13 @@
 
   .nav--mobile .navbar .nav-trigger {
     width: 7rem;
+  }
+
+  /* ***** Home Navigation */
+
+  /* --- Nav-Styling */
+
+  .nav--home svg.lab-logo {
+    transform: translate3d(-1em, 2em, 0);
   }
 }

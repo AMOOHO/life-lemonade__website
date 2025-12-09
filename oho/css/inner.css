@@ -1249,6 +1249,20 @@ header.__text-bg-img .header-wrap__inner {
     display: none;
   }
 
+  /* ***** Twisted Line on Home */
+
+  body.home .twisted-line-wrap--1 {
+    width: 35rem;
+    height: 88rem;
+    transform: translate3d(-8rem, -25.5rem, 0);
+  }
+
+  body.home .twisted-line-wrap--2 {
+    width: 68rem;
+    height: 86rem;
+    transform: translate3d(25%, -5rem, 0);
+  }
+
   /* SINGLE POST *******************************************************************************/
 
   /*  IMPRINT + DATA PRIVACY *******************************************************************************/
