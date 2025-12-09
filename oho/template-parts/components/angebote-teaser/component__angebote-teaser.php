@@ -34,9 +34,9 @@ $offersPosts = $component['offers'] ?? get_sub_field('offers');
       $teaserText = get_field('teaser-text');
       $color['slug'] = "lemon"; // Wanted by client
     ?>
-      <div class="angebot-item ratio--1_1 box box-xl-4 box-md-8 box-sm-11">
+      <div class="angebot-item ratio--1_1 box box-xl-4 box-md-8 box-sm-11 box-xs-12">
         <a href="<?php the_permalink(); ?>">
-          <div class="h-full flex-wrap dir-col space-between-xl pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-3 pb-md-15 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?> shadow">
+          <div class="h-full flex-wrap dir-col space-between-xl pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-3 pb-md-15 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?> shadow nowrap">
             <div class="mb-xl-4 mb-md-2 mb-sm-15">
               <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
               <?php if ($teaserSubtitle): ?>

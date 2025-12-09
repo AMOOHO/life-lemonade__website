@@ -1138,16 +1138,16 @@ body.contact .footer-wrap a:hover {
     /* ***** Font Sizes */
     --fsize__h1: calc(7.169375rem * 0.6);
     --fsize__h2: calc(3.86375rem * 0.65);
-    --fsize__h3: calc(1.75625rem * 0.8);
-    --fsize__h4: calc(1.75625rem * 0.8);
-    --fsize__h5: calc(1.75625rem * 0.8);
-    --fsize__h6: calc(1.75625rem * 0.8);
-    --fsize__p: calc(1.75625rem * 0.8);
-    --fsize__s: calc(1.164375rem * 0.95);
-    --fsize__xs: calc(0.875rem * 0.8);
-    --fsize__button: calc(1.216875rem * 0.85);
-    /* --fsize__teaser: calc(1.51375rem * 0.5);
-    --fsize__nav: calc(1.51375rem * 0.5); */
+    --fsize__h3: calc(1.75625rem * 0.9);
+    --fsize__h4: calc(1.75625rem * 0.9);
+    --fsize__h5: calc(1.75625rem * 0.9);
+    --fsize__h6: calc(1.75625rem * 0.9);
+    --fsize__p: calc(1.75625rem * 0.9);
+    --fsize__s: calc(1.164375rem * 1.1);
+    --fsize__xs: calc(1.164375rem * 0.95);
+    --fsize__button: calc(1.216875rem * 1);
+    --fsize__teaser: calc(1.51375rem * 0.85);
+    --fsize__nav: calc(1.51375rem * 0.85);
 
     /* ***** Icon Sizes */
     /* --isize__small: calc(3.5rem * 0.5);
@@ -1213,11 +1213,23 @@ body.contact .footer-wrap a:hover {
 
   :root {
     /* ***** Font Sizes */
+    --fsize__h1: calc(7.169375rem * 0.6);
+    --fsize__h2: calc(3.86375rem * 0.65);
+    --fsize__h3: calc(1.75625rem * 0.9);
+    --fsize__h4: calc(1.75625rem * 0.9);
+    --fsize__h5: calc(1.75625rem * 0.9);
+    --fsize__h6: calc(1.75625rem * 0.9);
+    --fsize__p: calc(1.75625rem * 0.9);
+    --fsize__s: calc(1.164375rem * 1.1);
+    --fsize__xs: calc(1.164375rem * 1.1);
+    --fsize__button: calc(1.216875rem * 1.1);
+    --fsize__teaser: calc(1.51375rem * 0.9);
+    --fsize__nav: calc(1.51375rem * 0.9);
   }
 
   html,
   body {
-    /* font-size: 1rem; */
+    font-size: 2.65vw;
   }
 
   /*

@@ -15,21 +15,27 @@
   <div class="footer-wrap">
     <div class="footer-wrap__inner">
 
-      <div class="flex-wrap space-between-xl align-middle-xl">
+      <div class="flex-wrap space-between-xl align-middle-xl dir-col-sm justify-start-sm align-top-sm gap-sm-15 pb-sm-2">
         <div class="box">
-          <div class="flex-wrap gap-xl-2">
+          <div class="flex-wrap gap-xl-2 gap-sm-15 dir-col-sm">
             <div class="box">
               <span class="xs"><b>©</b>&nbsp;Life&nbsp;Lemonade&nbsp;GmbH</span>
             </div>
+
             <div class="box">
-              <a href="/impressum/" class="xs">Impressum</a>
+              <div class="flex-wrap gap-xl-2">
+                <div class="box">
+                  <a href="/impressum/" class="xs">Impressum</a>
+                </div>
+                <div class="box">
+                  <a href="/datenschutz/" class="xs">Datenschutz</a>
+                </div>
+                <div class="box">
+                  <span class="adjustCookieSettingsBtn xs">Cookies</span>
+                </div>
+              </div>
             </div>
-            <div class="box">
-              <a href="/datenschutz/" class="xs">Datenschutz</a>
-            </div>
-            <div class="box">
-              <span class="adjustCookieSettingsBtn xs">Cookies</span>
-            </div>
+
           </div>
         </div>
         <div class="box">

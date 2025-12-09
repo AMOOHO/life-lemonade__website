@@ -436,6 +436,10 @@
   -----------------------------------------------------------------------------
   */
 
+  .nav--mobile .navbar .nav-trigger .icon-cross {
+    left: -0.25em;
+  }
+
   /* ***** Home Navigation */
 
   /* --- Nav-Styling */
@@ -459,9 +463,15 @@
   -----------------------------------------------------------------------------
   */
 
-  /* ***** Nav-Wrap */
+  .nav--mobile {
+    --navheight: 5.5rem;
+  }
 
-  /* ***** Nav-Styling */
+  .nav--mobile .navbar .logo-wrap svg.logo {
+    width: 19rem;
+  }
 
-  /* ***** Nav-Wrap Trigger */
+  .nav--mobile .navbar .nav-trigger {
+    width: 7rem;
+  }
 }

@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div class="marquee-wrap marquee-wrap--2 mt-xl-1 mt-md-0">
+      <div class="marquee-wrap marquee-wrap--2 mt-xl-1">
         <div class="marquee-track marquee--ltr">
           <div class="marquee-item">
             <span class="s button bg--strawberry fcolor--dark mt-xl-05">Mit Wissenschaft und Fun Faktor<span class="icon-arrow_right"></span></span>
