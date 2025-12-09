@@ -82,7 +82,8 @@ if ($form->validate()) {
 
     $form->sendMail(
       'wordpress@ohodesign.ch', // to
-      'noreply@vsa-firate.cyon.net', // from (if possible, use a real email address over SMTP to avoid spam filter issues)
+      'noreply@lifelemonade.ch', // from (if possible, use a real email address over SMTP to avoid spam filter issues)
+      // 'noreply@vsa-firate.cyon.net', // from (if possible, use a real email address over SMTP to avoid spam filter issues)
       '', // replyTo (better leave this empty due to spam filter issues)
       $site_name . ' – Kontaktformular (DE)', // sender name
       $subject // subject
