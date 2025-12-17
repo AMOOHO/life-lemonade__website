@@ -153,8 +153,8 @@
 /* --- Nav-Styling */
 
 .nav--home svg.lab-logo {
-  width: 18rem;
-  height: 18rem;
+  width: 21rem;
+  height: 21rem;
 }
 
 .nav--home svg.lab-logo path.l {
@@ -410,8 +410,9 @@
   /* --- Nav-Styling */
 
   .nav--home svg.lab-logo {
-    width: 12rem;
-    height: 12rem;
+    width: 16rem;
+    height: 16rem;
+    transform: translate3d(0, -1.75em, 0);
   }
 
   /* ***** Lab Logo */
@@ -446,6 +447,7 @@
 
   .nav--home svg.lab-logo {
     position: absolute;
+    transform: translate3d(-1em, -1.75em, 0);
   }
 
   /* --- Navlist */
@@ -455,6 +457,11 @@
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.375rem;
+  }
+
+  .nav--desktop ul.nav-list li,
+  .nav--home ul.nav-list li {
+    margin-left: 1.25em;
   }
 }
 

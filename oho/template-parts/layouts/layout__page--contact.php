@@ -28,7 +28,7 @@ get_header();
               Holbeinstrasse 18<br>
               4051 Basel<br><br>
 
-              <a class="mail-link" data-name="spring" data-domain="lifelemonade.ch"></a><br>
+              <a class="mail-link" data-name="hello" data-domain="lifelemonade.ch"></a><br>
               <a href="tel:<?= format_phone_nr("+41 79 123 45 67", true, ''); ?>"><?= format_phone_nr("+41 79 123 45 67"); ?></a>
             </address>
           </div>
