@@ -103,7 +103,7 @@
   /* mix-blend-mode: overlay; */
   transform: scale(0.25);
   box-shadow: 0 0 2.5rem 0.125rem rgba(0, 0, 0, 0.05);
-  mix-blend-mode: hard-light;
+  /* mix-blend-mode: hard-light; */
   pointer-events: none;
 }
 
