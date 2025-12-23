@@ -87,7 +87,7 @@ if ($img) {
           ?>
 
             <div class="post-item box box-xl-4 box-md-6 box-sm-12">
-              <a href="<?= get_permalink(); ?>">
+              <a href="<?= get_permalink(); ?>" class="cc--hoverscale">
                 <div class="flex-wrap dir-col overflow-hidden h-full">
                   <!-- Main Image -->
                   <?php
@@ -105,7 +105,7 @@ if ($img) {
                     <?php endif; ?>
                   </div>
 
-                  <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
+                  <div class="relative flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
                     <div class="mb-xl-25">
                       <h3 class="post-title mt0"><?= get_the_title(); ?></h3>
                       <p class="my0 s"><?= $teaserText; ?></p>
@@ -123,7 +123,7 @@ if ($img) {
       </div>
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
-    <a href="<?= get_post_type_archive_link('blog'); ?>" class="block text-center mt-xl-5 mt-md-3 mt-sm-2">
+    <a href="<?= get_post_type_archive_link('blog'); ?>" class="block text-center mt-xl-5 mt-md-3 mt-sm-2 cc--hoverscale">
       <div class="button p bg--dark fcolor--strawberry">alle Beiträge ansehen</div>
     </a>
   </div>

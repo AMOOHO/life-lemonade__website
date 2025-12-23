@@ -31,10 +31,10 @@ $scope = $args['scope'] ?? null;
             <!-- Nav-List -->
 
             <ul class="nav-list">
-              <li><a class="<?php the_nav_class(1077); ?>" href="<?= get_permalink(1077); /* Portrait */ ?>"><b>Portrait</b></a></li>
-              <li><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?>" href="<?= get_post_type_archive_link('blog'); ?>"><b>Blog</b></a></li>
-              <li><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?>" href="<?= get_post_type_archive_link('angebot'); ?>"><b>Angebot</b></a></li>
-              <li class="has-icon"><a class="<?php the_nav_class(1079); ?>" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--lemon"></span></span></a></li>
+              <li><a class="<?php the_nav_class(1077); ?> cc--hoverscale" href="<?= get_permalink(1077); /* Portrait */ ?>"><b>Portrait</b></a></li>
+              <li><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?> cc--hoverscale" href="<?= get_post_type_archive_link('blog'); ?>"><b>Blog</b></a></li>
+              <li><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?> cc--hoverscale" href="<?= get_post_type_archive_link('angebot'); ?>"><b>Angebot</b></a></li>
+              <li class="has-icon"><a class="<?php the_nav_class(1079); ?> cc--hoverscale" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--lemon"></span></span></a></li>
             </ul>
           </div>
 
@@ -69,7 +69,7 @@ $scope = $args['scope'] ?? null;
   <div class="sec-wrap__inner slim">
     <h2 class="leading-large text-center fcolor--strawberry">
 
-      Life Lemonade stärkt die Zufriedenheit, mentale Gesundheit und Innovationskraft deiner Mitarbeitenden nachhaltig und spürbar. Mit <a href="<?= get_post_type_archive_link('angebot'); ?>" class="underline">Workshops und Impulsen</a> rund um Positive Psychologie und Life Design machen wir aus den Zitronen des Arbeitsalltags spritzige Erfolge und verwandeln Potenzial in Wirkung:
+      Life Lemonade stärkt die Zufriedenheit, mentale Gesundheit und Innovationskraft deiner Mitarbeitenden nachhaltig und spürbar. Mit <a href="<?= get_post_type_archive_link('angebot'); ?>" class="underline cc--hoverscale">Workshops und Impulsen</a> rund um Positive Psychologie und Life Design machen wir aus den Zitronen des Arbeitsalltags spritzige Erfolge und verwandeln Potenzial in Wirkung:
       Für starke Teams, kreative Lösungen und mehr Impact für die Zukunft.
     </h2>
   </div>
@@ -137,8 +137,8 @@ $scope = $args['scope'] ?? null;
 
 
             <div class="post-item box box-xl-4 box-md-9 box-sm-12">
-              <a href="<?= get_permalink(); ?>">
-                <div class="flex-wrap dir-col overflow-hidden h-full">
+              <a href="<?= get_permalink(); ?>" class="cc--hoverscale">
+                <div class="relative flex-wrap dir-col overflow-hidden h-full">
                   <!-- Main Image -->
                   <?php
                   $img = get_field('main-img--group');
@@ -162,7 +162,7 @@ $scope = $args['scope'] ?? null;
                     <?php endif; ?>
                   </div>
 
-                  <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
+                  <div class="relative flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
                     <div class="mb-xl-25">
                       <h3 class="post-title mt0 factor-a-bold-ss01"><?= get_the_title(); ?></h3>
                       <p class="s my0"><?= $teaserText; ?></p>
@@ -182,7 +182,7 @@ $scope = $args['scope'] ?? null;
     <?php endif; ?>
     <div class="flex-wrap justify-center-xl mt-xl-5 mt-md-3 mt-sm-2">
       <div class="box">
-        <a href="<?= get_post_type_archive_link('blog'); ?>">
+        <a href="<?= get_post_type_archive_link('blog'); ?>" class="cc--hoverscale">
           <div class="button p bg--dark fcolor--strawberry">alle Beiträge ansehen</div>
         </a>
       </div>

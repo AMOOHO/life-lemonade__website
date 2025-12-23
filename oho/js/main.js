@@ -173,6 +173,216 @@ const scripts = {
 
   default: function () {
     // ----------------------------
+    // CUSTOM CURSOR (CC)
+    // ----------------------------
+
+    const cc = document.getElementById("cc");
+
+    if (cc) {
+      // add cc--hoverscale to selected elements that should scale the cursor on hover
+
+      const hoverScaleElements = document.querySelectorAll("a, input, textarea");
+      hoverScaleElements.forEach((el) => {
+        if (!el.classList.contains("cc--hoverscale")) {
+          el.classList.add("cc--hoverscale");
+        }
+      });
+
+      let ccVisible = false;
+      let mouseX = 0;
+      let mouseY = 0;
+
+      // Cursor Functions
+
+      const showCC = () => {
+        if (!ccVisible) {
+          gsap.set(cc, { autoAlpha: 1 });
+          ccVisible = true;
+        }
+      };
+
+      const hideCC = () => {
+        if (ccVisible) {
+          gsap.set(cc, { autoAlpha: 0 });
+          ccVisible = false;
+        }
+      };
+
+      const destroyCC = () => {
+        cc.remove();
+      };
+
+      // Cursor-Position bei Mausbewegung aktualisieren
+      document.addEventListener("mousemove", (e) => {
+        showCC();
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        gsap.to(cc, {
+          x: mouseX,
+          y: mouseY,
+          duration: 0,
+          ease: "power2.out",
+        });
+      });
+
+      // Hide cursor on Touch Only devices
+      if (ScrollTrigger.isTouch === 1) {
+        // console.log("Touch Only");
+        hideCC();
+        destroyCC();
+      }
+
+      // Touch and Mouse Devices
+      if (ScrollTrigger.isTouch === 2) {
+        // console.log("Touch and Mouse");
+        // Detect touch events to hide the custom cursor
+        document.addEventListener("touchstart", hideCC);
+      }
+
+      // Apply hover effects to interactive elements
+      const applyHoverEffects = (cursorElement) => {
+        document.querySelectorAll(".cc--hoverscale").forEach((item) => {
+          let scaleFactor = 0.5;
+          if (item.classList.contains("cc--hoverscale_xl")) {
+            scaleFactor = 1;
+          }
+          item.addEventListener("mouseenter", () => {
+            gsap.to(cursorElement, {
+              scale: scaleFactor,
+              duration: 0.25,
+              ease: "power2.out",
+            });
+          });
+          item.addEventListener("mouseleave", () => {
+            gsap.to(cursorElement, {
+              scale: 0.2,
+              duration: 0.25,
+              ease: "power2.out",
+            });
+          });
+        });
+      };
+
+      applyHoverEffects(cc);
+
+      // Create and manage a single instance of the custom cursor
+      const createCCInstance = (container) => {
+        // Remove any existing instances of custom cursors
+        document.querySelectorAll(".cc-instance").forEach((cursor) => cursor.remove());
+
+        // Create a new instance of the cursor
+        const newCC = cc.cloneNode(true);
+        newCC.classList.add("cc-instance");
+        newCC.style.backgroundColor = "#cce3d1";
+
+        // special color case for nav-wrap on body--accent pages
+        // if (body.classList.contains("body--accent") && container.classList.contains("nav-wrap")) {
+        //   newCC.style.backgroundColor = "#8ed6eb";
+
+        //   if (container.classList.contains("scrolled")) {
+        //     newCC.style.backgroundColor = "#c2decb";
+        //   }
+        // }
+
+        // if (container.classList.contains("cc-container--footer")) {
+        //   newCC.style.backgroundColor = "#60cd94";
+        // }
+        // if (container.classList.contains("__marquees")) {
+        //   newCC.style.backgroundColor = "#60cd94";
+        // }
+
+        container.prepend(newCC);
+
+        // Make the new cursor follow the mouse movement within the container
+        const updateCursorPosition = (e) => {
+          let mouseX = e.clientX + window.scrollX; // Include global scroll offset
+          let mouseY = e.clientY + window.scrollY; // Include global scroll offset
+
+          if (container.classList.contains("nav-wrap")) {
+            const containerRect = container.getBoundingClientRect();
+            // Position relative to the container
+            mouseX = e.clientX - containerRect.left;
+            mouseY = e.clientY - containerRect.top;
+
+            // Set cursor to fixed for nav-wrap
+            newCC.style.position = "fixed";
+          } else {
+            // Set cursor to absolute for smooth-scroll containers
+            newCC.style.position = "absolute";
+
+            // Adjust for container's position relative to the document
+            const containerRect = container.getBoundingClientRect();
+            mouseX = e.clientX - containerRect.left + container.scrollLeft;
+            mouseY = e.clientY - containerRect.top + container.scrollTop;
+          }
+
+          // Use GSAP to animate the cursor's movement smoothly
+          gsap.to(newCC, {
+            x: mouseX,
+            y: mouseY,
+            duration: 0,
+            ease: "power2.out",
+          });
+        };
+
+        container.addEventListener("mousemove", updateCursorPosition);
+
+        // Handle scroll events to update cursor position when scrolling
+        const handleScroll = () => {
+          updateCursorPosition({ clientX: mouseX, clientY: mouseY });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Clean up the event listener when the cursor instance is removed
+        newCC.addEventListener("remove", () => {
+          container.removeEventListener("mousemove", updateCursorPosition);
+          window.removeEventListener("scroll", handleScroll);
+        });
+
+        // Apply hover effects to the new cursor instance
+        applyHoverEffects(newCC);
+
+        return newCC;
+      };
+
+      // General function to manage custom cursor instances
+      const manageCursorInstance = (element) => {
+        element.addEventListener("mouseenter", () => {
+          const newCC = createCCInstance(element);
+          showCC(newCC); // Show the new cursor instance
+          hideCC(); // Hide the master cursor
+        });
+
+        element.addEventListener("mouseleave", () => {
+          // Remove all cursor instances
+          document.querySelectorAll(".cc-instance").forEach((cursor) => {
+            cursor.dispatchEvent(new Event("remove")); // Trigger cleanup
+            cursor.remove();
+          });
+          showCC(); // Make the master cursor visible again
+        });
+      };
+
+      // Elements that need a cursor instance
+      const interactiveElements = [
+        // ".footer-wrap__inner > .flex-wrap",
+        // "#nav--desktop .nav-wrap__inner > .flex-wrap",
+        // ".post-item > a > .flex-wrap",
+        // "section.__marquees",
+      ];
+      interactiveElements.forEach((selector) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((element) => {
+          if (element) {
+            manageCursorInstance(element);
+          }
+        });
+      });
+    }
+
+    // ----------------------------
     // MARQUEES
     // ----------------------------
 
@@ -297,7 +507,7 @@ const scripts = {
       // Erstes Timeline-Setup
       let slantedImageTimeline = createTimeline(true);
 
-      switchWrap.addEventListener("mouseenter", () => {
+      switchWrap.addEventListener("click", () => {
         if (slantedImageTimeline.isActive()) return; // Verhindern, dass Animation doppelt startet
 
         slantedImageTimeline.play().then(() => {

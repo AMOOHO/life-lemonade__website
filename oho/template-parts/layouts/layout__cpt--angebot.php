@@ -80,13 +80,13 @@ get_header();
           <div class="post-item box box-xl-4 box-md-6 box-sm-12">
             <a href="<?php the_permalink(); ?>">
               <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pb-xl-25 pxy-md-2 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
-                <div>
+                <div class="relative cc--hoverscale">
                   <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>
                   <?php if ($teaserSubtitle): ?>
                     <h3 class="post-title mt05 mb0 factor-a-bold-ss01"><?= $teaserSubtitle; ?></h3>
                   <?php endif; ?>
                 </div>
-                <div class="mt-xl-25 mt-md-15">
+                <div class="relative mt-xl-25 mt-md-15 cc--hoverscale">
                   <span class="button button--themed block w-fit">mehr erfahren</span>
                 </div>
               </div>

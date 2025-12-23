@@ -15,7 +15,7 @@
   <div class="footer-wrap">
     <div class="footer-wrap__inner">
 
-      <div class="flex-wrap space-between-xl align-middle-xl dir-col-sm justify-start-sm align-top-sm gap-sm-15 pb-sm-2">
+      <div class="relative flex-wrap space-between-xl align-middle-xl dir-col-sm justify-start-sm align-top-sm gap-sm-15 pb-sm-2">
         <div class="box">
           <div class="flex-wrap gap-xl-2 gap-sm-15 dir-col-sm">
             <div class="box">
@@ -25,13 +25,13 @@
             <div class="box">
               <div class="flex-wrap gap-xl-2">
                 <div class="box">
-                  <a href="/impressum/" class="xs">Impressum</a>
+                  <a href="/impressum/" class="xs cc--hoverscale">Impressum</a>
                 </div>
                 <div class="box">
-                  <a href="/datenschutz/" class="xs">Datenschutz</a>
+                  <a href="/datenschutz/" class="xs cc--hoverscale">Datenschutz</a>
                 </div>
                 <div class="box">
-                  <span class="adjustCookieSettingsBtn xs">Cookies</span>
+                  <span class="adjustCookieSettingsBtn xs cc--hoverscale">Cookies</span>
                 </div>
               </div>
             </div>
@@ -91,6 +91,9 @@
 <?php /* Footer Init */ ?>
 <?php get_framework_part('footer'); /* LOAD OHO Design GmbH Web Development Framework Part 5/5 */ ?>
 <?php wp_footer(); ?>
+
+<!-- Custom Cursor -->
+<div id="cc" class="cc" style="visibility: hidden;"></div>
 
 </body>
 

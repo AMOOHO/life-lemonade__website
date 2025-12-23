@@ -19,12 +19,11 @@ $bgPlaceholderClass = $postData['color'] && $postData['color'] !== 'strawberry'
   : 'bg--offwhite--yellow';
 
 $bgClass = $postData['color'] ? 'bg--' . $postData['color'] : 'bg--offwhite';
-
-
+$elementThemeClass = $postData['color'] ? 'element-theme--' . $postData['color'] : 'element-theme--offwhite';
 ?>
 <div class="mix post-item box box-xl-4 box-md-6 box-sm-12" data-id="<?= $postData['id']; ?>">
-  <a href="<?= $postData['permalink']; ?>">
-    <div class="flex-wrap dir-col overflow-hidden h-full">
+  <a href="<?= $postData['permalink']; ?>" class="cc--hoverscale">
+    <div class="flex-wrap dir-col overflow-hidden h-full <?= $bgClass; ?> <?= $elementThemeClass; ?>">
       <!-- Main Image -->
       <div class="covered-image-wrap ratio--3_2 <?= $bgPlaceholderClass; ?> <?= $postData['img']['position']; ?>">
         <?php if (!empty($postData['img']['sizes'])) : ?>
@@ -37,7 +36,7 @@ $bgClass = $postData['color'] ? 'bg--' . $postData['color'] : 'bg--offwhite';
         <?php endif; ?>
       </div>
 
-      <div class="flex-wrap dir-col grow space-between-xl pxy-xl-2 <?= $bgClass; ?>">
+      <div class="relative flex-wrap dir-col grow space-between-xl pxy-xl-2">
         <div class="mb-xl-25">
           <h3 class="post-title mt0 factor-a-bold-ss01"><?= $postData['title'] ?></h3>
           <p class="s my0"><?= $postData['teaser_text'] ?></p>

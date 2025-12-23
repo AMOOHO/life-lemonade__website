@@ -53,7 +53,7 @@ get_header();
             $teaserText = get_field('teaser-text');
           ?>
             <div class="post-item box box-xl-4 box-md-10 box-sm-12">
-              <a href="<?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>" class="cc--hoverscale">
                 <div class="flex-wrap dir-col space-between-xl h-full pxy-xl-3 pr-xl-5 pb-xl-25 pxy-md-2 pr-md-4 pb-md-15 <?= $color ? 'bg--' . $color['slug'] : 'bg--offwhite'; ?>">
                   <div class="mb-xl-4 mb-md-2 mb-sm-15">
                     <h2 class="post-title mt0 mb0 factor-a-bold-ss01"><?= $teaserTitle; ?></h2>

@@ -20,21 +20,21 @@
       // * *************************
       ?>
 
-      <div class="flex-wrap space-between-xl align-middle-xl h-full">
+      <div class="relative flex-wrap space-between-xl align-middle-xl h-full">
 
         <!-- Logo -->
 
-        <a class="<?php the_nav_class(2); ?>" href="/">
+        <a class="<?php the_nav_class(2); ?> relative cc--hoverscale" href="/">
           <?php include(get_template_directory() . "/media/life-lemonade-logo.svg"); ?>
         </a>
 
         <!-- Nav-List -->
 
-        <ul class="nav-list">
-          <li><a class="<?php the_nav_class(1077); ?>" href="<?= get_permalink(1077); /* Portrait */ ?>"><b>Portrait</b></a></li>
-          <li><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?>" href="<?= get_post_type_archive_link('blog'); ?>"><b>Blog</b></a></li>
-          <li><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?>" href="<?= get_post_type_archive_link('angebot'); ?>"><b>Angebot</b></a></li>
-          <li class="has-icon"><a class="<?php the_nav_class(1079); ?>" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--dark"></span></span></a></li>
+        <ul class="nav-list relative">
+          <li><a class="<?php the_nav_class(1077); ?> cc--hoverscale" href="<?= get_permalink(1077); /* Portrait */ ?>"><b>Portrait</b></a></li>
+          <li><a class="<?php the_nav_class(get_post_type_archive_link('blog')); ?> cc--hoverscale" href="<?= get_post_type_archive_link('blog'); ?>"><b>Blog</b></a></li>
+          <li><a class="<?php the_nav_class(get_post_type_archive_link('angebot')); ?> cc--hoverscale" href="<?= get_post_type_archive_link('angebot'); ?>"><b>Angebot</b></a></li>
+          <li class="has-icon"><a class="<?php the_nav_class(1079); ?> cc--hoverscale" href="<?= get_permalink(1079);/* Kontakt */ ?>"><span class="icon-wrap"><span class="icon-mail fcolor--dark"></span></span></a></li>
         </ul>
       </div>
 

@@ -32,7 +32,7 @@ $quoteAuthor = $quoteGroup['author'];
           </div>
         </div>
         <div class="box box-xl-4 box-md-8">
-          <div class="slanted-image-wrap relative" data-anim="slanted-images-switch" data-anim-trigger="hover">
+          <div class="slanted-image-wrap relative cc--hoverscale" data-anim="slanted-images-switch" data-anim-trigger="hover">
             <div class="twisted-line-wrap">
               <?php include(get_template_directory() . "/media/placeholders/twisted-line-3.svg"); ?>
             </div>

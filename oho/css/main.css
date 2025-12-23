@@ -89,6 +89,24 @@
   --nav__height: 4.59375rem;
 }
 
+/* CUSTOM CURSOR *******************************************************************************/
+
+.cc {
+  z-index: 99999;
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color__primary);
+  top: -2.5rem;
+  left: -2.5rem;
+  /* mix-blend-mode: overlay; */
+  transform: scale(0.25);
+  box-shadow: 0 0 2.5rem 0.125rem rgba(0, 0, 0, 0.05);
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+}
+
 /* FONTS – LICENSED TO Life Lemonade *******************************************************************************/
 
 @font-face {
@@ -606,23 +624,28 @@ p a:hover,
   color: var(--color__dark);
 }
 
-.bg--lemon > div > .button--themed {
+.bg--lemon > div > .button--themed,
+.element-theme--lemon .button--themed {
   background: var(--color__lemon--light);
 }
 
-.bg--mint > div > .button--themed {
+.bg--mint > div > .button--themed,
+.element-theme--mint .button--themed {
   background: var(--color__mint--light);
 }
 
-.bg--grape > div > .button--themed {
+.bg--grape > div > .button--themed,
+.element-theme--grape .button--themed {
   background: var(--color__grape--light);
 }
 
-.bg--strawberry > div > .button--themed {
+.bg--strawberry > div > .button--themed,
+.element-theme--strawberry .button--themed {
   background: var(--color__strawberry--light);
 }
 
-.bg--berry > div > .button--themed {
+.bg--berry > div > .button--themed,
+.element-theme--berry .button--themed {
   background: var(--color__berry--light);
 }
 
@@ -1013,6 +1036,10 @@ body.home .main__inner {
 
 .footer-wrap__inner {
   padding: 1em 1.375em;
+}
+
+.footer-wrap__inner > .flex-wrap > .box {
+  z-index: 1;
 }
 
 .footer-wrap a,

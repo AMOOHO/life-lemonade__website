@@ -57,6 +57,14 @@
 
 /* ***** Post grid */
 
+.post-item {
+  position: relative;
+}
+
+.post-item .covered-image-wrap {
+  z-index: -1;
+}
+
 .post-item .post-title {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
