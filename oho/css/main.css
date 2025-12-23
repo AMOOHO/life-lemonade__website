@@ -101,7 +101,10 @@
   top: -2.5rem;
   left: -2.5rem;
   /* mix-blend-mode: overlay; */
+  -webkit-transform: scale(0.25);
+  -ms-transform: scale(0.25);
   transform: scale(0.25);
+  -webkit-box-shadow: 0 0 2.5rem 0.125rem rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 2.5rem 0.125rem rgba(0, 0, 0, 0.05);
   /* mix-blend-mode: hard-light; */
   pointer-events: none;

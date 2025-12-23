@@ -22,7 +22,7 @@ defined('ABSPATH') || exit; // Allows to be executed in WP environment only. Pre
   /* --- Cookies */
 
   const googleAnalyticsCookieActive = true; // true or false
-  const gaIDHash = 'XXXXXXXXXXXXXXX'; // Hash value for GA ID XXXXXXXXXXXXXXX
+  const gaIDHash = '2GTPQN3KW5'; // Hash value for GA ID XXXXXXXXXXXXXXX
   const gaID = 'G-' + gaIDHash;
 
   const googleTagManagerCookieActive = false; // true or false

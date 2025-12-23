@@ -140,6 +140,7 @@
 }
 
 .bg--split-dark__strawberry {
+  background: -o-linear-gradient(top, var(--color__strawberry) 45%, var(--color__dark) 45%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -147,7 +148,6 @@
     color-stop(45%, var(--color__strawberry)),
     color-stop(45%, var(--color__dark))
   );
-  background: -o-linear-gradient(top, var(--color__strawberry) 45%, var(--color__dark) 45%);
   background: linear-gradient(180deg, var(--color__strawberry) 45%, var(--color__dark) 45%);
 }
 
@@ -156,6 +156,7 @@
 }
 
 .bg--split-dark__strawberry--light {
+  background: -o-linear-gradient(top, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -163,7 +164,6 @@
     color-stop(45%, var(--color__dark)),
     color-stop(45%, var(--color__strawberry--light))
   );
-  background: -o-linear-gradient(top, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
   background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__strawberry--light) 45%);
 }
 
@@ -176,6 +176,7 @@
 }
 
 .bg--split-dark__primary {
+  background: -o-linear-gradient(top, var(--color__dark) 45%, var(--color__primary) 45%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -183,7 +184,6 @@
     color-stop(45%, var(--color__dark)),
     color-stop(45%, var(--color__primary))
   );
-  background: -o-linear-gradient(top, var(--color__dark) 45%, var(--color__primary) 45%);
   background: linear-gradient(180deg, var(--color__dark) 45%, var(--color__primary) 45%);
 }
 
@@ -202,6 +202,7 @@
 /* --- Special Cases */
 
 .bg--darksplit {
+  background: -o-linear-gradient(top, var(--color__background) 40%, var(--color__dark) 40%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -209,7 +210,6 @@
     color-stop(40%, var(--color__background)),
     color-stop(40%, var(--color__dark))
   );
-  background: -o-linear-gradient(top, var(--color__background) 40%, var(--color__dark) 40%);
   background: linear-gradient(180deg, var(--color__background) 40%, var(--color__dark) 40%);
 }
 
@@ -401,17 +401,17 @@
 
 @media only screen and (max-width: 55em) {
   .bg--split-dark__strawberry--light {
+    background: -o-linear-gradient(
+      top,
+      var(--color__dark) 55%,
+      var(--color__strawberry--light) 55%
+    );
     background: -webkit-gradient(
       linear,
       left top,
       left bottom,
       color-stop(55%, var(--color__dark)),
       color-stop(55%, var(--color__strawberry--light))
-    );
-    background: -o-linear-gradient(
-      top,
-      var(--color__dark) 55%,
-      var(--color__strawberry--light) 55%
     );
     background: linear-gradient(
       180deg,
@@ -421,6 +421,7 @@
   }
 
   .bg--split-dark__primary {
+    background: -o-linear-gradient(top, var(--color__dark) 55%, var(--color__primary) 55%);
     background: -webkit-gradient(
       linear,
       left top,
@@ -428,7 +429,6 @@
       color-stop(55%, var(--color__dark)),
       color-stop(55%, var(--color__primary))
     );
-    background: -o-linear-gradient(top, var(--color__dark) 55%, var(--color__primary) 55%);
     background: linear-gradient(180deg, var(--color__dark) 55%, var(--color__primary) 55%);
   }
 }

@@ -3201,10 +3201,12 @@ footer:after {
 .flex-wrap > .box-xl-10,
 .flex-wrap > .box-xl-11,
 .flex-wrap > .box-xl-12 {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
+  -ms-grid-column: unset;
   grid-column-start: unset;
   grid-column-end: unset;
   pointer-events: none;
@@ -3228,7 +3230,6 @@ footer:after {
 }
 
 .flex-wrap > .box-xl {
-  -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   -webkit-box-flex: 1;
   flex-grow: 1;
@@ -5614,10 +5615,12 @@ footer:after {
   .flex-wrap > .box-lg-10,
   .flex-wrap > .box-lg-11,
   .flex-wrap > .box-lg-12 {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    -ms-grid-column: unset;
     grid-column-start: unset;
     grid-column-end: unset;
     pointer-events: none;
@@ -5640,7 +5643,6 @@ footer:after {
   }
 
   .flex-wrap > .box-lg {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -8025,10 +8027,12 @@ footer:after {
   .flex-wrap > .box-md-10,
   .flex-wrap > .box-md-11,
   .flex-wrap > .box-md-12 {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    -ms-grid-column: unset;
     grid-column-start: unset;
     grid-column-end: unset;
     pointer-events: none;
@@ -8051,7 +8055,6 @@ footer:after {
   }
 
   .flex-wrap > .box-md {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -10440,10 +10443,12 @@ footer:after {
   .flex-wrap > .box-sm-10,
   .flex-wrap > .box-sm-11,
   .flex-wrap > .box-sm-12 {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    -ms-grid-column: unset;
     grid-column-start: unset;
     grid-column-end: unset;
     pointer-events: none;
@@ -10466,7 +10471,6 @@ footer:after {
   }
 
   .flex-wrap > .box-sm {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -12851,10 +12855,12 @@ footer:after {
   .flex-wrap > .box-xs-10,
   .flex-wrap > .box-xs-11,
   .flex-wrap > .box-xs-12 {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
+    -ms-grid-column: unset;
     grid-column-start: unset;
     grid-column-end: unset;
     pointer-events: none;
@@ -12877,7 +12883,6 @@ footer:after {
   }
 
   .flex-wrap > .box-xs {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
